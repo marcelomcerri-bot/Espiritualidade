@@ -99,7 +99,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl lg:text-5xl font-medium mb-6 text-foreground">
-              Seminário Cuidado Espiritual na Saúde Mental
+              Cuidado Espiritual na Saúde Mental
             </h2>
             <p className="text-xl text-primary font-medium mb-4">
               Uma Abordagem Científica e Humanizada
