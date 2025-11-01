@@ -8,17 +8,17 @@ async function generateTestMessage(): Promise<string> {
   const userContext = `Esta pessoa está começando sua jornada de autoconhecimento espiritual. Crie uma mensagem de boas-vindas calorosa (150-250 palavras).`;
 
   try {
-    const model = await ai.models.get("gemini-2.5-flash");
-    const result = await model.generateContent({
-      systemInstruction: systemPrompt,
-      generationConfig: {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.0-flash-001",
+      config: {
+        systemInstruction: systemPrompt,
         temperature: 0.8,
         topP: 0.9,
       },
       contents: userContext,
     });
 
-    return result.text() || "API funcionando!";
+    return response.text || "API funcionando!";
   } catch (error) {
     console.error("Error in test:", error);
     throw error;

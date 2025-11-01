@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 
 // DON'T DELETE THIS COMMENT
 // Follow these instructions when using this blueprint:
-// - Note that the newest Gemini model series is "gemini-2.5-flash" or gemini-2.5-pro"
+// - Note that the newest Gemini model series is "gemini-2.0-flash-001" or gemini-2.0-pro-001"
 //   - do not change this unless explicitly requested by the user
 
 // This API key is from Gemini Developer API Key, not vertex AI API Key
@@ -85,7 +85,7 @@ Gere uma "Reflexão que Cura" única e profunda para esta pessoa. Seja autêntic
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash-001",
       config: {
         systemInstruction: systemPrompt,
         temperature: 0.9,
@@ -108,7 +108,7 @@ export async function generateDailyReflection(): Promise<string> {
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash-001",
       config: {
         systemInstruction: systemPrompt,
         temperature: 0.95,

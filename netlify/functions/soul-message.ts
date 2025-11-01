@@ -79,7 +79,7 @@ Gere uma "Reflexão que Cura" única e profunda para esta pessoa. Seja autêntic
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash-001",
       config: {
         systemInstruction: systemPrompt,
         temperature: 0.8,

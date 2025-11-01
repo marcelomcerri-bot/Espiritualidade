@@ -130,7 +130,7 @@ export default function TestGemini() {
             <CardTitle className="text-blue-800 dark:text-blue-300">Informações</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2 text-sm text-blue-700 dark:text-blue-300">
-            <p><strong>Modelo:</strong> gemini-2.5-flash</p>
+            <p><strong>Modelo:</strong> gemini-2.0-flash-001</p>
             <p><strong>Tipo de Teste:</strong> Geração de mensagem espiritual personalizada</p>
             <p><strong>Endpoint:</strong> /api/test-gemini</p>
           </CardContent>
