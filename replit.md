@@ -1,9 +1,17 @@
 # Bem-Estar Espiritual (Spiritual Wellbeing Platform)
 
 ## Overview
-A mental health and spiritual wellness platform built with React and Express. The application provides evidence-based tools and logotherapy-based practices to strengthen mental health through spiritual care.
+A spiritual wellness platform built with React and Express for the discipline "Espiritualidade no Campo da Saúde" at UFF. The application provides evidence-based tools and logotherapy-based practices to strengthen wellbeing through spiritual care.
 
 **Current State**: Fully functional in development and production modes. The application is using in-memory storage (MemStorage) as no PostgreSQL database has been provisioned yet.
+
+**Latest Updates (Nov 1, 2025)**:
+- Updated all references from "saúde mental" to "Espiritualidade no Campo da Saúde"
+- Improved header and feature card styling for better desktop appearance
+- Replaced YouTube video links with verified working alternatives
+- Removed Contact/Support section, replaced with academic project information
+- Updated footer credits to reflect student development for UFF discipline
+- Fixed React warnings related to nested anchor tags
 
 ## Project Architecture
 

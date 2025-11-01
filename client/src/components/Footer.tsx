@@ -22,31 +22,23 @@ export default function Footer() {
             <h3 className="font-serif font-medium mb-4 text-foreground">Recursos</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/proposito">
-                  <a className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-proposito">
-                    Descobrir Propósito
-                  </a>
+                <Link href="/proposito" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-proposito">
+                  Descobrir Propósito
                 </Link>
               </li>
               <li>
-                <Link href="/praticas">
-                  <a className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-praticas">
-                    Práticas Espirituais
-                  </a>
+                <Link href="/praticas" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-praticas">
+                  Práticas Espirituais
                 </Link>
               </li>
               <li>
-                <Link href="/jornada">
-                  <a className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-jornada">
-                    Minha Jornada
-                  </a>
+                <Link href="/jornada" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-jornada">
+                  Minha Jornada
                 </Link>
               </li>
               <li>
-                <Link href="/momento-dificil">
-                  <a className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-momento">
-                    Momento Difícil
-                  </a>
+                <Link href="/momento-dificil" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-momento">
+                  Momento Difícil
                 </Link>
               </li>
             </ul>
@@ -56,17 +48,13 @@ export default function Footer() {
             <h3 className="font-serif font-medium mb-4 text-foreground">Acadêmico</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/referencias">
-                  <a className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-referencias">
-                    Referências ABNT
-                  </a>
+                <Link href="/referencias" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-referencias">
+                  Referências ABNT
                 </Link>
               </li>
               <li>
-                <Link href="/aprenda">
-                  <a className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-aprenda">
-                    Base Científica
-                  </a>
+                <Link href="/aprenda" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-aprenda">
+                  Base Científica
                 </Link>
               </li>
               <li>
