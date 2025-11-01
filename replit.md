@@ -1,18 +1,20 @@
-# Bem-Estar Espiritual (Spiritual Wellbeing Platform)
+# Cuidado Espiritual na Saúde Mental (Spiritual Care in Mental Health Platform)
 
 ## Overview
 A spiritual wellness platform built with React and Express for the discipline "Espiritualidade no Campo da Saúde" at UFF. The application provides evidence-based tools and logotherapy-based practices to strengthen wellbeing through spiritual care.
 
-**Current State**: Fully functional in development and production modes. The application is using in-memory storage (MemStorage) as no PostgreSQL database has been provisioned yet.
+**Current State**: Fully functional in development and production modes. The application is using in-memory storage (MemStorage) as no PostgreSQL database has been provisioned yet. Google Gemini AI integration is active for generating personalized spiritual reflections.
 
 **Latest Updates (Nov 1, 2025)**:
-- Updated all references from "saúde mental" to "Espiritualidade no Campo da Saúde"
-- Improved header and feature card styling for better desktop appearance
+- **Rebranding**: Changed site name from "Bem-Estar Espiritual" to "Cuidado Espiritual na Saúde Mental"
+- **Feature Rename**: "Mensagem da Alma" → "Reflexões que Curam" (Reflections that Heal)
+- Configured Google Gemini API (GEMINI_API_KEY) for AI-generated reflections
+- Improved header spacing and layout for better desktop appearance
+- Removed "Seminário" prefix from homepage section title
+- Removed explanatory "Sobre esta mensagem" section for cleaner UX
+- Updated Gemini prompts to align with new "Reflexões que Curam" branding
 - Replaced YouTube video links with verified working alternatives
-- Removed Contact/Support section, replaced with academic project information
-- Updated footer credits to reflect student development for UFF discipline
 - Fixed React warnings related to nested anchor tags
-- Removed academic citation counts ("1.900 citações no Google Scholar")
 - Configured project for Netlify deployment (netlify.toml + _redirects)
 
 ## Project Architecture
@@ -49,6 +51,7 @@ A spiritual wellness platform built with React and Express for the discipline "E
 - **Meu Diário**: Personal journal with gratitude tracking
 - **Práticas**: Spiritual and mental health practices
 - **Minha Jornada**: Journey assessments and progress tracking
+- **Reflexões que Curam**: AI-generated personalized spiritual reflections using Google Gemini
 - **Mapa de Sentido**: Meaning pillars mapping
 - **Momento Difícil**: Support for difficult moments
 - **Aprenda Mais**: Educational resources and references
@@ -56,6 +59,7 @@ A spiritual wellness platform built with React and Express for the discipline "E
 ## Development Setup
 
 ### Environment Variables
+- `GEMINI_API_KEY`: Google Gemini API key for AI-generated reflections (required for "Reflexões que Curam" feature)
 - `DATABASE_URL`: PostgreSQL connection string (optional - uses in-memory storage if not set)
 - `PORT`: Server port (defaults to 5000)
 - `NODE_ENV`: Environment mode (development/production)
