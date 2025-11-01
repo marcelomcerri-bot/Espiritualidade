@@ -12,6 +12,7 @@ import Praticas from "@/pages/Praticas";
 import Jornada from "@/pages/Jornada";
 import MomentoDificil from "@/pages/MomentoDificil";
 import MapaSentido from "@/pages/MapaSentido";
+import MensagemAlma from "@/pages/MensagemAlma";
 import Aprenda from "@/pages/Aprenda";
 import Referencias from "@/pages/Referencias";
 import Sobre from "@/pages/Sobre";
@@ -30,6 +31,7 @@ function Router() {
           <Route path="/jornada" component={Jornada} />
           <Route path="/momento-dificil" component={MomentoDificil} />
           <Route path="/mapa-sentido" component={MapaSentido} />
+          <Route path="/mensagem-alma" component={MensagemAlma} />
           <Route path="/aprenda" component={Aprenda} />
           <Route path="/referencias" component={Referencias} />
           <Route path="/sobre" component={Sobre} />

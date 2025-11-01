@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertDiaryEntrySchema, insertPurposeAnswerSchema, insertMeaningPillarSchema, insertJourneyAssessmentSchema } from "@shared/schema";
+import { generateSoulMessage, generateDailyReflection } from "./gemini";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Diary entries
@@ -118,6 +119,52 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(newAssessment);
     } catch (error) {
       res.status(400).json({ error: "Invalid journey assessment data" });
+    }
+  });
+
+  app.get("/api/soul-message", async (req, res) => {
+    try {
+      const userId = "demo-user";
+      const diaryEntries = await storage.getDiaryEntries(userId);
+      const journeyAssessments = await storage.getJourneyAssessments(userId);
+      
+      const hasData = diaryEntries.length > 0 || journeyAssessments.length > 0;
+      
+      const recentDiaryEntries = diaryEntries.slice(0, 3).map(entry => ({
+        title: entry.title,
+        content: entry.content,
+        gratitude: entry.gratitude || undefined,
+      }));
+      
+      const latestJourney = journeyAssessments[journeyAssessments.length - 1];
+      const latestJourneyStats = latestJourney ? {
+        spiritual: latestJourney.spiritual,
+        emotional: latestJourney.emotional,
+        mental: latestJourney.mental,
+        sentidoVida: latestJourney.sentidoVida,
+        esperanca: latestJourney.esperanca,
+      } : undefined;
+      
+      const message = await generateSoulMessage({
+        recentDiaryEntries: recentDiaryEntries.length > 0 ? recentDiaryEntries : undefined,
+        latestJourneyStats,
+        hasData,
+      });
+      
+      res.json({ message });
+    } catch (error) {
+      console.error("Error generating soul message:", error);
+      res.status(500).json({ error: "Failed to generate soul message" });
+    }
+  });
+
+  app.get("/api/daily-reflection", async (req, res) => {
+    try {
+      const reflection = await generateDailyReflection();
+      res.json({ reflection });
+    } catch (error) {
+      console.error("Error generating daily reflection:", error);
+      res.status(500).json({ error: "Failed to generate daily reflection" });
     }
   });
 

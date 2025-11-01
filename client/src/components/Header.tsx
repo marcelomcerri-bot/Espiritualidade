@@ -13,6 +13,7 @@ export default function Header() {
     { name: "Meu Diário", href: "/diario" },
     { name: "Práticas", href: "/praticas" },
     { name: "Minha Jornada", href: "/jornada" },
+    { name: "Mensagem da Alma", href: "/mensagem-alma" },
     { name: "Aprenda Mais", href: "/aprenda" },
   ];
 
