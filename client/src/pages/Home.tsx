@@ -1,10 +1,9 @@
-import { Compass, BookOpen, Heart, TrendingUp, Shield, Sparkles } from "lucide-react";
+import { Compass, BookOpen, Heart, TrendingUp, Shield, Sparkles, Flower2 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import FeatureCard from "@/components/FeatureCard";
 import QuoteCard from "@/components/QuoteCard";
 import heroImage from "@assets/generated_images/Peaceful_forest_morning_light_7cfb107a.png";
-import lotusImage from "@assets/generated_images/Lotus_flower_transparent_background_ac05ff77.png";
 
 export default function Home() {
   const features = [
@@ -67,11 +66,9 @@ export default function Home() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
           <div className="max-w-2xl animate-fade-in">
-            <img
-              src={lotusImage}
-              alt="Lotus"
-              className="w-20 h-20 mb-8 opacity-80 animate-float"
-            />
+            <div className="w-20 h-20 mb-8 flex items-center justify-center">
+              <Flower2 className="w-16 h-16 text-primary opacity-80 animate-float" />
+            </div>
             <h1 className="font-serif text-5xl lg:text-7xl font-light mb-6 text-foreground leading-tight">
               Descubra o <span className="text-primary">Sentido</span> e o <span className="text-primary">Propósito</span> da Vida
             </h1>

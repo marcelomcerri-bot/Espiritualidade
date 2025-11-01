@@ -2,6 +2,19 @@
 
 Este guia explica como fazer o deploy da aplicação no Netlify com as funções de IA funcionando.
 
+## ⚠️ IMPORTANTE: Configure a Chave do Gemini no Netlify
+
+Para que a funcionalidade **"Reflexões que Curam"** funcione no Netlify, você **DEVE** configurar a variável de ambiente `GEMINI_API_KEY` no painel do Netlify:
+
+1. Acesse **Site settings** > **Environment variables** no dashboard do Netlify
+2. Adicione a variável:
+   - **Key**: `GEMINI_API_KEY`
+   - **Value**: Sua chave da API do Google Gemini (a mesma que você configurou no Replit)
+   - **Scopes**: Marque todas (Build, Functions, Post processing)
+3. Faça um novo deploy após configurar a variável
+
+Sem essa configuração, a página "Reflexões que Curam" não funcionará em produção.
+
 ## ✅ Pré-requisitos
 
 - Conta no [Netlify](https://www.netlify.com/)

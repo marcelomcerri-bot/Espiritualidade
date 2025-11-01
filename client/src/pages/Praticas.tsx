@@ -59,16 +59,16 @@ export default function Praticas() {
                 reference="Great Meditation. Gratitude Meditation. YouTube, 2022. Disponível em: https://www.youtube.com/watch?v=3t6XdFnJpQM"
               />
               <VideoPlayer
-                videoId="1vx8iUvfyCY"
+                videoId="2saauDlIqM0"
                 title="Meditação para Sono Profundo"
                 description="O sono reparador é fundamental para a saúde mental e espiritual. Esta prática de relaxamento profundo auxilia na regulação do sistema nervoso, reduzindo pensamentos ruminantes e promovendo paz interior, essenciais para o autocuidado espiritual."
-                reference="Michael Sealey. Guided Meditation for Deep Sleep. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=1vx8iUvfyCY"
+                reference="Poetoterapia por Lázaro Ramon. Meditação para Dormir - Viagem Mental Profundamente Relaxante. YouTube. Disponível em: https://www.youtube.com/watch?v=2saauDlIqM0"
               />
               <VideoPlayer
-                videoId="O-6f5wQXSu8"
+                videoId="sJjyX9W-E-Y"
                 title="Meditação para Ansiedade (10 min)"
                 description="A ansiedade afeta profundamente a dimensão espiritual ao desconectar a pessoa do presente. Esta meditação utiliza técnicas de respiração e atenção plena que acalmam o sistema nervoso, restaurando o equilíbrio entre corpo, mente e espírito."
-                reference="Goodful. 10-Minute Meditation For Anxiety. YouTube, 2019. Disponível em: https://www.youtube.com/watch?v=O-6f5wQXSu8"
+                reference="Raissa Zoccal - Yoga Mudra. Meditação Guiada para Aliviar Ansiedade. YouTube. Disponível em: https://www.youtube.com/watch?v=sJjyX9W-E-Y"
               />
             </div>
           </TabsContent>
