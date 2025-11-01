@@ -69,7 +69,7 @@ export default function MensagemAlma() {
             Mensagem da Alma
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Uma mensagem única, gerada especialmente para você, baseada em sua jornada espiritual
+            Cuidado Espiritual na Saúde Mental
           </p>
         </div>
 
@@ -134,13 +134,7 @@ export default function MensagemAlma() {
           </CardContent>
         </Card>
 
-        <div className="mt-8 p-6 rounded-2xl bg-muted/30 border border-muted">
-          <p className="text-sm text-muted-foreground italic leading-relaxed">
-            <strong className="text-foreground">Sobre esta mensagem:</strong> Cada mensagem é única e gerada por inteligência artificial treinada em princípios de Logoterapia de Viktor Frankl e cuidado espiritual na saúde mental. Ela analisa suas reflexões do diário e autoavaliações para oferecer insights personalizados à sua jornada atual. Visite esta página sempre que precisar de orientação, inspiração ou uma nova perspectiva.
-          </p>
-        </div>
-
-        <div className="mt-6 p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20">
+        <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20">
           <p className="text-sm text-muted-foreground leading-relaxed text-center">
             💫 Esta mensagem foi criada especialmente para você em {new Date().toLocaleDateString('pt-BR', { 
               weekday: 'long', 

@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover-elevate rounded-lg px-3 py-2 transition-all">
+          <Link href="/" className="flex items-center gap-2 hover-elevate rounded-lg px-3 py-2 transition-all mr-6">
             <Heart className="w-6 h-6 text-primary" />
             <span className="font-serif text-xl font-medium text-foreground">
               Bem-Estar Espiritual
