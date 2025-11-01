@@ -162,14 +162,14 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="Vídeo"
-                citation="STEPHENSON, J. Anxiety Relief Meditation. YouTube, 2021. Disponível em: https://www.youtube.com/watch?v=z6X5oEIg6Ak. Acesso em: 1 nov. 2025."
-                url="https://www.youtube.com/watch?v=z6X5oEIg6Ak"
+                citation="SEALEY, M. Guided Meditation for Deep Sleep. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=1vx8iUvfyCY. Acesso em: 1 nov. 2025."
+                url="https://www.youtube.com/watch?v=1vx8iUvfyCY"
               />
 
               <ReferenceItem
                 type="Vídeo"
-                citation="GOODFUL. Morning Meditation. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=ssss7V1_eyA. Acesso em: 1 nov. 2025."
-                url="https://www.youtube.com/watch?v=ssss7V1_eyA"
+                citation="GOODFUL. 10-Minute Meditation For Anxiety. YouTube, 2019. Disponível em: https://www.youtube.com/watch?v=O-6f5wQXSu8. Acesso em: 1 nov. 2025."
+                url="https://www.youtube.com/watch?v=O-6f5wQXSu8"
               />
 
               <ReferenceItem
@@ -197,7 +197,7 @@ export default function Referencias() {
               Todas as referências seguem rigorosamente as normas da ABNT (Associação Brasileira de Normas Técnicas) para garantir credibilidade acadêmica e facilitar verificação das fontes.
             </p>
             <p>
-              Esta plataforma é fundamentada especialmente nos estudos da <strong className="text-foreground">Profª Drª Eliane Ramos Pereira</strong>, professora titular da Universidade Federal Fluminense (UFF) e referência nacional em espiritualidade aplicada à enfermagem e saúde mental.
+              Esta plataforma é fundamentada especialmente nos estudos da <strong className="text-foreground">Profª Drª Eliane Ramos Pereira</strong>, professora titular da Universidade Federal Fluminense (UFF) e referência nacional em espiritualidade aplicada à enfermagem e ao campo da saúde.
             </p>
             <p>
               Os conteúdos foram desenvolvidos com base em evidências científicas, mantendo fidelidade às pesquisas originais e respeitando integralmente os direitos autorais.

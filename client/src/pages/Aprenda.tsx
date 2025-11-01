@@ -12,7 +12,7 @@ export default function Aprenda() {
             Aprenda Mais
           </h1>
           <p className="text-lg text-muted-foreground">
-            Compreenda a base científica que fundamenta o cuidado espiritual na saúde mental
+            Compreenda a base científica que fundamenta o cuidado espiritual no campo da saúde
           </p>
         </div>
 
@@ -169,7 +169,7 @@ export default function Aprenda() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              Esta plataforma é fundamentada em décadas de pesquisas sobre espiritualidade e saúde mental. Destaque especial para os trabalhos da Profª Eliane Ramos Pereira (UFF), referência nacional em espiritualidade no cuidado em saúde.
+              Esta plataforma é fundamentada em décadas de pesquisas sobre espiritualidade no campo da saúde. Destaque especial para os trabalhos da Profª Eliane Ramos Pereira (UFF), referência nacional em espiritualidade no cuidado em saúde.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">

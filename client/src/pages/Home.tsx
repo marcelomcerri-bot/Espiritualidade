@@ -76,7 +76,7 @@ export default function Home() {
               Descubra o <span className="text-primary">Sentido</span> e o <span className="text-primary">Propósito</span> da Vida
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-8">
-              Plataforma baseada em evidências científicas e Logoterapia para fortalecer sua saúde mental através do cuidado espiritual.
+              Plataforma baseada em evidências científicas e Logoterapia para fortalecer seu bem-estar através do cuidado espiritual.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/proposito">
@@ -114,7 +114,7 @@ export default function Home() {
               Ferramentas para sua Jornada
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Recursos interativos baseados em Logoterapia e estudos sobre espiritualidade na saúde mental
+              Recursos interativos baseados em Logoterapia e estudos sobre espiritualidade no campo da saúde
             </p>
           </div>
           
@@ -154,7 +154,7 @@ export default function Home() {
                 Desde 2005, a Organização Mundial da Saúde reconhece a espiritualidade como componente integral da saúde. Estudos mostram que práticas espirituais funcionam como fator de proteção contra ansiedade, depressão e estresse.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Este projeto é fundamentado nas pesquisas da Profª Eliane Ramos Pereira (UFF), especialista em espiritualidade no cuidado em saúde mental, e em evidências de estudos fenomenológicos e de Logoterapia.
+                Este projeto é fundamentado em evidências científicas, estudos fenomenológicos e de Logoterapia, orientado pela Profª Eliane Ramos Pereira (UFF), especialista em espiritualidade no cuidado em saúde.
               </p>
               <Link href="/referencias">
                 <Button variant="outline" size="lg" data-testid="button-ver-referencias">
@@ -192,7 +192,7 @@ export default function Home() {
             Inicie sua Jornada de Autoconhecimento
           </h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Explore ferramentas baseadas em ciência para cultivar esperança, encontrar sentido e fortalecer sua saúde mental.
+            Explore ferramentas baseadas em ciência para cultivar esperança, encontrar sentido e fortalecer seu bem-estar.
           </p>
           <Link href="/proposito">
             <Button size="lg" className="text-lg px-12" data-testid="button-cta-comecar">

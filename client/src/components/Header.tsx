@@ -28,15 +28,15 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navigation.map((item) => (
               <Link 
                 key={item.name} 
                 href={item.href}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all hover-elevate ${
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-primary/10 ${
                   location === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-primary bg-primary/10"
+                    : "text-foreground hover:text-primary"
                 }`}
                 data-testid={`link-${item.name.toLowerCase().replace(" ", "-")}`}
               >

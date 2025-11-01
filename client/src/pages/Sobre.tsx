@@ -35,13 +35,13 @@ export default function Sobre() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              Este projeto foi desenvolvido como produto do seminário <strong className="text-foreground">"Cuidado Espiritual na Saúde Mental"</strong>, apresentado como trabalho acadêmico na disciplina de Enfermagem em Saúde Mental.
+              Este projeto foi desenvolvido como trabalho acadêmico na disciplina <strong className="text-foreground">"Espiritualidade no Campo da Saúde"</strong>, do curso de graduação em Enfermagem da Universidade Federal Fluminense (UFF).
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              A plataforma visa integrar conhecimentos sobre espiritualidade e saúde mental, oferecendo ferramentas práticas baseadas em evidências científicas e na Logoterapia de Viktor Frankl para o fortalecimento do bem-estar emocional e espiritual.
+              A plataforma visa integrar conhecimentos sobre espiritualidade no campo da saúde, oferecendo ferramentas práticas baseadas em evidências científicas e na Logoterapia de Viktor Frankl para o fortalecimento do bem-estar emocional e espiritual.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Fundamentado em estudos sobre a dimensão espiritual como fator de proteção e promoção da saúde mental, este trabalho busca contribuir para um cuidado integral e humanizado.
+              Fundamentado em estudos sobre a dimensão espiritual como fator de proteção e promoção da saúde, este trabalho busca contribuir para um cuidado integral e humanizado.
             </p>
           </CardContent>
         </Card>

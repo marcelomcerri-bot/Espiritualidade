@@ -14,7 +14,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Plataforma baseada em evidências científicas e Logoterapia para promover o cuidado espiritual na saúde mental.
+              Plataforma baseada em evidências científicas e Logoterapia para promover o cuidado espiritual no campo da saúde.
             </p>
           </div>
 
@@ -85,29 +85,24 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-serif font-medium mb-4 text-foreground">Contato</h3>
+            <h3 className="font-serif font-medium mb-4 text-foreground">Projeto</h3>
             <div className="space-y-3 text-sm">
-              <p className="text-muted-foreground">
-                Projeto acadêmico desenvolvido para o seminário de Cuidado Espiritual na Saúde Mental.
+              <p className="text-muted-foreground leading-relaxed">
+                Trabalho acadêmico desenvolvido na disciplina de Espiritualidade no Campo da Saúde.
               </p>
-              <a
-                href="mailto:contato@example.com"
-                className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
-                data-testid="link-footer-email"
-              >
-                <Mail className="w-4 h-4" />
-                Suporte
-              </a>
+              <p className="text-muted-foreground text-xs">
+                UFF - Escola de Enfermagem Aurora de Afonso Costa
+              </p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-card-border mt-12 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            Desenvolvido com base nas pesquisas da Profª Eliane Ramos Pereira (UFF) sobre espiritualidade e saúde mental.
+            Desenvolvido por acadêmicos de enfermagem da UFF na disciplina de Espiritualidade no Campo da Saúde
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            © 2025 • Todos os direitos reservados • Conteúdo baseado em evidências científicas
+            © 2025 • Conteúdo baseado em evidências científicas • Orientação: Profª Drª Eliane Ramos Pereira
           </p>
         </div>
       </div>

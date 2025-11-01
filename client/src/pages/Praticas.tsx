@@ -59,16 +59,16 @@ export default function Praticas() {
                 reference="Great Meditation. Gratitude Meditation. YouTube, 2022. Disponível em: https://www.youtube.com/watch?v=3t6XdFnJpQM"
               />
               <VideoPlayer
-                videoId="z6X5oEIg6Ak"
-                title="Meditação para Ansiedade"
-                description="Técnicas para reduzir ansiedade e encontrar equilíbrio emocional."
-                reference="Jason Stephenson. Anxiety Relief Meditation. YouTube, 2021. Disponível em: https://www.youtube.com/watch?v=z6X5oEIg6Ak"
+                videoId="1vx8iUvfyCY"
+                title="Meditação para Sono Profundo"
+                description="Meditação guiada para relaxamento profundo e sono reparador."
+                reference="Michael Sealey. Guided Meditation for Deep Sleep. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=1vx8iUvfyCY"
               />
               <VideoPlayer
-                videoId="ssss7V1_eyA"
-                title="Meditação Matinal"
-                description="Comece o dia com intenção, presença e energia positiva."
-                reference="Goodful. Morning Meditation. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=ssss7V1_eyA"
+                videoId="O-6f5wQXSu8"
+                title="Meditação para Ansiedade (10 min)"
+                description="Técnica rápida e eficaz para acalmar a mente e reduzir a ansiedade."
+                reference="Goodful. 10-Minute Meditation For Anxiety. YouTube, 2019. Disponível em: https://www.youtube.com/watch?v=O-6f5wQXSu8"
               />
             </div>
           </TabsContent>
