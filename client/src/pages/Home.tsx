@@ -112,41 +112,43 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <div className="bg-card rounded-2xl p-8 border border-card-border">
-              <h3 className="font-serif text-2xl font-medium mb-4 text-foreground">
-                Desenvolvido por Estudantes de Enfermagem
+            <div className="relative bg-gradient-to-br from-card to-background rounded-3xl p-10 border border-border/50 shadow-xl hover-lift overflow-hidden group">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <h3 className="relative font-serif text-2xl font-bold mb-6 text-foreground">
+                Desenvolvido por Estudantes de <span className="text-primary">Enfermagem</span>
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="relative text-muted-foreground leading-relaxed mb-4">
                 Esta plataforma foi criada por discentes do curso de Enfermagem da UFF como parte de seus estudos sobre espiritualidade no campo da saúde. Com dedicação e compromisso acadêmico, buscamos integrar conhecimentos científicos e práticas espirituais para promover bem-estar integral.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="relative text-muted-foreground leading-relaxed">
                 A plataforma oferece recursos interativos fundamentados em Logoterapia e estudos fenomenológicos sobre espiritualidade, tornando acessível o conhecimento sobre cuidado espiritual na saúde mental.
               </p>
             </div>
             
-            <div className="bg-card rounded-2xl p-8 border border-card-border">
-              <h3 className="font-serif text-2xl font-medium mb-4 text-foreground">
-                Por Que Cuidado Espiritual?
+            <div className="relative bg-gradient-to-br from-card to-background rounded-3xl p-10 border border-border/50 shadow-xl hover-lift overflow-hidden group">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <h3 className="relative font-serif text-2xl font-bold mb-6 text-foreground">
+                Por Que <span className="text-primary">Cuidado Espiritual</span>?
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="relative text-muted-foreground leading-relaxed mb-6">
                 A Organização Mundial da Saúde reconhece desde 2005 a espiritualidade como componente integral da saúde. Pesquisas demonstram que cultivar a dimensão espiritual:
               </p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  <span>Fortalece a resiliência psicológica</span>
+              <ul className="relative space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Fortalece a resiliência psicológica</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  <span>Reduz sintomas de ansiedade e depressão</span>
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Reduz sintomas de ansiedade e depressão</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  <span>Promove esperança e equilíbrio emocional</span>
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Promove esperança e equilíbrio emocional</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  <span>Auxilia na busca por sentido existencial</span>
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Auxilia na busca por sentido existencial</span>
                 </li>
               </ul>
             </div>
@@ -228,21 +230,21 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-card-border">
-                <p className="text-4xl font-bold text-primary mb-2">OMS</p>
-                <p className="text-sm text-muted-foreground">Reconhece a espiritualidade na saúde desde 2005</p>
+              <div className="group p-8 rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-5xl font-black text-primary mb-3 group-hover:scale-110 transition-transform">OMS</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Reconhece a espiritualidade na saúde desde 2005</p>
               </div>
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-card-border">
-                <p className="text-4xl font-bold text-accent-foreground mb-2">EEAAC</p>
-                <p className="text-sm text-muted-foreground">Escola de Enfermagem Aurora de Afonso Costa</p>
+              <div className="group p-8 rounded-3xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-5xl font-black text-accent mb-3 group-hover:scale-110 transition-transform">EEAAC</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Escola de Enfermagem Aurora de Afonso Costa</p>
               </div>
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-chart-2/10 to-chart-2/5 border border-card-border">
-                <p className="text-4xl font-bold text-chart-2 mb-2">UFF</p>
-                <p className="text-sm text-muted-foreground">Universidade Federal Fluminense</p>
+              <div className="group p-8 rounded-3xl bg-gradient-to-br from-chart-2/15 to-chart-2/5 border border-chart-2/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-5xl font-black text-chart-2 mb-3 group-hover:scale-110 transition-transform">UFF</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Universidade Federal Fluminense</p>
               </div>
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-chart-3/10 to-chart-3/5 border border-card-border">
-                <p className="text-4xl font-bold text-chart-3 mb-2">Frankl</p>
-                <p className="text-sm text-muted-foreground">Logoterapia como base teórica</p>
+              <div className="group p-8 rounded-3xl bg-gradient-to-br from-chart-3/15 to-chart-3/5 border border-chart-3/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-5xl font-black text-chart-3 mb-3 group-hover:scale-110 transition-transform">Frankl</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Logoterapia como base teórica</p>
               </div>
             </div>
           </div>
