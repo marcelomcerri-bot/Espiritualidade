@@ -9,11 +9,17 @@ import {
   type InsertMeaningPillar,
   type JourneyAssessment,
   type InsertJourneyAssessment,
+  type SoulMessage,
+  type InsertSoulMessage,
+  type DailyReflection,
+  type InsertDailyReflection,
   users,
   diaryEntries,
   purposeAnswers,
   meaningPillars,
   journeyAssessments,
+  soulMessages,
+  dailyReflections,
 } from "@shared/schema";
 import { eq, and, desc, sql as drizzleSql } from "drizzle-orm";
 import { randomUUID } from "crypto";
@@ -45,6 +51,12 @@ export interface IStorage {
   
   getJourneyAssessments(userId: string): Promise<JourneyAssessment[]>;
   createJourneyAssessment(assessment: InsertJourneyAssessment): Promise<JourneyAssessment>;
+  
+  saveSoulMessage(message: InsertSoulMessage): Promise<SoulMessage>;
+  getRecentSoulMessages(userId: string, limit?: number): Promise<SoulMessage[]>;
+  
+  saveDailyReflection(reflection: InsertDailyReflection): Promise<DailyReflection>;
+  getRecentDailyReflections(limit?: number): Promise<DailyReflection[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -53,6 +65,8 @@ export class MemStorage implements IStorage {
   private purposeAnswers: Map<string, PurposeAnswer>;
   private meaningPillars: Map<string, MeaningPillar>;
   private journeyAssessments: Map<string, JourneyAssessment>;
+  private soulMessages: Map<string, SoulMessage>;
+  private dailyReflections: Map<string, DailyReflection>;
 
   constructor() {
     this.users = new Map();
@@ -60,6 +74,8 @@ export class MemStorage implements IStorage {
     this.purposeAnswers = new Map();
     this.meaningPillars = new Map();
     this.journeyAssessments = new Map();
+    this.soulMessages = new Map();
+    this.dailyReflections = new Map();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -173,6 +189,61 @@ export class MemStorage implements IStorage {
     this.journeyAssessments.set(id, newAssessment);
     return newAssessment;
   }
+  
+  async saveSoulMessage(message: InsertSoulMessage): Promise<SoulMessage> {
+    const id = randomUUID();
+    const newMessage: SoulMessage = {
+      ...message,
+      id,
+      createdAt: new Date(),
+      userId: message.userId ?? null
+    };
+    this.soulMessages.set(id, newMessage);
+    
+    const userMessages = Array.from(this.soulMessages.values())
+      .filter(m => m.userId === message.userId)
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    
+    if (userMessages.length > 30) {
+      const toDelete = userMessages.slice(30);
+      toDelete.forEach(m => this.soulMessages.delete(m.id));
+    }
+    
+    return newMessage;
+  }
+  
+  async getRecentSoulMessages(userId: string, limit: number = 30): Promise<SoulMessage[]> {
+    return Array.from(this.soulMessages.values())
+      .filter(m => m.userId === userId)
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+      .slice(0, limit);
+  }
+  
+  async saveDailyReflection(reflection: InsertDailyReflection): Promise<DailyReflection> {
+    const id = randomUUID();
+    const newReflection: DailyReflection = {
+      ...reflection,
+      id,
+      createdAt: new Date()
+    };
+    this.dailyReflections.set(id, newReflection);
+    
+    const allReflections = Array.from(this.dailyReflections.values())
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    
+    if (allReflections.length > 30) {
+      const toDelete = allReflections.slice(30);
+      toDelete.forEach(r => this.dailyReflections.delete(r.id));
+    }
+    
+    return newReflection;
+  }
+  
+  async getRecentDailyReflections(limit: number = 30): Promise<DailyReflection[]> {
+    return Array.from(this.dailyReflections.values())
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+      .slice(0, limit);
+  }
 }
 
 export class DbStorage implements IStorage {
@@ -270,6 +341,58 @@ export class DbStorage implements IStorage {
     if (!db) throw new Error("Database not initialized");
     const [newAssessment] = await db.insert(journeyAssessments).values(assessment).returning();
     return newAssessment;
+  }
+  
+  async saveSoulMessage(message: InsertSoulMessage): Promise<SoulMessage> {
+    if (!db) throw new Error("Database not initialized");
+    const [newMessage] = await db.insert(soulMessages).values(message).returning();
+    
+    if (message.userId) {
+      const userMessages = await db.select().from(soulMessages)
+        .where(eq(soulMessages.userId, message.userId))
+        .orderBy(desc(soulMessages.createdAt));
+      
+      if (userMessages.length > 30) {
+        const toDelete = userMessages.slice(30);
+        for (const msg of toDelete) {
+          await db.delete(soulMessages).where(eq(soulMessages.id, msg.id));
+        }
+      }
+    }
+    
+    return newMessage;
+  }
+  
+  async getRecentSoulMessages(userId: string, limit: number = 30): Promise<SoulMessage[]> {
+    if (!db) throw new Error("Database not initialized");
+    return await db.select().from(soulMessages)
+      .where(eq(soulMessages.userId, userId))
+      .orderBy(desc(soulMessages.createdAt))
+      .limit(limit);
+  }
+  
+  async saveDailyReflection(reflection: InsertDailyReflection): Promise<DailyReflection> {
+    if (!db) throw new Error("Database not initialized");
+    const [newReflection] = await db.insert(dailyReflections).values(reflection).returning();
+    
+    const allReflections = await db.select().from(dailyReflections)
+      .orderBy(desc(dailyReflections.createdAt));
+    
+    if (allReflections.length > 30) {
+      const toDelete = allReflections.slice(30);
+      for (const ref of toDelete) {
+        await db.delete(dailyReflections).where(eq(dailyReflections.id, ref.id));
+      }
+    }
+    
+    return newReflection;
+  }
+  
+  async getRecentDailyReflections(limit: number = 30): Promise<DailyReflection[]> {
+    if (!db) throw new Error("Database not initialized");
+    return await db.select().from(dailyReflections)
+      .orderBy(desc(dailyReflections.createdAt))
+      .limit(limit);
   }
 }
 
