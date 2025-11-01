@@ -1,0 +1,17 @@
+[build]
+  # Comando para fazer o build apenas do frontend
+  command = "npm install && vite build"
+  
+  # Diretório onde estão os arquivos estáticos após o build do Vite
+  publish = "dist/public"
+
+# Redirecionamentos para SPAs (Single Page Applications)
+# Isso garante que rotas do React Router funcionem corretamente
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Configuração opcional para ignorar erros de build relacionados ao backend
+[build.environment]
+  NODE_VERSION = "20"

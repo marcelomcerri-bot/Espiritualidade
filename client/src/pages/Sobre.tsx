@@ -67,7 +67,6 @@ export default function Sobre() {
                 <p><strong className="text-foreground">Formação:</strong> Doutora em Enfermagem | Mestre em Enfermagem (UNIRIO) | Especialista em Psicanálise e Saúde Mental (UERJ)</p>
                 <p><strong className="text-foreground">Áreas de Expertise:</strong> Enfermagem em Saúde Mental, Espiritualidade e Cuidado Espiritual, Fenomenologia (Merleau-Ponty), Logoterapia (Viktor Frankl), Psicossomática</p>
                 <p><strong className="text-foreground">Liderança:</strong> Núcleo de Estudos Qualitativos Translacionais em Emoções e Espiritualidade na Saúde (QUALITEES/CNPq)</p>
-                <p><strong className="text-foreground">Produção Acadêmica:</strong> Mais de 1.900 citações no Google Scholar</p>
               </div>
               
               <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">

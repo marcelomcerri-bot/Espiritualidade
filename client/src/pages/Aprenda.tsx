@@ -174,12 +174,12 @@ export default function Aprenda() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               <div className="p-4 rounded-xl bg-background border border-card-border">
-                <p className="font-medium text-foreground mb-1">1.580+ Citações</p>
-                <p className="text-sm text-muted-foreground">Produção acadêmica reconhecida internacionalmente</p>
-              </div>
-              <div className="p-4 rounded-xl bg-background border border-card-border">
                 <p className="font-medium text-foreground mb-1">Universidade Federal Fluminense</p>
                 <p className="text-sm text-muted-foreground">Professora Titular em Enfermagem</p>
+              </div>
+              <div className="p-4 rounded-xl bg-background border border-card-border">
+                <p className="font-medium text-foreground mb-1">EEAAC/UFF</p>
+                <p className="text-sm text-muted-foreground">Escola de Enfermagem Aurora de Afonso Costa</p>
               </div>
               <div className="p-4 rounded-xl bg-background border border-card-border">
                 <p className="font-medium text-foreground mb-1">Fenomenologia</p>

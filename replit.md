@@ -12,6 +12,8 @@ A spiritual wellness platform built with React and Express for the discipline "E
 - Removed Contact/Support section, replaced with academic project information
 - Updated footer credits to reflect student development for UFF discipline
 - Fixed React warnings related to nested anchor tags
+- Removed academic citation counts ("1.900 citações no Google Scholar")
+- Configured project for Netlify deployment (netlify.toml + _redirects)
 
 ## Project Architecture
 
