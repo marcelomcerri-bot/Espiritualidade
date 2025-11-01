@@ -19,8 +19,8 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <Link href={href}>
-      <a
-        className="block group h-full"
+      <div
+        className="block group h-full cursor-pointer"
         data-testid={`card-${title.toLowerCase().replace(/\s+/g, "-")}`}
       >
         <div className={`h-full rounded-2xl bg-gradient-to-br ${gradient} p-8 border-2 border-card-border/50 shadow-md hover:shadow-xl hover:border-primary/30 hover:-translate-y-2 transition-all duration-300`}>
@@ -41,7 +41,7 @@ export default function FeatureCard({
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>
-      </a>
+      </div>
     </Link>
   );
 }
