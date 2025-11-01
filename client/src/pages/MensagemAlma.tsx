@@ -66,10 +66,10 @@ export default function MensagemAlma() {
             </div>
           </div>
           <h1 className="font-serif text-4xl lg:text-5xl font-medium mb-4 text-foreground">
-            Mensagem da Alma
+            Reflexões que Curam
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cuidado Espiritual na Saúde Mental
+            Mensagens de Cuidado Espiritual para sua Jornada
           </p>
         </div>
 

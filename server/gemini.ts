@@ -81,7 +81,7 @@ Com base nesses dados, crie uma mensagem personalizada que:
 
   const fullPrompt = `${userContext}
 
-Gere uma "Mensagem da Alma" única e profunda para esta pessoa. Seja autêntico, compassivo e inspirador. A mensagem será exibida hoje, ${new Date().toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.`;
+Gere uma "Reflexão que Cura" única e profunda para esta pessoa. Seja autêntico, compassivo e inspirador. A mensagem será exibida hoje, ${new Date().toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.`;
 
   try {
     const response = await ai.models.generateContent({

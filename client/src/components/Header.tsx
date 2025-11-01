@@ -13,7 +13,7 @@ export default function Header() {
     { name: "Meu Diário", href: "/diario" },
     { name: "Práticas", href: "/praticas" },
     { name: "Minha Jornada", href: "/jornada" },
-    { name: "Mensagem da Alma", href: "/mensagem-alma" },
+    { name: "Reflexões que Curam", href: "/mensagem-alma" },
     { name: "Aprenda Mais", href: "/aprenda" },
   ];
 
@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2 hover-elevate rounded-lg px-3 py-2 transition-all mr-6">
             <Heart className="w-6 h-6 text-primary" />
             <span className="font-serif text-xl font-medium text-foreground">
-              Bem-Estar Espiritual
+              Cuidado Espiritual na Saúde Mental
             </span>
           </Link>
 
