@@ -62,10 +62,10 @@ export default function Praticas() {
                 reference="Mindful Peace. Guided Meditation for Inner Peace. YouTube, 2023. Disponível em: https://www.youtube.com/watch?v=inpok4MKVLM"
               />
               <VideoPlayer
-                videoId="3t6XdFnJpQM"
+                videoId="BSVMH4WLLp4"
                 title="Meditação de Gratidão"
                 description="A gratidão é uma prática espiritual poderosa que aumenta o bem-estar psicológico e promove resiliência emocional. Estudos mostram que cultivar gratidão regularmente reduz estresse e fortalece o sentido de vida, conceito central na Logoterapia de Viktor Frankl."
-                reference="Great Meditation. Gratitude Meditation. YouTube, 2022. Disponível em: https://www.youtube.com/watch?v=3t6XdFnJpQM"
+                reference="Poetoterapia por Lázaro Ramon. Meditação Guiada - Gratidão. YouTube. Disponível em: https://www.youtube.com/watch?v=BSVMH4WLLp4"
               />
               <VideoPlayer
                 videoId="2saauDlIqM0"

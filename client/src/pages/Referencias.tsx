@@ -205,8 +205,8 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="Vídeo"
-                citation="GREAT MEDITATION. Gratitude Meditation. YouTube, 2022. Disponível em: https://www.youtube.com/watch?v=3t6XdFnJpQM. Acesso em: 1 nov. 2025."
-                url="https://www.youtube.com/watch?v=3t6XdFnJpQM"
+                citation="POETOTERAPIA POR LÁZARO RAMON. Meditação Guiada - Gratidão. YouTube. Disponível em: https://www.youtube.com/watch?v=BSVMH4WLLp4. Acesso em: 1 nov. 2025."
+                url="https://www.youtube.com/watch?v=BSVMH4WLLp4"
               />
 
               <ReferenceItem
