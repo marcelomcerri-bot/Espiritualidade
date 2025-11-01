@@ -93,3 +93,34 @@ export const insertJourneyAssessmentSchema = createInsertSchema(journeyAssessmen
 
 export type InsertJourneyAssessment = z.infer<typeof insertJourneyAssessmentSchema>;
 export type JourneyAssessment = typeof journeyAssessments.$inferSelect;
+
+export const soulMessages = pgTable("soul_messages", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  userId: varchar("user_id").references(() => users.id),
+  messageHash: varchar("message_hash", { length: 64 }).notNull(),
+  excerpt: text("excerpt").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const insertSoulMessageSchema = createInsertSchema(soulMessages).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertSoulMessage = z.infer<typeof insertSoulMessageSchema>;
+export type SoulMessage = typeof soulMessages.$inferSelect;
+
+export const dailyReflections = pgTable("daily_reflections", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  messageHash: varchar("message_hash", { length: 64 }).notNull(),
+  excerpt: text("excerpt").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const insertDailyReflectionSchema = createInsertSchema(dailyReflections).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertDailyReflection = z.infer<typeof insertDailyReflectionSchema>;
+export type DailyReflection = typeof dailyReflections.$inferSelect;
