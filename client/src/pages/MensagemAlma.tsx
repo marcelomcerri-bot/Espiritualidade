@@ -19,9 +19,12 @@ export default function MensagemAlma() {
     setError(null);
 
     try {
+      const isNetlify = window.location.hostname.includes('netlify.app');
+      const baseUrl = isNetlify ? '/.netlify/functions' : '/api';
+      
       const [messageRes, reflectionRes] = await Promise.all([
-        fetch("/api/soul-message"),
-        fetch("/api/daily-reflection")
+        fetch(`${baseUrl}/soul-message`),
+        fetch(`${baseUrl}/daily-reflection`)
       ]);
 
       if (!messageRes.ok || !reflectionRes.ok) {
