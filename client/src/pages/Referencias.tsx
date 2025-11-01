@@ -232,12 +232,21 @@ export default function Referencias() {
             <p>
               Para conhecer mais sobre o trabalho da Profª Eliane Ramos Pereira, visite seu{" "}
               <a
-                href="https://pesquisadores.uff.br/researcher/eliane-ramos-pereira"
+                href="https://scholar.google.com/citations?user=7VMEE9EAAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline font-medium"
               >
-                perfil acadêmico na UFF
+                perfil acadêmico no Google Scholar
+              </a>
+              {" "}ou seu{" "}
+              <a
+                href="https://orcid.org/0000-0002-6381-3979"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                perfil ORCID
               </a>
               .
             </p>
