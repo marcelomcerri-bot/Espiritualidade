@@ -133,7 +133,7 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="PDF"
-                citation="CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT, G.; MANHÃES, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico."
+                citation="CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT FREITAS, G.; MANHAES DE CARVALHO, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S.; SESSIN FREIXIEIRO YOUSSEF, B.; MOTTA CONCEICAO, D. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico."
               />
             </div>
           </TabsContent>

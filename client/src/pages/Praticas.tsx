@@ -49,25 +49,25 @@ export default function Praticas() {
               <VideoPlayer
                 videoId="inpok4MKVLM"
                 title="Meditação para Paz Interior (10 min)"
-                description="Prática guiada de mindfulness para acalmar a mente e cultivar serenidade."
+                description="A meditação mindfulness ajuda a reduzir sintomas de ansiedade e depressão ao cultivar a presença consciente no momento atual. Esta prática promove equilíbrio emocional e fortalece a conexão com seu mundo interior, elemento essencial do cuidado espiritual na saúde mental."
                 reference="Mindful Peace. Guided Meditation for Inner Peace. YouTube, 2023. Disponível em: https://www.youtube.com/watch?v=inpok4MKVLM"
               />
               <VideoPlayer
                 videoId="3t6XdFnJpQM"
                 title="Meditação de Gratidão"
-                description="Cultive sentimentos de gratidão e aprecie as bênçãos da vida."
+                description="A gratidão é uma prática espiritual poderosa que aumenta o bem-estar psicológico e promove resiliência emocional. Estudos mostram que cultivar gratidão regularmente reduz estresse e fortalece o sentido de vida, conceito central na Logoterapia de Viktor Frankl."
                 reference="Great Meditation. Gratitude Meditation. YouTube, 2022. Disponível em: https://www.youtube.com/watch?v=3t6XdFnJpQM"
               />
               <VideoPlayer
                 videoId="1vx8iUvfyCY"
                 title="Meditação para Sono Profundo"
-                description="Meditação guiada para relaxamento profundo e sono reparador."
+                description="O sono reparador é fundamental para a saúde mental e espiritual. Esta prática de relaxamento profundo auxilia na regulação do sistema nervoso, reduzindo pensamentos ruminantes e promovendo paz interior, essenciais para o autocuidado espiritual."
                 reference="Michael Sealey. Guided Meditation for Deep Sleep. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=1vx8iUvfyCY"
               />
               <VideoPlayer
                 videoId="O-6f5wQXSu8"
                 title="Meditação para Ansiedade (10 min)"
-                description="Técnica rápida e eficaz para acalmar a mente e reduzir a ansiedade."
+                description="A ansiedade afeta profundamente a dimensão espiritual ao desconectar a pessoa do presente. Esta meditação utiliza técnicas de respiração e atenção plena que acalmam o sistema nervoso, restaurando o equilíbrio entre corpo, mente e espírito."
                 reference="Goodful. 10-Minute Meditation For Anxiety. YouTube, 2019. Disponível em: https://www.youtube.com/watch?v=O-6f5wQXSu8"
               />
             </div>
@@ -87,13 +87,13 @@ export default function Praticas() {
               <VideoPlayer
                 videoId="lFcSrYw-ARY"
                 title="Música Relaxante com Sons da Natureza"
-                description="Combinação harmoniosa de melodias suaves e sons naturais para meditação."
+                description="A musicoterapia e os sons da natureza têm efeito comprovado na redução de cortisol e na promoção de estados meditativos. Esta prática facilita a conexão espiritual através da escuta contemplativa, nutrindo a alma e facilitando a introspecção."
                 reference="Meditation Relax Music. Relaxing Music with Nature Sounds. YouTube, 2019. Disponível em: https://www.youtube.com/watch?v=lFcSrYw-ARY"
               />
               <VideoPlayer
                 videoId="eKFTSSKCzWA"
                 title="Frequências de Cura 432Hz"
-                description="Música em frequência natural que promove harmonia e bem-estar."
+                description="Frequências sonoras específicas podem influenciar estados de consciência e bem-estar emocional. A música em 432Hz é associada à harmonia natural e à redução de estresse, criando um ambiente propício para práticas espirituais e cura emocional."
                 reference="Meditative Mind. 432Hz Healing Music. YouTube, 2018. Disponível em: https://www.youtube.com/watch?v=eKFTSSKCzWA"
               />
             </div>

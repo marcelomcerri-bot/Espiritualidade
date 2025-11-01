@@ -3,8 +3,10 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Sobre() {
   const authors = [
-    "Gabrielle Bittencourt",
-    "Gabriel Manhães",
+    "Bruno Sessin Freixieiro Youssef",
+    "Duane Motta Conceicao",
+    "Gabrielle Bittencourt Freitas",
+    "Gabriel Manhaes de Carvalho",
     "Marcelo Marques Cerri",
     "Maria Clara Cruz Lacerda Ritta",
     "Maria Luiza Cavalcanti Marques Gall Otero",
