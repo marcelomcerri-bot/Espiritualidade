@@ -49,10 +49,22 @@ export function useLocalDiary() {
     setEntries((prev) => prev.filter((entry) => entry.id !== id));
   };
 
+  const updateEntry = (id: string, updates: Partial<Omit<DiaryEntry, 'id' | 'date'>>) => {
+    setEntries((prev) => prev.map((entry) => 
+      entry.id === id ? { ...entry, ...updates } : entry
+    ));
+  };
+
+  const clearAll = () => {
+    setEntries([]);
+  };
+
   return {
     entries,
     addEntry,
     deleteEntry,
+    updateEntry,
+    clearAll,
     isLoading: false,
   };
 }
@@ -87,9 +99,26 @@ export function useLocalJourney() {
     return newAssessment;
   };
 
+  const deleteAssessment = (id: string) => {
+    setAssessments((prev) => prev.filter((assessment) => assessment.id !== id));
+  };
+
+  const updateAssessment = (id: string, updates: Partial<Omit<JourneyAssessment, 'id' | 'createdAt' | 'weekLabel'>>) => {
+    setAssessments((prev) => prev.map((assessment) => 
+      assessment.id === id ? { ...assessment, ...updates } : assessment
+    ));
+  };
+
+  const clearAll = () => {
+    setAssessments([]);
+  };
+
   return {
     assessments,
     addAssessment,
+    deleteAssessment,
+    updateAssessment,
+    clearAll,
     isLoading: false,
   };
 }

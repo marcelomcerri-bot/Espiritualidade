@@ -111,24 +111,8 @@ export default function MensagemAlma() {
                 </Button>
               </div>
             ) : (
-              <div className="space-y-6">
-                <div className="prose prose-lg max-w-none">
-                  {formatMessage(message)}
-                </div>
-
-                <div className="pt-6 border-t border-border flex justify-center">
-                  <Button
-                    onClick={() => fetchMessage(true)}
-                    disabled={isRefreshing}
-                    size="lg"
-                    variant="outline"
-                    className="gap-2"
-                    data-testid="button-refresh-message"
-                  >
-                    <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-                    {isRefreshing ? "Gerando Nova Mensagem..." : "Gerar Nova Mensagem"}
-                  </Button>
-                </div>
+              <div className="prose prose-lg max-w-none">
+                {formatMessage(message)}
               </div>
             )}
           </CardContent>

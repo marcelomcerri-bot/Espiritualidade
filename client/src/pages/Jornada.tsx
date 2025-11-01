@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from "recharts";
-import { TrendingUp, Heart, Brain, Sparkles, Plus } from "lucide-react";
+import { TrendingUp, Heart, Brain, Sparkles, Plus, Trash2, Edit, AlertTriangle } from "lucide-react";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { useLocalJourney } from "@/hooks/useLocalStorage";
@@ -12,6 +22,9 @@ import { useLocalJourney } from "@/hooks/useLocalStorage";
 export default function Jornada() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [showClearAllDialog, setShowClearAllDialog] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [newAssessment, setNewAssessment] = useState({
     spiritual: 50,
     emotional: 50,
@@ -24,11 +37,16 @@ export default function Jornada() {
     proposito: 50,
   });
 
-  const { assessments, addAssessment, isLoading } = useLocalJourney();
+  const { assessments, addAssessment, deleteAssessment, updateAssessment, clearAll, isLoading } = useLocalJourney();
 
   const handleSaveAssessment = () => {
     setIsSaving(true);
-    addAssessment(newAssessment);
+    if (editingId) {
+      updateAssessment(editingId, newAssessment);
+      setEditingId(null);
+    } else {
+      addAssessment(newAssessment);
+    }
     setIsDialogOpen(false);
     setNewAssessment({
       spiritual: 50,
@@ -42,6 +60,32 @@ export default function Jornada() {
       proposito: 50,
     });
     setIsSaving(false);
+  };
+
+  const handleEdit = (assessment: any) => {
+    setNewAssessment({
+      spiritual: assessment.spiritual,
+      emotional: assessment.emotional,
+      mental: assessment.mental,
+      sentidoVida: assessment.sentidoVida,
+      esperanca: assessment.esperanca,
+      gratidao: assessment.gratidao,
+      pazInterior: assessment.pazInterior,
+      conexao: assessment.conexao,
+      proposito: assessment.proposito,
+    });
+    setEditingId(assessment.id);
+    setIsDialogOpen(true);
+  };
+
+  const handleDelete = (id: string) => {
+    deleteAssessment(id);
+    setDeletingId(null);
+  };
+
+  const handleClearAll = () => {
+    clearAll();
+    setShowClearAllDialog(false);
   };
 
   const lineData = assessments.map((a) => ({
@@ -155,16 +199,47 @@ export default function Jornada() {
             </p>
           </div>
 
-          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-            <DialogTrigger asChild>
-              <Button size="lg" data-testid="button-new-assessment">
-                <Plus className="w-5 h-5 mr-2" />
-                Nova Autoavaliação
+          <div className="flex gap-2">
+            {assessments.length > 0 && (
+              <Button
+                onClick={() => setShowClearAllDialog(true)}
+                variant="outline"
+                size="sm"
+                className="text-destructive hover:bg-destructive/10"
+                data-testid="button-jornada-clear-all"
+              >
+                <Trash2 className="w-4 h-4 mr-2" />
+                Limpar Tudo
               </Button>
-            </DialogTrigger>
+            )}
+            <Dialog open={isDialogOpen} onOpenChange={(open) => {
+              setIsDialogOpen(open);
+              if (!open) {
+                setEditingId(null);
+                setNewAssessment({
+                  spiritual: 50,
+                  emotional: 50,
+                  mental: 50,
+                  sentidoVida: 50,
+                  esperanca: 50,
+                  gratidao: 50,
+                  pazInterior: 50,
+                  conexao: 50,
+                  proposito: 50,
+                });
+              }
+            }}>
+              <DialogTrigger asChild>
+                <Button size="lg" data-testid="button-new-assessment">
+                  <Plus className="w-5 h-5 mr-2" />
+                  Nova Autoavaliação
+                </Button>
+              </DialogTrigger>
             <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
               <DialogHeader>
-                <DialogTitle className="font-serif text-2xl">Autoavaliação Semanal</DialogTitle>
+                <DialogTitle className="font-serif text-2xl">
+                  {editingId ? "Editar Autoavaliação" : "Autoavaliação Semanal"}
+                </DialogTitle>
               </DialogHeader>
               <div className="space-y-6 py-4">
                 <div className="space-y-2">
@@ -273,11 +348,12 @@ export default function Jornada() {
                 </div>
 
                 <Button onClick={handleSaveAssessment} className="w-full" disabled={isSaving}>
-                  {isSaving ? "Salvando..." : "Salvar Autoavaliação"}
+                  {isSaving ? "Salvando..." : (editingId ? "Atualizar Autoavaliação" : "Salvar Autoavaliação")}
                 </Button>
               </div>
             </DialogContent>
           </Dialog>
+          </div>
         </div>
 
         {assessments.length === 0 ? (
@@ -461,6 +537,51 @@ export default function Jornada() {
             Estes gráficos são gerados a partir de autoavaliações semanais baseadas em escalas validadas de bem-estar espiritual. Pesquisas demonstram que o acompanhamento regular do próprio estado espiritual fortalece a consciência de si e facilita o cultivo intencional de práticas benéficas.
           </p>
         </div>
+
+        {/* Delete Confirmation Dialog */}
+        <AlertDialog open={deletingId !== null} onOpenChange={() => setDeletingId(null)}>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Excluir autoavaliação?</AlertDialogTitle>
+              <AlertDialogDescription>
+                Esta ação não pode ser desfeita. Esta autoavaliação será permanentemente excluída.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancelar</AlertDialogCancel>
+              <AlertDialogAction
+                onClick={() => deletingId && handleDelete(deletingId)}
+                className="bg-destructive hover:bg-destructive/90"
+              >
+                Excluir
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+
+        {/* Clear All Confirmation Dialog */}
+        <AlertDialog open={showClearAllDialog} onOpenChange={setShowClearAllDialog}>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle className="flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-destructive" />
+                Limpar todas as autoavaliações?
+              </AlertDialogTitle>
+              <AlertDialogDescription>
+                Esta ação não pode ser desfeita. Todas as {assessments.length} autoavaliação(ões) serão permanentemente excluídas.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancelar</AlertDialogCancel>
+              <AlertDialogAction
+                onClick={handleClearAll}
+                className="bg-destructive hover:bg-destructive/90"
+              >
+                Limpar Tudo
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </div>
     </div>
   );

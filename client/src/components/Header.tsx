@@ -19,17 +19,18 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover-elevate rounded-lg px-3 py-2 transition-all mr-6">
-            <Heart className="w-6 h-6 text-primary" />
-            <span className="font-serif text-xl font-medium text-foreground">
-              Cuidado Espiritual na Saúde Mental
-            </span>
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-3">
+        <div className="flex items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-2 hover-elevate rounded-lg px-2 py-1 transition-all flex-shrink-0">
+            <Heart className="w-5 h-5 text-primary" />
+            <div className="flex flex-col leading-tight">
+              <span className="font-serif text-sm font-medium text-foreground">Cuidado Espiritual</span>
+              <span className="font-serif text-xs text-muted-foreground">na Saúde Mental</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 flex-1 justify-center">
             {navigation.map((item) => (
               <Link 
                 key={item.name} 
@@ -51,7 +52,7 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
             <Link href="/momento-dificil">
               <Button 
                 variant={location === "/momento-dificil" ? "default" : "outline"} 
