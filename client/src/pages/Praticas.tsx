@@ -10,9 +10,14 @@ export default function Praticas() {
           <h1 className="font-serif text-4xl lg:text-5xl font-medium mb-4 text-foreground">
             Práticas
           </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl">
+          <p className="text-lg text-muted-foreground max-w-3xl mb-6">
             Explore diferentes formas de cultivar sua espiritualidade através de meditação, música contemplativa, conexão com a natureza e arte-terapia
           </p>
+          <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-950/20 border-l-4 border-orange-500 max-w-3xl">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">Caráter Educativo:</strong> Todas as práticas apresentadas têm finalidade educativa e informativa. Elas não substituem orientação médica, psicológica ou espiritual formal. Se você estiver passando por sofrimento emocional ou crise, procure um profissional de saúde qualificado.
+            </p>
+          </div>
         </div>
 
         <Tabs defaultValue="meditacao" className="w-full">

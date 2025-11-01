@@ -110,6 +110,29 @@ export default function Sobre() {
           </CardContent>
         </Card>
 
+        {/* Metodologia */}
+        <Card className="mb-8 border-2 border-accent/20">
+          <CardHeader>
+            <h2 className="font-serif text-2xl font-medium text-foreground flex items-center gap-2">
+              <BookOpen className="w-6 h-6 text-primary" />
+              Metodologia e Propósito
+            </h2>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-muted-foreground leading-relaxed">
+              Este site é resultado de um projeto acadêmico desenvolvido na disciplina <strong className="text-foreground">Espiritualidade no Campo da Saúde</strong> (EEAAC/UFF), com o objetivo de integrar teoria e prática no cuidado espiritual em saúde mental.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              A plataforma foi construída como produto educacional, não se caracterizando como plataforma de uso público ou comercial. Todo o conteúdo é fundamentado em evidências científicas, pesquisas acadêmicas e obras de autores reconhecidos na área de espiritualidade e saúde.
+            </p>
+            <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Natureza do Projeto:</strong> Trabalho acadêmico desenvolvido por discentes de graduação em Enfermagem da Universidade Federal Fluminense, sob orientação da Profª Drª Eliane Ramos Pereira, com finalidade exclusivamente educacional e de promoção do conhecimento sobre o cuidado espiritual no campo da saúde mental.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Footer Note */}
         <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-card-border">
           <p className="text-sm text-muted-foreground italic leading-relaxed text-center">

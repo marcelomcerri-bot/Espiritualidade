@@ -106,6 +106,24 @@ export default function Referencias() {
             <div className="space-y-4">
               <ReferenceItem
                 type="Artigo"
+                citation="LUCCHETTI, G.; KOENIG, H. G.; LUCCHETTI, A. L. G. Spirituality, religiousness, and mental health: A review of the current scientific evidence. World Journal of Clinical Cases, v. 9, n. 26, p. 7620–7631, 16 set. 2021. DOI: https://doi.org/10.12998/wjcc.v9.i26.7620."
+                url="https://doi.org/10.12998/wjcc.v9.i26.7620"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="MOREIRA-ALMEIDA, A.; KOENIG, H. G.; LUCCHETTI, G. Clinical implications of spirituality to mental health: review of evidence and practical guidelines. Revista Brasileira de Psiquiatria, v. 36, n. 2, p. 176–182, abr. 2014. DOI: https://doi.org/10.1590/1516-4446-2013-1255."
+                url="https://doi.org/10.1590/1516-4446-2013-1255"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="MOREIRA, R. DE S.; SANTANA JUNIOR, R. N. DE A.; POSSO, M. B. S. Spirituality, nursing and pain: an indissociable triad. Brazilian Journal of Pain, v. 4, n. 3, p. 282-287, 2021. DOI: https://doi.org/10.5935/2595-0118.20210044."
+                url="https://doi.org/10.5935/2595-0118.20210044"
+              />
+
+              <ReferenceItem
+                type="Artigo"
                 citation="GAVA, F. G. S.; TURRINI, R. N. T. Bem-estar espiritual e estresse percebido em profissionais de enfermagem da atenção primária à saúde. Revista Brasileira de Enfermagem, Brasília, v. 78, n. 2, e20240193, 2025. DOI: https://doi.org/10.1590/0034-7167-2024-0193pt."
                 url="https://doi.org/10.1590/0034-7167-2024-0193pt"
               />

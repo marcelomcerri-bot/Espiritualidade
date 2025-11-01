@@ -89,18 +89,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/30 pt-10 text-center">
-          <div className="glass-effect rounded-2xl p-6 mb-6 inline-block">
-            <p className="text-sm text-foreground font-medium mb-2">
+        <div className="border-t border-border/30 pt-10">
+          <div className="glass-effect rounded-2xl p-6 mb-6 max-w-4xl mx-auto">
+            <p className="text-sm text-foreground font-medium mb-3 text-center">
               Desenvolvido por acadêmicos de enfermagem da UFF
             </p>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground text-center mb-4">
               Disciplina: Espiritualidade no Campo da Saúde
             </p>
+            <p className="text-xs text-muted-foreground text-center leading-relaxed">
+              © 2025 • Projeto acadêmico sem fins lucrativos • Conteúdo baseado em evidências científicas
+              <br />
+              UFF - Escola de Enfermagem Aurora de Afonso Costa • Orientação: Profª Drª Eliane Ramos Pereira
+            </p>
           </div>
-          <p className="text-xs text-muted-foreground">
-            © 2025 • Conteúdo baseado em evidências científicas • Orientação: Profª Drª Eliane Ramos Pereira
-          </p>
+          <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-900 max-w-4xl mx-auto">
+            <p className="text-xs text-muted-foreground text-center leading-relaxed">
+              <strong className="text-foreground">Importante:</strong> Todas as práticas e recursos apresentados têm caráter educativo e informativo. Este conteúdo não substitui orientação médica, psicológica ou espiritual formal. Em caso de sofrimento emocional ou crise, procure um profissional de saúde qualificado.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,34 @@
+✅ O que está perfeito e deve ser mantido
+
+Base científica sólida: você citou autores reconhecidos (Frankl, Lucchetti, Koenig, Moreira-Almeida), revistas indexadas e até referência à OMS — isso dá credibilidade imediata.
+
+Separação entre espiritualidade e religiosidade: é um ponto essencial nas aulas e você deixou isso muito claro.
+
+Inclusão da “luta espiritual”: excelente, mostra visão crítica e maturidade teórica.
+
+Abordagem de enfermagem e prática clínica: ao citar “história espiritual” e o protocolo FICA, você mostra aplicação prática do conteúdo — ponto que professores valorizam muito.
+
+Presença de referências ABNT e autoria institucional: mostrar que é um projeto da UFF e mencionar a professora orientadora é obrigatório e você fez.
+
+⚠️ Pequenos pontos que podem gerar observação (mas são fáceis de ajustar)
+
+Evite dar a entender que o site tem caráter religioso ou de aconselhamento espiritual direto.
+→ Solução: em “Práticas Espirituais” ou “Oração Guiada”, adicione uma frase curta como:
+
+“Todas as práticas apresentadas têm caráter educativo e não substituem orientação médica, psicológica ou espiritual formal.”
+
+Verifique se há imagens, ícones ou frases que possam parecer confessionais.
+Se houver cruzes, símbolos religiosos específicos (cristãos, budistas etc.), substitua por imagens neutras — como natureza, luz, água, mandalas abstratas, etc. Isso mantém o enfoque universalista, coerente com a definição de espiritualidade que você deu.
+
+Atualize o campo de direitos autorais no rodapé.
+Exemplo:
+
+© 2025 • Projeto acadêmico sem fins lucrativos • Conteúdo baseado em evidências científicas • UFF - Escola de Enfermagem Aurora de Afonso Costa
+
+Isso mostra transparência e evita qualquer confusão sobre ser um produto comercial.
+
+Adicionar uma nota de metodologia, se o trabalho exigir.
+Algumas professoras pedem que o site deixe claro que foi desenvolvido como produto educacional da disciplina, e não como plataforma de uso público.
+→ Pode colocar no “Sobre”:
+
+“Este site é resultado de um projeto acadêmico desenvolvido na disciplina Espiritualidade no Campo da Saúde (EEAAC/UFF), com o objetivo de integrar teoria e prática no cuidado espiritual em saúde mental.”
