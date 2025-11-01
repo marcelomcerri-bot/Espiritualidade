@@ -1,9 +1,22 @@
 [build]
-  # Comando para fazer o build apenas do frontend
+  # Comando para fazer o build do frontend
   command = "npm install && vite build"
   
   # Diretório onde estão os arquivos estáticos após o build do Vite
   publish = "dist/public"
+  
+  # Diretório das funções serverless
+  functions = "netlify/functions"
+
+[functions]
+  # Bundler para as funções
+  node_bundler = "esbuild"
+
+# Redirecionar chamadas da API para as funções serverless
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
 
 # Redirecionamentos para SPAs (Single Page Applications)
 # Isso garante que rotas do React Router funcionem corretamente
@@ -12,6 +25,6 @@
   to = "/index.html"
   status = 200
 
-# Configuração opcional para ignorar erros de build relacionados ao backend
+# Configuração do ambiente
 [build.environment]
   NODE_VERSION = "20"

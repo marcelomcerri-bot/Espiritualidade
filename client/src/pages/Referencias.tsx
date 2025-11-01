@@ -1,6 +1,8 @@
-import { FileText, Video, BookOpen } from "lucide-react";
+import { FileText, Video, BookOpen, Download } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ReferenceItem from "@/components/ReferenceItem";
+import { Button } from "@/components/ui/button";
+import pdfFile from "@assets/Espiritualidade e Saúde mental_1762015049821.pdf";
 
 export default function Referencias() {
   return (
@@ -131,10 +133,35 @@ export default function Referencias() {
                 url="https://www.cofen.gov.br/resolucao-cofen-no-5642017_59145.html"
               />
 
-              <ReferenceItem
-                type="PDF"
-                citation="CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT FREITAS, G.; MANHAES DE CARVALHO, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S.; SESSIN FREIXIEIRO YOUSSEF, B.; MOTTA CONCEICAO, D. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico."
-              />
+              <div className="p-6 rounded-lg border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-background hover:shadow-lg transition-all">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-3">
+                      <FileText className="w-5 h-5 text-primary" />
+                      <span className="font-semibold text-primary">PDF - Material Acadêmico</span>
+                    </div>
+                    <p className="text-sm text-foreground leading-relaxed">
+                      CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT FREITAS, G.; MANHAES DE CARVALHO, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S.; SESSIN FREIXIEIRO YOUSSEF, B.; MOTTA CONCEICAO, D. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico.
+                    </p>
+                  </div>
+                  <a
+                    href={pdfFile}
+                    download="Espiritualidade_e_Saude_Mental_UFF_2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      variant="default"
+                      size="sm"
+                      className="gap-2"
+                      data-testid="button-download-pdf"
+                    >
+                      <Download className="w-4 h-4" />
+                      Baixar PDF
+                    </Button>
+                  </a>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
