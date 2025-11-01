@@ -22,6 +22,10 @@ A spiritual wellness platform built with React and Express for the discipline "E
   - Added clear-all functionality to Minha Jornada
   - Implemented confirmation dialogs for all destructive actions
   - Fixed dialog state management bug in Jornada that prevented creating new assessments after canceling edits
+- **Recent Fixes (Nov 1, 2025)**:
+  - Replaced lotus flower image with clean SVG icon (Flower2 from lucide-react) to remove background artifacts
+  - Updated meditation videos to Portuguese: Poetoterapia (sleep) and Raissa Zoccal/Yoga Mudra (anxiety)
+  - Configured GEMINI_API_KEY as Replit Secret (must also be added to Netlify for production deployment)
 
 ## Project Architecture
 
