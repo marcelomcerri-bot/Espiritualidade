@@ -21,11 +21,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 hover-elevate rounded-lg px-2 py-1 transition-all flex-shrink-0">
-            <Heart className="w-5 h-5 text-primary" />
+          <Link href="/" className="flex items-center gap-3 hover-elevate rounded-lg px-3 py-2 transition-all flex-shrink-0">
+            <Heart className="w-7 h-7 text-primary" />
             <div className="flex flex-col leading-tight">
-              <span className="font-serif text-sm font-medium text-foreground">Cuidado Espiritual</span>
-              <span className="font-serif text-xs text-muted-foreground">na Saúde Mental</span>
+              <span className="font-serif text-base font-semibold text-foreground">Cuidado Espiritual</span>
+              <span className="font-serif text-sm text-muted-foreground">na Saúde Mental</span>
             </div>
           </Link>
 

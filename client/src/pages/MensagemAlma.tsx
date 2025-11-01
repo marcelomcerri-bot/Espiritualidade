@@ -95,13 +95,10 @@ export default function MensagemAlma() {
           <CardContent className="p-8 lg:p-12">
             {isLoading ? (
               <div className="flex flex-col items-center justify-center py-16">
-                <div className="relative mb-6">
+                <div className="relative">
                   <div className="w-16 h-16 rounded-full border-4 border-primary/30 border-t-primary animate-spin"></div>
                   <Sparkles className="w-6 h-6 text-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                 </div>
-                <p className="text-muted-foreground animate-pulse">
-                  Gerando sua mensagem personalizada...
-                </p>
               </div>
             ) : error ? (
               <div className="text-center py-16">

@@ -168,6 +168,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/test-gemini", async (req, res) => {
+    try {
+      console.log("Testing Gemini API...");
+      const message = await generateSoulMessage({
+        hasData: false,
+      });
+      console.log("Gemini API test successful!");
+      res.json({ 
+        success: true, 
+        message,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("Gemini API test failed:", error);
+      res.status(500).json({ 
+        success: false, 
+        error: error instanceof Error ? error.message : "Failed to test Gemini API",
+        timestamp: new Date().toISOString()
+      });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
