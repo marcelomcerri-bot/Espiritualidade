@@ -22,10 +22,8 @@ import { drizzle } from "drizzle-orm/neon-serverless";
 
 let db: ReturnType<typeof drizzle> | null = null;
 
-if (process.env.DATABASE_URL) {
-  const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-  db = drizzle({ client: pool });
-}
+// Force memory storage for now - database connection not available
+console.log("Using memory storage (in-memory data, non-persistent)");
 
 export { db };
 
@@ -275,4 +273,4 @@ export class DbStorage implements IStorage {
   }
 }
 
-export const storage = process.env.DATABASE_URL ? new DbStorage() : new MemStorage();
+export const storage = new MemStorage();

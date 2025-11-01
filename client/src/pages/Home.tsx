@@ -94,15 +94,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Statement */}
+      {/* Seminar Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-card">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl lg:text-4xl font-medium mb-6 text-foreground">
-            Cuidado Integral para o Bem-Estar
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            A dimensão espiritual é parte essencial do ser humano. Pesquisas demonstram que cultivar a espiritualidade fortalece a resiliência psicológica, reduz ansiedade e depressão, e promove esperança e equilíbrio emocional. Esta plataforma integra conhecimento científico com práticas que nutrem o sentido existencial.
-          </p>
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl lg:text-5xl font-medium mb-6 text-foreground">
+              Seminário Cuidado Espiritual na Saúde Mental
+            </h2>
+            <p className="text-xl text-primary font-medium mb-4">
+              Uma Abordagem Científica e Humanizada
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div className="bg-card rounded-2xl p-8 border border-card-border">
+              <h3 className="font-serif text-2xl font-medium mb-4 text-foreground">
+                Sobre o Seminário
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                O seminário explora a integração entre cuidado espiritual e saúde mental, fundamentado em evidências científicas e na prática clínica. Reconhecendo a espiritualidade como dimensão essencial do ser humano, o programa oferece ferramentas práticas para profissionais de saúde e pessoas interessadas em bem-estar integral.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Esta plataforma digital complementa o seminário, oferecendo recursos interativos baseados em Logoterapia e estudos fenomenológicos sobre espiritualidade no campo da saúde.
+              </p>
+            </div>
+            
+            <div className="bg-card rounded-2xl p-8 border border-card-border">
+              <h3 className="font-serif text-2xl font-medium mb-4 text-foreground">
+                Por Que Cuidado Espiritual?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                A Organização Mundial da Saúde reconhece desde 2005 a espiritualidade como componente integral da saúde. Pesquisas demonstram que cultivar a dimensão espiritual:
+              </p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Fortalece a resiliência psicológica</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Reduz sintomas de ansiedade e depressão</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Promove esperança e equilíbrio emocional</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">•</span>
+                  <span>Auxilia na busca por sentido existencial</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl p-8 border border-primary/20">
+            <h3 className="font-serif text-xl font-medium mb-3 text-foreground text-center">
+              Base Acadêmica
+            </h3>
+            <p className="text-muted-foreground leading-relaxed text-center">
+              Este projeto é orientado pela <strong className="text-foreground">Profª Eliane Ramos Pereira (UFF)</strong>, 
+              especialista em espiritualidade no cuidado em saúde, vinculado à <strong className="text-foreground">Escola de Enfermagem Aurora de Afonso Costa (EEAAC)</strong> 
+              da <strong className="text-foreground">Universidade Federal Fluminense</strong>.
+            </p>
+          </div>
         </div>
       </section>
 

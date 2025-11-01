@@ -28,36 +28,53 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-3">
             {navigation.map((item) => (
               <Link 
                 key={item.name} 
                 href={item.href}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-primary/10 ${
-                  location === item.href
-                    ? "text-primary bg-primary/10"
-                    : "text-foreground hover:text-primary"
-                }`}
-                data-testid={`link-${item.name.toLowerCase().replace(" ", "-")}`}
               >
-                {item.name}
+                <Button
+                  variant={location === item.href ? "default" : "ghost"}
+                  size="sm"
+                  className={`transition-all duration-300 ${
+                    location === item.href
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground hover:bg-primary/10 hover:text-primary"
+                  }`}
+                  data-testid={`link-${item.name.toLowerCase().replace(" ", "-")}`}
+                >
+                  {item.name}
+                </Button>
               </Link>
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2">
             <Link href="/momento-dificil">
-              <Button variant="outline" size="sm" data-testid="button-momento-dificil">
+              <Button 
+                variant={location === "/momento-dificil" ? "default" : "outline"} 
+                size="sm" 
+                data-testid="button-momento-dificil"
+              >
                 Momento Difícil
               </Button>
             </Link>
             <Link href="/sobre">
-              <Button variant="outline" size="sm" data-testid="button-sobre">
+              <Button 
+                variant={location === "/sobre" ? "default" : "outline"} 
+                size="sm" 
+                data-testid="button-sobre"
+              >
                 Sobre
               </Button>
             </Link>
             <Link href="/referencias">
-              <Button variant="default" size="sm" data-testid="button-referencias">
+              <Button 
+                variant={location === "/referencias" ? "default" : "outline"} 
+                size="sm" 
+                data-testid="button-referencias"
+              >
                 Referências
               </Button>
             </Link>

@@ -48,6 +48,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const answers = await storage.getPurposeAnswers(userId);
       res.json(answers);
     } catch (error) {
+      console.error("Error fetching purpose answers:", error);
       res.status(500).json({ error: "Failed to fetch purpose answers" });
     }
   });
@@ -55,10 +56,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/purpose", async (req, res) => {
     try {
       const userId = "demo-user"; // TODO: implement auth
+      console.log("Received purpose answer:", req.body);
       const validatedAnswer = insertPurposeAnswerSchema.parse({ ...req.body, userId });
+      console.log("Validated answer:", validatedAnswer);
       const savedAnswer = await storage.savePurposeAnswer(validatedAnswer);
       res.json(savedAnswer);
     } catch (error) {
+      console.error("Error saving purpose answer:", error);
       res.status(400).json({ error: "Invalid purpose answer data" });
     }
   });

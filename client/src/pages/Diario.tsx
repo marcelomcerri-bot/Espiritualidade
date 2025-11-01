@@ -22,11 +22,7 @@ export default function Diario() {
 
   const createMutation = useMutation({
     mutationFn: async (entry: typeof newEntry) => {
-      return await apiRequest("/api/diary", {
-        method: "POST",
-        body: JSON.stringify(entry),
-        headers: { "Content-Type": "application/json" },
-      });
+      return await apiRequest("POST", "/api/diary", entry);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/diary"] });
