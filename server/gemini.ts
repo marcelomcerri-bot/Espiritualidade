@@ -5,7 +5,12 @@ import { storage } from "./storage";
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
 function generateMessageHash(text: string): string {
-  return createHash('sha256').update(text.trim().toLowerCase()).digest('hex');
+  const normalized = text
+    .toLowerCase()
+    .replace(/[^\w\sáéíóúâêôãõàèìòùç]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return createHash('sha256').update(normalized).digest('hex');
 }
 
 function getWeeklyTheme(date: Date): { theme: string; focus: string } {
@@ -37,8 +42,8 @@ interface SoulMessageContext {
 
 export async function generateSoulMessage(context: SoulMessageContext): Promise<string> {
   const userId = "demo-user";
-  const recentMessages = await storage.getRecentSoulMessages(userId, 10);
-  const recentExcerpts = recentMessages.map(m => m.excerpt).join('\n- ');
+  const recentMessages = await storage.getRecentSoulMessages(userId, 30);
+  const recentExcerpts = recentMessages.slice(0, 10).map(m => m.excerpt).join('\n- ');
   
   const bannedPhrases = [
     "você consegue",
@@ -167,8 +172,8 @@ Gere uma "Reflexão que Cura" única e profunda para esta pessoa. Seja autêntic
 }
 
 export async function generateDailyReflection(): Promise<string> {
-  const recentReflections = await storage.getRecentDailyReflections(10);
-  const recentExcerpts = recentReflections.map(r => r.excerpt).join('\n- ');
+  const recentReflections = await storage.getRecentDailyReflections(30);
+  const recentExcerpts = recentReflections.slice(0, 10).map(r => r.excerpt).join('\n- ');
   
   const today = new Date();
   const { theme, focus } = getWeeklyTheme(today);
