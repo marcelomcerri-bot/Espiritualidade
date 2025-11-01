@@ -11,7 +11,7 @@ export default function Referencias() {
             Referências
           </h1>
           <p className="text-lg text-muted-foreground">
-            Todas as fontes acadêmicas e multimídia utilizadas nesta plataforma, formatadas em ABNT
+            Todas as fontes acadêmicas e multimídia utilizadas nesta plataforma, formatadas rigorosamente em ABNT
           </p>
         </div>
 
@@ -35,7 +35,11 @@ export default function Referencias() {
             <h2 className="font-serif text-2xl font-medium mb-6 text-foreground">
               Artigos Científicos e Livros
             </h2>
-
+            
+            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
+              Artigos da Profª Drª Eliane Ramos Pereira
+            </h3>
+            
             <div className="space-y-4">
               <ReferenceItem
                 type="Artigo"
@@ -45,10 +49,76 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="Artigo"
-                citation="SORA, A. B. A. et al. A Dimensão Espiritual Sob a Ótica dos Enfermeiros que Atuam em Uma Unidade Psiquiátrica. Epitaya E-Books, v. 1, n. 11, p. 103-113, 2021. DOI: https://doi.org/10.47879/ed.ep.2021366p103."
+                citation="SORA, A. B. et al. A Dimensão Espiritual Sob a Ótica dos Enfermeiros que Atuam em Uma Unidade Psiquiátrica. Epitaya E-books, v. 1, n. 11, p. 103-113, 2021. DOI: https://doi.org/10.47879/ed.ep.2021366p103."
                 url="https://portal.epitaya.com.br/index.php/ebooks/article/view/264"
               />
 
+              <ReferenceItem
+                type="Artigo"
+                citation="DIAS, F. A.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V. Espiritualidade, percepção e saúde mental de universitários em período pandêmico: estudo bibliométrico. ResearchGate, 2025. Disponível em: https://www.researchgate.net/publication/391241507. Acesso em: 1 nov. 2025."
+                url="https://www.researchgate.net/publication/391241507"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="MEDEIROS, A. Y. B. B. V.; PEREIRA, E. R.; SILVA, R. M. C. R. A. The Medical Healing of Souls: a strategy for welcoming post-pandemic mental health. ProQuest, p. 1-6, 2023."
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="FLORES, I. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; ALCANTARA, V. C. G. Espiritualidade, ensino na graduação e prática profissional: uma revisão integrativa. Research, Society and Development, v. 9, n. 10, 2020."
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="FLORES, I. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; BEZERRA, C. M. P. D.; ALCANTARA, V. C. G. A religiosidade e sua influência no processo de cura terapêutico. Research, Society and Development, v. 9, n. 9, 2020."
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="ROCHA, R. C. N. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V.; MARINS, A. M. F. O sentido da vida dos enfermeiros no trabalho em cuidados paliativos: revisão integrativa. Revista Eletrônica de Enfermagem, v. 22, 2020."
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="DIAS, F. A.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V. Espiritualidade e saúde: Uma reflexão crítica sobre a vida simbólica. Research, Society and Development, v. 9, n. 8, 2020."
+              />
+            </div>
+
+            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
+              Referências da Apresentação do Seminário
+            </h3>
+
+            <div className="space-y-4">
+              <ReferenceItem
+                type="Artigo"
+                citation="GAVA, F. G. S.; TURRINI, R. N. T. Bem-estar espiritual e estresse percebido em profissionais de enfermagem da atenção primária à saúde. Revista Brasileira de Enfermagem, Brasília, v. 78, n. 2, e20240193, 2025. DOI: https://doi.org/10.1590/0034-7167-2024-0193pt."
+                url="https://doi.org/10.1590/0034-7167-2024-0193pt"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="MONTEIRO, D. D. et al. Espiritualidade/religiosidade e saúde mental no brasil: uma revisão. Boletim da Academia Paulista de Psicologia, São Paulo, v. 40, n. 98, p. 129-139, jun. 2020. Disponível em: http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1415-711X2020000100014. Acesso em: 29 out. 2025."
+                url="http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1415-711X2020000100014"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="CAMPOS, A. A. et al. A influência da espiritualidade na saúde mental de jovens e adultos: uma revisão sistemática. PsicoFAE: Revista de Psicologia da FAE, Curitiba, v. 12, n. 1, 2023. DOI: https://doi.org/10.55388/psicofae.v12n1.410."
+                url="https://doi.org/10.55388/psicofae.v12n1.410"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="SAAD, M.; MASIERO, D.; BATTISTELLA, L. R. Espiritualidade baseada em evidências. Acta Fisiátrica, v. 8, n. 3, p. 107-112, 2001."
+              />
+            </div>
+
+            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
+              Livros e Obras de Referência
+            </h3>
+
+            <div className="space-y-4">
               <ReferenceItem
                 type="Livro"
                 citation="KOENIG, H. G. Spirituality in Patient Care: Why, How, When, and What. 3. ed. Philadelphia: Templeton Press, 2013."
@@ -57,32 +127,6 @@ export default function Referencias() {
               <ReferenceItem
                 type="Livro"
                 citation="PESSINI, L.; BARCHIFONTAINE, C. P. de. Bioética, cuidado e espiritualidade. São Paulo: Loyola, 2014."
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="SAAD, M.; MASIERO, D.; BATTISTELLA, L. R. Espiritualidade baseada em evidências. Acta Fisiátrica, v. 8, n. 3, p. 107-112, 2001."
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="GAVA, F. G. S.; TURRINI, R. N. T. Bem-estar espiritual e estresse percebido em profissionais de enfermagem da atenção primária à saúde. Revista Brasileira de Enfermagem, Brasília, v. 78, n. 2, p. e20240193, 2025. DOI: https://doi.org/10.1590/0034-7167-2024-0193pt."
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="MONTEIRO, D. D. et al. Espiritualidade/religiosidade e saúde mental no brasil: uma revisão. Boletim da Academia Paulista de Psicologia, São Paulo, v. 40, n. 98, p. 129-139, jun. 2020."
-                url="http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1415-711X2020000100014"
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="CAMPOS, A. A. et al. A influência da espiritualidade na saúde mental de jovens e adultos: uma revisão sistemática. PsicoFAE: Revista de Psicologia da FAE, Curitiba, v. 12, n. 1, 2023. DOI: https://doi.org/10.55388/psicofae.v12n1.410."
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="MEDEIROS, A. Y. B. B. V.; PEREIRA, E. R.; SILVA, R. M. C. R. A. The Medical Healing of Souls: a strategy for welcoming post-pandemic mental health. ProQuest, p. 1-6, 2023."
               />
             </div>
           </TabsContent>
@@ -137,11 +181,11 @@ export default function Referencias() {
 
           <TabsContent value="apresentacao" className="space-y-4 animate-fade-in">
             <h2 className="font-serif text-2xl font-medium mb-6 text-foreground">
-              Material da Apresentação
+              Material da Apresentação do Seminário
             </h2>
 
             <p className="text-muted-foreground mb-6">
-              Referências extraídas da apresentação do seminário "Espiritualidade e Saúde Mental"
+              Referências extraídas da apresentação do seminário "Espiritualidade e Saúde Mental" conforme documento fornecido.
             </p>
 
             <div className="space-y-4">
@@ -153,7 +197,7 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="PDF"
-                citation="CERRI, M. M. et al. Espiritualidade e Saúde Mental. Apresentação de seminário. Universidade [Nome da Universidade], 2025. Material não publicado."
+                citation="CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT, G.; MANHÃES, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico."
               />
             </div>
           </TabsContent>
@@ -168,7 +212,10 @@ export default function Referencias() {
               Todas as referências seguem rigorosamente as normas da ABNT (Associação Brasileira de Normas Técnicas) para garantir credibilidade acadêmica e facilitar verificação das fontes.
             </p>
             <p>
-              Os conteúdos desta plataforma foram completamente reescritos e parafraseados para evitar plágio, mantendo fidelidade às evidências científicas das fontes originais.
+              Esta plataforma é fundamentada especialmente nos estudos da <strong className="text-foreground">Profª Drª Eliane Ramos Pereira</strong>, professora titular da Universidade Federal Fluminense (UFF) e referência nacional em espiritualidade aplicada à enfermagem e saúde mental.
+            </p>
+            <p>
+              Os conteúdos foram desenvolvidos com base em evidências científicas, mantendo fidelidade às pesquisas originais e respeitando integralmente os direitos autorais.
             </p>
             <p>
               Para conhecer mais sobre o trabalho da Profª Eliane Ramos Pereira, visite seu{" "}
@@ -179,6 +226,15 @@ export default function Referencias() {
                 className="text-primary hover:underline font-medium"
               >
                 perfil acadêmico na UFF
+              </a>
+              {" "}ou seu{" "}
+              <a
+                href="https://scholar.google.com/citations?user=7VMEE9EAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                Google Scholar
               </a>
               .
             </p>

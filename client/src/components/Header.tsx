@@ -51,6 +51,11 @@ export default function Header() {
                 Momento Difícil
               </Button>
             </Link>
+            <Link href="/sobre">
+              <Button variant="outline" size="sm" data-testid="button-sobre">
+                Sobre
+              </Button>
+            </Link>
             <Link href="/referencias">
               <Button variant="default" size="sm" data-testid="button-referencias">
                 Referências
@@ -99,6 +104,16 @@ export default function Header() {
                   data-testid="button-mobile-momento-dificil"
                 >
                   Momento Difícil
+                </Button>
+              </Link>
+              <Link href="/sobre">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => setMobileMenuOpen(false)}
+                  data-testid="button-mobile-sobre"
+                >
+                  Sobre
                 </Button>
               </Link>
               <Link href="/referencias">

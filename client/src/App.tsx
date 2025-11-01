@@ -14,6 +14,7 @@ import MomentoDificil from "@/pages/MomentoDificil";
 import MapaSentido from "@/pages/MapaSentido";
 import Aprenda from "@/pages/Aprenda";
 import Referencias from "@/pages/Referencias";
+import Sobre from "@/pages/Sobre";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -31,6 +32,7 @@ function Router() {
           <Route path="/mapa-sentido" component={MapaSentido} />
           <Route path="/aprenda" component={Aprenda} />
           <Route path="/referencias" component={Referencias} />
+          <Route path="/sobre" component={Sobre} />
           <Route component={NotFound} />
         </Switch>
       </main>
