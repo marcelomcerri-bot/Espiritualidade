@@ -3,8 +3,10 @@
 ## ❌ Problema
 A aba "Reflexões que Curam" mostra o erro: **"Não foi possível gerar sua mensagem. Por favor, tente novamente."**
 
-## ✅ Causa Provável
-A variável de ambiente `GEMINI_API_KEY` **NÃO está configurada corretamente** no Netlify ou está com o escopo errado.
+## ✅ Causa (RESOLVIDA!)
+Havia **dois problemas**:
+1. ❌ O código das funções serverless estava usando a API do Google Gemini incorretamente → ✅ **CORRIGIDO!**
+2. ⚠️ A variável `GEMINI_API_KEY` precisa estar configurada no Netlify (você já fez isso!)
 
 ---
 
@@ -40,9 +42,9 @@ Se você ainda não tem uma chave do Gemini:
 
 7. Clique em **"Create variable"** ou **"Save"**
 
-### **Passo 3: Fazer um novo deploy**
+### **3. Fazer um novo deploy com o código corrigido**
 
-⚠️ **IMPORTANTE**: Apenas adicionar a variável NÃO é suficiente! Você precisa fazer um novo deploy.
+⚠️ **SUPER IMPORTANTE**: Agora que o código foi corrigido, você precisa fazer um novo deploy!
 
 **Opção A - Redeploy automático:**
 1. No dashboard do Netlify, vá em **Deploys**

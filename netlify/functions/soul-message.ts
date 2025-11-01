@@ -73,18 +73,22 @@ Com base nesses dados, crie uma mensagem personalizada que:
 - Encoraje os próximos passos`;
   }
 
+  const fullPrompt = `${userContext}
+
+Gere uma "Reflexão que Cura" única e profunda para esta pessoa. Seja autêntico, compassivo e inspirador. A mensagem será exibida hoje, ${new Date().toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.`;
+
   try {
-    const model = await ai.models.get("gemini-2.5-flash");
-    const result = await model.generateContent({
-      systemInstruction: systemPrompt,
-      generationConfig: {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      config: {
+        systemInstruction: systemPrompt,
         temperature: 0.8,
         topP: 0.9,
       },
-      contents: userContext,
+      contents: fullPrompt,
     });
 
-    return result.text() || "Desculpe, não foi possível gerar uma mensagem no momento.";
+    return response.text || "Desculpe, não foi possível gerar uma mensagem no momento.";
   } catch (error) {
     console.error("Error generating soul message:", error);
     throw new Error("Não foi possível gerar a mensagem. Por favor, tente novamente.");

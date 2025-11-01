@@ -26,19 +26,23 @@ Não repita reflexões - seja sempre original.`;
   ];
 
   const randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+  
+  const fullPrompt = `${randomPrompt}
+
+Crie uma reflexão para hoje, ${new Date().toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' })}.`;
 
   try {
-    const model = await ai.models.get("gemini-2.5-flash");
-    const result = await model.generateContent({
-      systemInstruction: systemPrompt,
-      generationConfig: {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      config: {
+        systemInstruction: systemPrompt,
         temperature: 0.9,
         topP: 0.95,
       },
-      contents: randomPrompt,
+      contents: fullPrompt,
     });
 
-    return result.text() || "Que este dia seja repleto de sentido e propósito.";
+    return response.text || "Que este dia seja repleto de sentido e propósito.";
   } catch (error) {
     console.error("Error generating daily reflection:", error);
     throw new Error("Não foi possível gerar a reflexão diária.");
