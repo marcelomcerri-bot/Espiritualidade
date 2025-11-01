@@ -16,6 +16,12 @@ A spiritual wellness platform built with React and Express for the discipline "E
 - Replaced YouTube video links with verified working alternatives
 - Fixed React warnings related to nested anchor tags
 - Configured project for Netlify deployment (netlify.toml + _redirects)
+- **Enhanced UX**: 
+  - Removed "Gerar Nova Mensagem" button from Reflexões que Curam (auto-generates on entry)
+  - Added edit, delete, and clear-all functionality to Meu Diário
+  - Added clear-all functionality to Minha Jornada
+  - Implemented confirmation dialogs for all destructive actions
+  - Fixed dialog state management bug in Jornada that prevented creating new assessments after canceling edits
 
 ## Project Architecture
 
