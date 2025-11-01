@@ -90,7 +90,7 @@ export default function Sobre() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Este projeto foi desenvolvido pelos seguintes discentes como trabalho de seminário:
+              Este projeto foi desenvolvido pelos seguintes discentes:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {authors.map((author, index) => (

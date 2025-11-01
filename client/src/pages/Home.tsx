@@ -109,13 +109,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <div className="bg-card rounded-2xl p-8 border border-card-border">
               <h3 className="font-serif text-2xl font-medium mb-4 text-foreground">
-                Sobre o Seminário
+                Desenvolvido por Estudantes de Enfermagem
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                O seminário explora a integração entre cuidado espiritual e saúde mental, fundamentado em evidências científicas e na prática clínica. Reconhecendo a espiritualidade como dimensão essencial do ser humano, o programa oferece ferramentas práticas para profissionais de saúde e pessoas interessadas em bem-estar integral.
+                Esta plataforma foi criada por discentes do curso de Enfermagem da UFF como parte de seus estudos sobre espiritualidade no campo da saúde. Com dedicação e compromisso acadêmico, buscamos integrar conhecimentos científicos e práticas espirituais para promover bem-estar integral.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Esta plataforma digital complementa o seminário, oferecendo recursos interativos baseados em Logoterapia e estudos fenomenológicos sobre espiritualidade no campo da saúde.
+                A plataforma oferece recursos interativos fundamentados em Logoterapia e estudos fenomenológicos sobre espiritualidade, tornando acessível o conhecimento sobre cuidado espiritual na saúde mental.
               </p>
             </div>
             

@@ -1,4 +1,4 @@
-import { Heart, Sparkles, Sun, Wind, Book, Users, Phone, Brain, Lightbulb, Activity } from "lucide-react";
+import { Heart, Sparkles, Sun, Wind, Book, Users, Brain, Lightbulb, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import BreathingExercise from "@/components/BreathingExercise";
@@ -239,24 +239,6 @@ export default function MomentoDificil() {
                 <h3 className="font-medium mb-1 text-foreground">Conecte-se com Pessoas Queridas</h3>
                 <p className="text-sm text-muted-foreground">
                   Compartilhar o que sente com amigos, familiares ou um profissional de saúde mental pode trazer alívio e perspectiva.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Professional Help Notice */}
-        <Card className="border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-background">
-          <CardContent className="pt-6">
-            <div className="flex items-start gap-3">
-              <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="font-medium mb-2 text-foreground">Buscar Apoio Profissional</h3>
-                <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                  Se você sente que precisa de apoio adicional, considere conversar com um profissional de saúde mental ou psicólogo. Buscar ajuda é um sinal de autocuidado e força.
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  <strong className="text-foreground">CVV - 188:</strong> Centro de Valorização da Vida (24h, gratuito) - Conversa sigilosa para quem precisa de apoio emocional.
                 </p>
               </div>
             </div>
