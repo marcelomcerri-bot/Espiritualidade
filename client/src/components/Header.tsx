@@ -18,19 +18,25 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-3">
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/50 shadow-lg">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 opacity-50" />
+      <nav className="relative max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3 hover-elevate rounded-lg px-3 py-2 transition-all flex-shrink-0">
-            <Heart className="w-7 h-7 text-primary" />
+          <Link href="/" className="flex items-center gap-3 hover-lift rounded-xl px-3 py-2 transition-all flex-shrink-0 group">
+            <div className="relative">
+              <Heart className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
+              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full group-hover:bg-primary/30 transition-all" />
+            </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-serif text-base font-semibold text-foreground">Cuidado Espiritual</span>
-              <span className="font-serif text-sm text-muted-foreground">na Saúde Mental</span>
+              <span className="font-serif text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Cuidado Espiritual
+              </span>
+              <span className="font-serif text-xs text-muted-foreground">na Saúde Mental</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2 flex-1 justify-center">
+          <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {navigation.map((item) => (
               <Link 
                 key={item.name} 
@@ -39,10 +45,10 @@ export default function Header() {
                 <Button
                   variant={location === item.href ? "default" : "ghost"}
                   size="sm"
-                  className={`transition-all duration-300 ${
+                  className={`transition-all duration-300 font-medium ${
                     location === item.href
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-primary/10 hover:text-primary"
+                      ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground shadow-md hover:shadow-lg"
+                      : "text-foreground hover:bg-primary/10 hover:text-primary hover:scale-105"
                   }`}
                   data-testid={`link-${item.name.toLowerCase().replace(" ", "-")}`}
                 >
@@ -56,7 +62,8 @@ export default function Header() {
             <Link href="/momento-dificil">
               <Button 
                 variant={location === "/momento-dificil" ? "default" : "outline"} 
-                size="sm" 
+                size="sm"
+                className="hover-lift font-medium"
                 data-testid="button-momento-dificil"
               >
                 Momento Difícil
@@ -65,7 +72,8 @@ export default function Header() {
             <Link href="/sobre">
               <Button 
                 variant={location === "/sobre" ? "default" : "outline"} 
-                size="sm" 
+                size="sm"
+                className="hover-lift font-medium"
                 data-testid="button-sobre"
               >
                 Sobre
@@ -74,7 +82,8 @@ export default function Header() {
             <Link href="/referencias">
               <Button 
                 variant={location === "/referencias" ? "default" : "outline"} 
-                size="sm" 
+                size="sm"
+                className="hover-lift font-medium"
                 data-testid="button-referencias"
               >
                 Referências

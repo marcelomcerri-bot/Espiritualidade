@@ -56,33 +56,41 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center transform scale-105"
           style={{
             backgroundImage: `url(${heroImage})`,
-            filter: "brightness(0.7)",
+            filter: "brightness(0.65)",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/30" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-          <div className="max-w-2xl animate-fade-in">
-            <div className="w-20 h-20 mb-8 flex items-center justify-center">
-              <Flower2 className="w-16 h-16 text-primary opacity-80 animate-float" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32 w-full">
+          <div className="max-w-3xl">
+            <div className="relative w-24 h-24 mb-10 flex items-center justify-center animate-fade-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 blur-2xl rounded-full animate-pulse-glow" />
+              <Flower2 className="relative w-20 h-20 text-primary animate-float drop-shadow-lg" />
             </div>
-            <h1 className="font-serif text-5xl lg:text-7xl font-light mb-6 text-foreground leading-tight">
-              Descubra o <span className="text-primary">Sentido</span> e o <span className="text-primary">Propósito</span> da Vida
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight animate-fade-in-up">
+              <span className="text-foreground">Descubra o </span>
+              <span className="gradient-text">Sentido</span>
+              <br />
+              <span className="text-foreground">e o </span>
+              <span className="gradient-text">Propósito</span>
+              <br />
+              <span className="text-foreground">da Vida</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-8">
-              Plataforma baseada em evidências científicas e Logoterapia para fortalecer seu bem-estar através do cuidado espiritual.
+            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-10 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              Plataforma baseada em <strong className="text-foreground">evidências científicas</strong> e <strong className="text-foreground">Logoterapia</strong> para fortalecer seu bem-estar através do cuidado espiritual.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               <Link href="/proposito">
-                <Button size="lg" className="text-lg px-8" data-testid="button-hero-comecar">
+                <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg hover:shadow-xl transition-all hover-lift" data-testid="button-hero-comecar">
                   Começar Minha Jornada
                 </Button>
               </Link>
               <Link href="/aprenda">
-                <Button size="lg" variant="outline" className="text-lg px-8" data-testid="button-hero-aprenda">
+                <Button size="lg" variant="outline" className="text-lg px-10 py-6 glass-effect hover-lift" data-testid="button-hero-aprenda">
                   Conheça a Ciência
                 </Button>
               </Link>
@@ -158,23 +166,28 @@ export default function Home() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl lg:text-5xl font-medium mb-4 text-foreground">
-              Ferramentas para sua Jornada
+      <section className="py-24 bg-gradient-to-b from-background via-card/30 to-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50" />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="text-sm font-semibold tracking-wider uppercase text-primary px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                Ferramentas Interativas
+              </span>
+            </div>
+            <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-6 text-foreground">
+              Recursos para sua <span className="gradient-text">Jornada</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Recursos interativos baseados em Logoterapia e estudos sobre espiritualidade no campo da saúde
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Ferramentas baseadas em <strong className="text-foreground">Logoterapia</strong> e estudos científicos sobre espiritualidade na saúde
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
             {features.map((feature, index) => (
               <div
                 key={feature.title}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="hover-lift"
               >
                 <FeatureCard {...feature} />
               </div>
@@ -237,19 +250,24 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/10 via-accent/5 to-background">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl lg:text-5xl font-medium mb-6 text-foreground">
-            Inicie sua Jornada de Autoconhecimento
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Explore ferramentas baseadas em ciência para cultivar esperança, encontrar sentido e fortalecer seu bem-estar.
-          </p>
-          <Link href="/proposito">
-            <Button size="lg" className="text-lg px-12" data-testid="button-cta-comecar">
-              Começar Agora
-            </Button>
-          </Link>
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/15 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent" />
+        <div className="absolute top-10 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+        <div className="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <div className="glass-effect rounded-3xl p-12 lg:p-16 shadow-2xl border-2">
+            <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-8 text-foreground">
+              Inicie sua Jornada de <span className="gradient-text">Autoconhecimento</span>
+            </h2>
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
+              Explore ferramentas baseadas em ciência para cultivar esperança, encontrar sentido e fortalecer seu bem-estar espiritual.
+            </p>
+            <Link href="/proposito">
+              <Button size="lg" className="text-xl px-16 py-7 bg-gradient-to-r from-primary via-primary/90 to-accent hover:scale-105 shadow-xl hover:shadow-2xl transition-all" data-testid="button-cta-comecar">
+                Começar Agora
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -23,22 +23,24 @@ export default function FeatureCard({
         className="block group h-full cursor-pointer"
         data-testid={`card-${title.toLowerCase().replace(/\s+/g, "-")}`}
       >
-        <div className={`h-full rounded-2xl bg-gradient-to-br ${gradient} p-8 border-2 border-card-border/50 shadow-md hover:shadow-xl hover:border-primary/30 hover:-translate-y-2 transition-all duration-300`}>
-          <div className="mb-6 inline-flex p-4 rounded-xl bg-background/60 border border-card-border/30">
-            <Icon className="w-8 h-8 text-primary" />
+        <div className={`relative h-full rounded-3xl bg-gradient-to-br ${gradient} p-8 border border-card-border/30 shadow-lg hover:shadow-2xl hover:border-primary/40 hover:-translate-y-2 transition-all duration-500 overflow-hidden`}>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          
+          <div className="relative mb-6 inline-flex p-5 rounded-2xl bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm border border-primary/20 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+            <Icon className="w-9 h-9 text-primary group-hover:text-accent transition-colors duration-500" />
           </div>
           
-          <h3 className="font-serif text-2xl font-semibold mb-3 text-foreground leading-tight">
+          <h3 className="relative font-serif text-2xl font-bold mb-4 text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
             {title}
           </h3>
           
-          <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
+          <p className="relative text-muted-foreground leading-relaxed mb-6 text-base">
             {description}
           </p>
           
-          <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
-            <span>Explorar</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <div className="relative flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all duration-300">
+            <span className="text-sm tracking-wide">EXPLORAR</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
           </div>
         </div>
       </div>
