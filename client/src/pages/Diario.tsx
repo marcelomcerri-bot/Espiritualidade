@@ -1,41 +1,31 @@
-import { useQuery, useMutation } from "@tanstack/react-query";
 import { Plus, BookOpen, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useState } from "react";
-import type { DiaryEntry } from "@shared/schema";
+import { useLocalDiary } from "@/hooks/useLocalStorage";
 
 export default function Diario() {
   const [isCreating, setIsCreating] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [newEntry, setNewEntry] = useState({
     title: "",
     content: "",
     gratitude: "",
   });
 
-  const { data: entries = [], isLoading } = useQuery<DiaryEntry[]>({
-    queryKey: ["/api/diary"],
-  });
-
-  const createMutation = useMutation({
-    mutationFn: async (entry: typeof newEntry) => {
-      return await apiRequest("POST", "/api/diary", entry);
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/diary"] });
-      setNewEntry({ title: "", content: "", gratitude: "" });
-      setIsCreating(false);
-    },
-  });
+  const { entries, addEntry, isLoading } = useLocalDiary();
 
   const handleSave = () => {
     if (!newEntry.title || !newEntry.content) {
       return;
     }
-    createMutation.mutate(newEntry);
+    setIsSaving(true);
+    addEntry(newEntry);
+    setNewEntry({ title: "", content: "", gratitude: "" });
+    setIsCreating(false);
+    setIsSaving(false);
   };
 
   return (
@@ -109,8 +99,8 @@ export default function Diario() {
               </div>
 
               <div className="flex gap-3">
-                <Button onClick={handleSave} disabled={createMutation.isPending} data-testid="button-diario-save">
-                  {createMutation.isPending ? "Salvando..." : "Salvar Entrada"}
+                <Button onClick={handleSave} disabled={isSaving} data-testid="button-diario-save">
+                  {isSaving ? "Salvando..." : "Salvar Entrada"}
                 </Button>
                 <Button
                   onClick={() => setIsCreating(false)}

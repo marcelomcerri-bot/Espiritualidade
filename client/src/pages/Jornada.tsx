@@ -7,12 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { useQuery, useMutation } from "@tanstack/react-query";
-import { apiRequest, queryClient } from "@/lib/queryClient";
-import type { JourneyAssessment } from "@shared/schema";
+import { useLocalJourney } from "@/hooks/useLocalStorage";
 
 export default function Jornada() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [newAssessment, setNewAssessment] = useState({
     spiritual: 50,
     emotional: 50,
@@ -25,37 +24,24 @@ export default function Jornada() {
     proposito: 50,
   });
 
-  const { data: assessments = [], isLoading } = useQuery<JourneyAssessment[]>({
-    queryKey: ["/api/journey"],
-  });
-
-  const createMutation = useMutation({
-    mutationFn: async (assessment: typeof newAssessment) => {
-      const weekNumber = assessments.length + 1;
-      return await apiRequest("POST", "/api/journey", {
-        ...assessment,
-        weekLabel: `Sem ${weekNumber}`,
-      });
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/journey"] });
-      setIsDialogOpen(false);
-      setNewAssessment({
-        spiritual: 50,
-        emotional: 50,
-        mental: 50,
-        sentidoVida: 50,
-        esperanca: 50,
-        gratidao: 50,
-        pazInterior: 50,
-        conexao: 50,
-        proposito: 50,
-      });
-    },
-  });
+  const { assessments, addAssessment, isLoading } = useLocalJourney();
 
   const handleSaveAssessment = () => {
-    createMutation.mutate(newAssessment);
+    setIsSaving(true);
+    addAssessment(newAssessment);
+    setIsDialogOpen(false);
+    setNewAssessment({
+      spiritual: 50,
+      emotional: 50,
+      mental: 50,
+      sentidoVida: 50,
+      esperanca: 50,
+      gratidao: 50,
+      pazInterior: 50,
+      conexao: 50,
+      proposito: 50,
+    });
+    setIsSaving(false);
   };
 
   const lineData = assessments.map((a) => ({
@@ -286,8 +272,8 @@ export default function Jornada() {
                   </div>
                 </div>
 
-                <Button onClick={handleSaveAssessment} className="w-full" disabled={createMutation.isPending}>
-                  {createMutation.isPending ? "Salvando..." : "Salvar Autoavaliação"}
+                <Button onClick={handleSaveAssessment} className="w-full" disabled={isSaving}>
+                  {isSaving ? "Salvando..." : "Salvar Autoavaliação"}
                 </Button>
               </div>
             </DialogContent>
