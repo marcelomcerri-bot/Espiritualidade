@@ -59,11 +59,11 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center transform scale-105"
           style={{
             backgroundImage: `url(${heroImage})`,
-            filter: "brightness(0.65)",
+            filter: "brightness(0.5)",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/98 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32 w-full">
           <div className="max-w-3xl">
