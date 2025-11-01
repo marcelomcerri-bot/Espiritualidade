@@ -26,6 +26,16 @@ A spiritual wellness platform built with React and Express for the discipline "E
   - Replaced lotus flower image with clean SVG icon (Flower2 from lucide-react) to remove background artifacts
   - Updated meditation videos to Portuguese: Poetoterapia (sleep) and Raissa Zoccal/Yoga Mudra (anxiety)
   - Configured GEMINI_API_KEY as Replit Secret (must also be added to Netlify for production deployment)
+- **Major Visual Redesign (Nov 1, 2025)**:
+  - Implemented modern, vibrant color palette with improved contrast ratios (WCAG AA compliant)
+  - Added glassmorphism effects and smooth animations throughout the app
+  - Redesigned core components: Header, Footer, FeatureCard, QuoteCard with modern gradients and hover effects
+  - Improved Home page with enhanced hero section, animated cards, and better visual hierarchy
+  - Updated text contrast for better accessibility (foreground: 12%, muted-foreground: 30%)
+  - Added interactive hover animations with scale, rotate, and translate transforms
+  - Implemented rounded-3xl corners and elevated shadows for depth
+  - Created custom gradient backgrounds with primary/accent color overlays
+  - All changes architect-reviewed and accessibility-tested
 
 ## Project Architecture
 
