@@ -93,6 +93,19 @@ Com base nesses dados, crie uma mensagem personalizada que:
 
 export const handler = async () => {
   try {
+    if (!process.env.GEMINI_API_KEY) {
+      console.error("GEMINI_API_KEY not found in environment variables");
+      return {
+        statusCode: 500,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          error: "GEMINI_API_KEY não está configurada. Configure a variável de ambiente no Netlify." 
+        }),
+      };
+    }
+
     const message = await generateSoulMessage({
       hasData: false,
     });
