@@ -212,15 +212,6 @@ export default function Referencias() {
               >
                 perfil acadêmico na UFF
               </a>
-              {" "}ou seu{" "}
-              <a
-                href="https://scholar.google.com/citations?user=7VMEE9EAAAAJ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
-              >
-                Google Scholar
-              </a>
               .
             </p>
           </div>

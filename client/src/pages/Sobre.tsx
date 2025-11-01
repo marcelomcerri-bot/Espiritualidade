@@ -109,23 +109,6 @@ export default function Sobre() {
           </CardContent>
         </Card>
 
-        {/* Academic Context */}
-        <Card className="bg-muted/20">
-          <CardHeader>
-            <h2 className="font-serif text-2xl font-medium text-foreground flex items-center gap-2">
-              <BookOpen className="w-6 h-6 text-primary" />
-              Contexto Acadêmico
-            </h2>
-          </CardHeader>
-          <CardContent className="space-y-3 text-muted-foreground">
-            <p><strong className="text-foreground">Instituição:</strong> Universidade Federal Fluminense (UFF)</p>
-            <p><strong className="text-foreground">Curso:</strong> Enfermagem</p>
-            <p><strong className="text-foreground">Disciplina:</strong> Enfermagem em Saúde Mental</p>
-            <p><strong className="text-foreground">Tema do Seminário:</strong> Espiritualidade e Saúde Mental</p>
-            <p><strong className="text-foreground">Professora Responsável:</strong> Profª Drª Eliane Ramos Pereira</p>
-          </CardContent>
-        </Card>
-
         {/* Footer Note */}
         <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 border border-card-border">
           <p className="text-sm text-muted-foreground italic leading-relaxed text-center">

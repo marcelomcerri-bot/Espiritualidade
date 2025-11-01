@@ -169,8 +169,8 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">Reconhece a espiritualidade na saúde desde 2005</p>
               </div>
               <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-card-border">
-                <p className="text-4xl font-bold text-accent-foreground mb-2">1.580+</p>
-                <p className="text-sm text-muted-foreground">Citações acadêmicas da Profª Eliane Pereira</p>
+                <p className="text-4xl font-bold text-accent-foreground mb-2">EEAAC</p>
+                <p className="text-sm text-muted-foreground">Escola de Enfermagem Aurora de Afonso Costa</p>
               </div>
               <div className="p-6 rounded-2xl bg-gradient-to-br from-chart-2/10 to-chart-2/5 border border-card-border">
                 <p className="text-4xl font-bold text-chart-2 mb-2">UFF</p>
