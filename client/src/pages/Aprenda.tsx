@@ -160,6 +160,302 @@ export default function Aprenda() {
           </CardContent>
         </Card>
 
+        {/* Specific Mental Disorders Section */}
+        <div className="mb-16">
+          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
+            Espiritualidade e Transtornos Mentais Específicos
+          </h2>
+          
+          <Card className="mb-8">
+            <CardContent className="pt-6">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                A literatura científica atual demonstra que os benefícios da espiritualidade para a saúde mental podem ser observados em condições específicas. Evidências robustas, principalmente em contextos ocidentais, associam níveis mais altos de espiritualidade e religiosidade a:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="p-4 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900" data-testid="benefit-depression">
+                  <p className="font-medium text-foreground mb-2">✓ Menor incidência de depressão</p>
+                  <p className="text-sm text-muted-foreground">Práticas espirituais atuam como fator protetor significativo</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900" data-testid="benefit-suicide">
+                  <p className="font-medium text-foreground mb-2">✓ Menor taxa de suicídio</p>
+                  <p className="text-sm text-muted-foreground">Senso de propósito e comunidade oferecem proteção</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900" data-testid="benefit-substance">
+                  <p className="font-medium text-foreground mb-2">✓ Menor uso e abuso de substâncias</p>
+                  <p className="text-sm text-muted-foreground">Valores espirituais promovem comportamentos saudáveis</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-200 dark:border-yellow-900" data-testid="benefit-anxiety">
+                  <p className="font-medium text-foreground mb-2">~ Relação mista com ansiedade</p>
+                  <p className="text-sm text-muted-foreground">Estudos mostram resultados positivos, nulos e até negativos</p>
+                </div>
+              </div>
+              
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Condições como <strong>transtorno bipolar</strong> e <strong>estresse pós-traumático</strong> frequentemente mostram melhores desfechos quando associadas a coping religioso positivo e maior significado espiritual.
+              </p>
+              
+              <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-950/20 border-l-4 border-orange-500" data-testid="warning-spiritual-struggle">
+                <p className="text-sm font-medium text-orange-900 dark:text-orange-200 mb-2">⚠️ Importante Ressalva:</p>
+                <p className="text-sm text-muted-foreground">
+                  Em uma minoria dos casos (7% a 15%), a espiritualidade pode se manifestar como "luta espiritual", o que está consistentemente associado a piores resultados de saúde mental.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Spiritual Struggle Section */}
+        <div className="mb-16">
+          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
+            Luta Espiritual: Um Fator de Risco Crucial
+          </h2>
+          
+          <Card className="border-2 border-destructive/20 bg-destructive/5">
+            <CardContent className="pt-6">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Para equilibrar a visão, é fundamental abordar o conceito de <strong>"luta espiritual"</strong> ou <strong>"coping religioso negativo"</strong>. Esta situação ocorre quando o indivíduo:
+              </p>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-background" data-testid="struggle-punishment">
+                  <span className="text-destructive font-bold">•</span>
+                  <p className="text-muted-foreground">Interpreta sua doença ou sofrimento como um <strong>castigo divino</strong></p>
+                </div>
+                
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-background" data-testid="struggle-abandoned">
+                  <span className="text-destructive font-bold">•</span>
+                  <p className="text-muted-foreground">Sente-se <strong>abandonado por Deus</strong> ou pela sua fé</p>
+                </div>
+                
+                <div className="flex items-start gap-3 p-3 rounded-lg bg-background" data-testid="struggle-community">
+                  <span className="text-destructive font-bold">•</span>
+                  <p className="text-muted-foreground">Entra em <strong>conflito com sua comunidade de fé</strong></p>
+                </div>
+              </div>
+              
+              <div className="p-4 rounded-xl bg-background border border-destructive/30">
+                <p className="text-sm font-medium text-foreground mb-2">Diferença Importante:</p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Diferente de simplesmente não ser religioso, a luta espiritual é um <strong>estado de sofrimento ativo relacionado às crenças</strong>.
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Estudos mostram que esse tipo de coping está fortemente associado a maiores níveis de depressão, ansiedade, pior adesão ao tratamento e maior ideação suicida, representando um importante fator de risco que os profissionais de saúde devem estar aptos a identificar.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Clinical Assessment Section */}
+        <div className="mb-16">
+          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
+            Avaliação Espiritual na Prática Clínica
+          </h2>
+          
+          <Card>
+            <CardContent className="pt-6">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Uma das aplicações mais práticas e consensuais nas diretrizes clínicas é a realização da <strong>"História Espiritual"</strong> durante a anamnese. Trata-se de uma entrevista breve e estruturada para compreender a importância e o impacto (positivo ou negativo) das crenças do paciente em sua saúde e no tratamento.
+              </p>
+              
+              <div className="p-6 rounded-xl bg-primary/10 border border-primary/30 mb-6">
+                <h3 className="font-serif text-xl font-medium text-foreground mb-4">Ferramenta FICA</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Uma das ferramentas validadas mais utilizadas é o protocolo FICA, que permite ao profissional identificar, em poucos minutos, como a espiritualidade impacta o paciente:
+                </p>
+                
+                <div className="space-y-3">
+                  <div className="flex gap-3" data-testid="fica-faith">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">F</div>
+                    <div>
+                      <p className="font-medium text-foreground">Fé (Faith)</p>
+                      <p className="text-sm text-muted-foreground">Você tem crenças espirituais ou religiosas?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3" data-testid="fica-importance">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">I</div>
+                    <div>
+                      <p className="font-medium text-foreground">Importância (Importance)</p>
+                      <p className="text-sm text-muted-foreground">Qual a importância da fé na sua vida?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3" data-testid="fica-community">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">C</div>
+                    <div>
+                      <p className="font-medium text-foreground">Comunidade (Community)</p>
+                      <p className="text-sm text-muted-foreground">Você faz parte de uma comunidade espiritual?</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3" data-testid="fica-action">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">A</div>
+                    <div>
+                      <p className="font-medium text-foreground">Ação (Address/Action)</p>
+                      <p className="text-sm text-muted-foreground">Como gostaria que abordássemos isso no seu cuidado?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-4 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900">
+                <p className="text-sm font-medium text-green-900 dark:text-green-200 mb-2">✓ Benefícios Comprovados:</p>
+                <p className="text-sm text-muted-foreground">
+                  Estudos demonstram que essa abordagem aumenta a satisfação do paciente com o cuidado e pode melhorar a adesão ao tratamento, pois sinaliza um acolhimento integral da pessoa.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Nursing Interventions Section */}
+        <div className="mb-16">
+          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
+            Intervenções de Enfermagem para Dor e Ansiedade
+          </h2>
+          
+          <Card>
+            <CardContent className="pt-6">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                A espiritualidade também se mostra uma ferramenta valiosa e de <strong>baixo custo</strong> para intervenções de enfermagem diretas, especialmente no manejo de sintomas. Revisões sistemáticas e ensaios clínicos identificaram práticas eficazes:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="p-4 rounded-xl bg-background border border-card-border" data-testid="intervention-prayer">
+                  <p className="font-medium text-foreground mb-2">🙏 Oração Guiada</p>
+                  <p className="text-sm text-muted-foreground">Meditação baseada em preces adaptadas às crenças do paciente</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-background border border-card-border" data-testid="intervention-positive">
+                  <p className="font-medium text-foreground mb-2">💭 Pensamento Positivo</p>
+                  <p className="text-sm text-muted-foreground">Treinamento focado em esperança e significado</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-background border border-card-border" data-testid="intervention-listening">
+                  <p className="font-medium text-foreground mb-2">👂 Escuta Ativa</p>
+                  <p className="text-sm text-muted-foreground">Focada no conforto espiritual e necessidades existenciais</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-background border border-card-border" data-testid="intervention-meditation">
+                  <p className="font-medium text-foreground mb-2">🧘 Meditação Espiritual</p>
+                  <p className="text-sm text-muted-foreground">Práticas contemplativas respeitando tradições individuais</p>
+                </div>
+              </div>
+              
+              <div className="p-4 rounded-xl bg-accent/10 border border-accent/30">
+                <p className="text-sm font-medium text-foreground mb-2">📊 Resultados Comprovados:</p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Essas intervenções, quando realizadas com respeito à crença do paciente, resultaram em:
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    <span><strong>Redução significativa da intensidade da dor</strong> em pacientes queimados, oncológicos e pós-operatórios</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    <span><strong>Diminuição dos níveis de ansiedade</strong> em diversos contextos clínicos</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    <span><strong>Cuidado holístico</strong> que complementa o manejo farmacológico, promovendo conforto e bem-estar</span>
+                  </li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Biological Mechanisms Section */}
+        <div className="mb-16">
+          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
+            Mecanismos Biológicos: Uma Fronteira da Pesquisa
+          </h2>
+          
+          <Card className="bg-gradient-to-br from-chart-2/5 to-chart-5/5">
+            <CardContent className="pt-6">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                A ciência começa a explorar os possíveis <strong>mecanismos biológicos</strong> que mediam a relação entre espiritualidade e saúde. Pesquisas preliminares, ainda em estágio inicial, investigam como crenças e práticas espirituais podem influenciar marcadores neurobiológicos.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="p-4 rounded-xl bg-background/80 backdrop-blur border border-card-border" data-testid="bio-bdnf">
+                  <p className="font-medium text-foreground mb-2">🧠 BDNF</p>
+                  <p className="text-sm text-muted-foreground">Fator Neurotrófico Derivado do Cérebro — níveis mais altos correlacionados com maior espiritualidade</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-background/80 backdrop-blur border border-card-border" data-testid="bio-serotonin">
+                  <p className="font-medium text-foreground mb-2">🔬 Serotonina</p>
+                  <p className="text-sm text-muted-foreground">Disponibilidade de transportadores de serotonina relacionada ao bem-estar espiritual</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-background/80 backdrop-blur border border-card-border" data-testid="bio-dopamine">
+                  <p className="font-medium text-foreground mb-2">⚡ Dopamina</p>
+                  <p className="text-sm text-muted-foreground">Variações em genes relacionados ao sistema dopaminérgico</p>
+                </div>
+                
+                <div className="p-4 rounded-xl bg-background/80 backdrop-blur border border-card-border" data-testid="bio-oxytocin">
+                  <p className="font-medium text-foreground mb-2">💙 Oxitocina</p>
+                  <p className="text-sm text-muted-foreground">Sistema de oxitocina associado a conexão social e espiritual</p>
+                </div>
+              </div>
+              
+              <div className="p-4 rounded-xl bg-chart-5/20 border border-chart-5/30">
+                <p className="text-sm font-medium text-foreground mb-2">🔭 Perspectiva Futura:</p>
+                <p className="text-sm text-muted-foreground">
+                  Embora sejam descobertas iniciais, elas abrem um caminho promissor para entender como o bem-estar espiritual pode se traduzir em mudanças fisiológicas mensuráveis no cérebro e no corpo, integrando dimensões subjetivas e objetivas da saúde humana.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* References Section */}
+        <div className="mb-16">
+          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
+            Referências Científicas
+          </h2>
+          
+          <Card>
+            <CardContent className="pt-6 space-y-4">
+              <div className="p-4 rounded-lg bg-background border border-card-border" data-testid="ref-lucchetti">
+                <p className="text-sm font-medium text-foreground mb-2">Lucchetti, G., Koenig, H. G., & Lucchetti, A. L. G. (2021)</p>
+                <p className="text-sm text-muted-foreground italic mb-2">
+                  Spirituality, religiousness, and mental health: A review of the current scientific evidence.
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  World Journal of Clinical Cases, v. 9, n. 26, p. 7620–7631.
+                </p>
+              </div>
+              
+              <div className="p-4 rounded-lg bg-background border border-card-border" data-testid="ref-moreira-almeida">
+                <p className="text-sm font-medium text-foreground mb-2">Moreira-Almeida, A., Koenig, H. G., & Lucchetti, G. (2014)</p>
+                <p className="text-sm text-muted-foreground italic mb-2">
+                  Clinical implications of spirituality to mental health: review of evidence and practical guidelines.
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Revista Brasileira de Psiquiatria, v. 36, n. 2, p. 176–182.
+                </p>
+              </div>
+              
+              <div className="p-4 rounded-lg bg-background border border-card-border" data-testid="ref-moreira">
+                <p className="text-sm font-medium text-foreground mb-2">Moreira, R. S., Santana Junior, R. N. A., & Posso, M. B. S. (2021)</p>
+                <p className="text-sm text-muted-foreground italic mb-2">
+                  Spirituality, nursing and pain: an indissociable triad.
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Brazilian Journal of Pain, 2021.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Research Base */}
         <Card>
           <CardHeader>
