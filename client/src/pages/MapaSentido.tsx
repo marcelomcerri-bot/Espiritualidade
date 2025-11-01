@@ -17,11 +17,7 @@ export default function MapaSentido() {
 
   const createMutation = useMutation({
     mutationFn: async (pillar: { category: string; text: string }) => {
-      return await apiRequest("/api/meaning-pillars", {
-        method: "POST",
-        body: JSON.stringify(pillar),
-        headers: { "Content-Type": "application/json" },
-      });
+      return await apiRequest("POST", "/api/meaning-pillars", pillar);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/meaning-pillars"] });
@@ -31,9 +27,7 @@ export default function MapaSentido() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      return await apiRequest(`/api/meaning-pillars/${id}`, {
-        method: "DELETE",
-      });
+      return await apiRequest("DELETE", `/api/meaning-pillars/${id}`);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/meaning-pillars"] });

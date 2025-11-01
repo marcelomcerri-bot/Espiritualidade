@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import FeatureCard from "@/components/FeatureCard";
 import QuoteCard from "@/components/QuoteCard";
 import heroImage from "@assets/generated_images/Peaceful_forest_morning_light_7cfb107a.png";
-import lotusImage from "@assets/generated_images/Watercolor_lotus_spiritual_symbol_9ac31502.png";
+import lotusImage from "@assets/generated_images/Lotus_flower_transparent_background_ac05ff77.png";
 
 export default function Home() {
   const features = [

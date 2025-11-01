@@ -1,17 +1,12 @@
-import { Heart, Sparkles, Sun, Wind, Book, Users, Phone } from "lucide-react";
+import { Heart, Sparkles, Sun, Wind, Book, Users, Phone, Brain, Lightbulb, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import BreathingExercise from "@/components/BreathingExercise";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function MomentoDificil() {
-  const hopefulQuotes = [
-    "Este momento difícil não define quem você é. Você tem força interior para atravessá-lo.",
-    "A espiritualidade nos lembra que sempre há esperança, mesmo nos dias mais sombrios.",
-    "Sua vida tem valor e significado profundos. Esta fase é passageira.",
-    "Você já superou dias difíceis antes. Sua resiliência é maior do que imagina.",
-    "Quando tudo parece incerto, o sentido da vida permanece. Você não está sozinho.",
-  ];
+  const [selectedMood, setSelectedMood] = useState<string | null>(null);
 
   const spiritualPractices = [
     {
@@ -39,6 +34,42 @@ export default function MomentoDificil() {
       link: "/praticas#meditacao",
     },
   ];
+
+  const moodOptions = [
+    { label: "Ansioso", value: "ansioso", color: "from-yellow-500/20 to-orange-500/20", borderColor: "border-yellow-500/40" },
+    { label: "Triste", value: "triste", color: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/40" },
+    { label: "Sobrecarregado", value: "sobrecarregado", color: "from-red-500/20 to-pink-500/20", borderColor: "border-red-500/40" },
+    { label: "Sem esperança", value: "sem-esperanca", color: "from-gray-500/20 to-slate-500/20", borderColor: "border-gray-500/40" },
+    { label: "Estressado", value: "estressado", color: "from-purple-500/20 to-violet-500/20", borderColor: "border-purple-500/40" },
+  ];
+
+  const moodRecommendations: Record<string, { title: string; practices: string[]; description: string }> = {
+    ansioso: {
+      title: "Apoio para Ansiedade",
+      description: "A ansiedade pode ser aliviada através de práticas que trazem você de volta ao momento presente.",
+      practices: ["Respiração 4-7-8 (inspire por 4, segure por 7, expire por 8)", "Observar 5 coisas que você vê, 4 que você toca, 3 que você ouve", "Meditação de body scan para reconexão corporal", "Caminhada consciente ao ar livre"],
+    },
+    triste: {
+      title: "Acolhimento da Tristeza",
+      description: "A tristeza é uma emoção válida que merece ser acolhida com compaixão.",
+      practices: ["Escrever uma carta para você mesmo com palavras de conforto", "Praticar gratidão por pequenos momentos do dia", "Ouvir música que toca sua alma", "Conectar-se com a natureza ou com pessoas queridas"],
+    },
+    sobrecarregado: {
+      title: "Alívio da Sobrecarga",
+      description: "Quando tudo parece demais, é hora de simplificar e voltar ao essencial.",
+      practices: ["Listar 3 prioridades absolutas e deixar o resto para depois", "Respiração profunda por 5 minutos", "Prática de soltar o controle - reconhecer o que não está em suas mãos", "Conversar com alguém de confiança sobre o que você está sentindo"],
+    },
+    "sem-esperanca": {
+      title: "Reencontrar a Esperança",
+      description: "Mesmo quando parece que não há saída, existem caminhos de renovação.",
+      practices: ["Relembrar um momento difícil que você já superou", "Conectar-se com seu propósito de vida através do questionário", "Praticar compaixão por si mesmo - você está fazendo o melhor que pode", "Buscar apoio profissional - pedir ajuda é um ato de coragem"],
+    },
+    estressado: {
+      title: "Redução do Estresse",
+      description: "O estresse crônico pode ser transformado através de práticas de ancoragem.",
+      practices: ["Técnica de respiração consciente 4-4-4-4", "Fazer uma pausa e mudar de ambiente por alguns minutos", "Meditação de 10 minutos focada no presente", "Prática de movimento: alongamento ou caminhada leve"],
+    },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-card py-12">
@@ -96,6 +127,60 @@ export default function MomentoDificil() {
           </div>
         </div>
 
+        {/* Mood-Based Recommendations - NOVA FUNCIONALIDADE */}
+        <Card className="mb-8 bg-gradient-to-br from-accent/5 to-primary/5">
+          <CardHeader>
+            <h2 className="font-serif text-2xl font-medium text-foreground flex items-center gap-2">
+              <Brain className="w-6 h-6 text-primary" />
+              Como Você Está Se Sentindo Agora?
+            </h2>
+            <p className="text-muted-foreground">
+              Selecione a emoção que mais representa o que você está vivendo. Ofereceremos práticas personalizadas.
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+              {moodOptions.map((mood) => (
+                <button
+                  key={mood.value}
+                  onClick={() => setSelectedMood(mood.value)}
+                  className={`p-4 rounded-xl transition-all border-2 ${
+                    selectedMood === mood.value
+                      ? `bg-gradient-to-br ${mood.color} ${mood.borderColor} scale-105`
+                      : "bg-background border-card-border hover:border-primary/40"
+                  }`}
+                  data-testid={`button-mood-${mood.value}`}
+                >
+                  <p className="text-sm font-medium text-foreground">{mood.label}</p>
+                </button>
+              ))}
+            </div>
+
+            {selectedMood && moodRecommendations[selectedMood] && (
+              <div className="animate-fade-in space-y-4" data-testid="mood-recommendations">
+                <div className="p-5 rounded-xl bg-background border border-primary/30">
+                  <h3 className="font-serif text-xl font-medium mb-2 text-foreground flex items-center gap-2">
+                    <Lightbulb className="w-5 h-5 text-primary" />
+                    {moodRecommendations[selectedMood].title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {moodRecommendations[selectedMood].description}
+                  </p>
+                  <h4 className="font-medium text-foreground mb-3">Práticas Recomendadas:</h4>
+                  <ul className="space-y-2">
+                    {moodRecommendations[selectedMood].practices.map((practice, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                        <Activity className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                        <span>{practice}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
         {/* Breathing Exercise */}
         <Card className="mb-8" id="respiracao">
           <CardHeader>
@@ -111,25 +196,6 @@ export default function MomentoDificil() {
             <BreathingExercise />
           </CardContent>
         </Card>
-
-        {/* Hopeful Quotes */}
-        <div className="mb-8">
-          <h2 className="font-serif text-2xl font-medium mb-6 text-foreground">
-            Mensagens de Esperança e Força
-          </h2>
-          <div className="grid grid-cols-1 gap-4">
-            {hopefulQuotes.map((quote, index) => (
-              <div
-                key={index}
-                className="p-5 rounded-xl bg-gradient-to-br from-accent/10 to-primary/5 border border-card-border"
-              >
-                <p className="text-base text-foreground leading-relaxed italic">
-                  "{quote}"
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Additional Resources */}
         <Card className="mb-8 bg-muted/20">

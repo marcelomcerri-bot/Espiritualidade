@@ -16,7 +16,7 @@ export default function Referencias() {
         </div>
 
         <Tabs defaultValue="artigos" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="artigos" className="gap-2" data-testid="tab-artigos">
               <BookOpen className="w-4 h-4" />
               Artigos e Livros
@@ -24,10 +24,6 @@ export default function Referencias() {
             <TabsTrigger value="videos" className="gap-2" data-testid="tab-videos">
               <Video className="w-4 h-4" />
               Vídeos
-            </TabsTrigger>
-            <TabsTrigger value="apresentacao" className="gap-2" data-testid="tab-apresentacao">
-              <FileText className="w-4 h-4" />
-              Apresentação
             </TabsTrigger>
           </TabsList>
 
@@ -86,7 +82,23 @@ export default function Referencias() {
             </div>
 
             <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
-              Referências da Apresentação do Seminário
+              Livros e Obras de Referência
+            </h3>
+
+            <div className="space-y-4">
+              <ReferenceItem
+                type="Livro"
+                citation="KOENIG, H. G. Spirituality in Patient Care: Why, How, When, and What. 3. ed. Philadelphia: Templeton Press, 2013."
+              />
+
+              <ReferenceItem
+                type="Livro"
+                citation="PESSINI, L.; BARCHIFONTAINE, C. P. de. Bioética, cuidado e espiritualidade. São Paulo: Loyola, 2014."
+              />
+            </div>
+
+            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
+              Outras Referências Utilizadas
             </h3>
 
             <div className="space-y-4">
@@ -112,21 +124,16 @@ export default function Referencias() {
                 type="Artigo"
                 citation="SAAD, M.; MASIERO, D.; BATTISTELLA, L. R. Espiritualidade baseada em evidências. Acta Fisiátrica, v. 8, n. 3, p. 107-112, 2001."
               />
-            </div>
 
-            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
-              Livros e Obras de Referência
-            </h3>
-
-            <div className="space-y-4">
               <ReferenceItem
-                type="Livro"
-                citation="KOENIG, H. G. Spirituality in Patient Care: Why, How, When, and What. 3. ed. Philadelphia: Templeton Press, 2013."
+                type="PDF"
+                citation="BRASIL. Conselho Federal de Enfermagem (COFEN). Código de Ética dos Profissionais de Enfermagem. Resolução Cofen nº 564/2017. Brasília, 2017. Disponível em: https://www.cofen.gov.br/resolucao-cofen-no-5642017_59145.html. Acesso em: 28 out. 2025."
+                url="https://www.cofen.gov.br/resolucao-cofen-no-5642017_59145.html"
               />
 
               <ReferenceItem
-                type="Livro"
-                citation="PESSINI, L.; BARCHIFONTAINE, C. P. de. Bioética, cuidado e espiritualidade. São Paulo: Loyola, 2014."
+                type="PDF"
+                citation="CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT, G.; MANHÃES, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico."
               />
             </div>
           </TabsContent>
@@ -179,28 +186,6 @@ export default function Referencias() {
             </div>
           </TabsContent>
 
-          <TabsContent value="apresentacao" className="space-y-4 animate-fade-in">
-            <h2 className="font-serif text-2xl font-medium mb-6 text-foreground">
-              Material da Apresentação do Seminário
-            </h2>
-
-            <p className="text-muted-foreground mb-6">
-              Referências extraídas da apresentação do seminário "Espiritualidade e Saúde Mental" conforme documento fornecido.
-            </p>
-
-            <div className="space-y-4">
-              <ReferenceItem
-                type="PDF"
-                citation="BRASIL. Conselho Federal de Enfermagem (COFEN). Código de Ética dos Profissionais de Enfermagem. Resolução Cofen nº 564/2017. Brasília, 2017. Disponível em: https://www.cofen.gov.br/resolucao-cofen-no-5642017_59145.html. Acesso em: 28 out. 2025."
-                url="https://www.cofen.gov.br/resolucao-cofen-no-5642017_59145.html"
-              />
-
-              <ReferenceItem
-                type="PDF"
-                citation="CERRI, M. M.; OTERO, M. L. C. M. G.; BITTENCOURT, G.; MANHÃES, G.; CARVALHO, R. G. G.; RITTA, M. C. C. L.; MEDEIROS, R. M.; ALMEIDA, P. A. S. Espiritualidade e Saúde Mental: Apresentação de Seminário. Universidade Federal Fluminense (UFF), 2025. Material acadêmico."
-              />
-            </div>
-          </TabsContent>
         </Tabs>
 
         <div className="mt-12 p-8 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 border border-card-border">

@@ -32,13 +32,9 @@ export default function Jornada() {
   const createMutation = useMutation({
     mutationFn: async (assessment: typeof newAssessment) => {
       const weekNumber = assessments.length + 1;
-      return await apiRequest("/api/journey", {
-        method: "POST",
-        body: JSON.stringify({
-          ...assessment,
-          weekLabel: `Sem ${weekNumber}`,
-        }),
-        headers: { "Content-Type": "application/json" },
+      return await apiRequest("POST", "/api/journey", {
+        ...assessment,
+        weekLabel: `Sem ${weekNumber}`,
       });
     },
     onSuccess: () => {
@@ -88,6 +84,69 @@ export default function Jornada() {
         mental: latestAssessment.mental,
       }
     : { spiritual: 0, emotional: 0, mental: 0 };
+
+  const getPersonalizedInsights = () => {
+    if (!latestAssessment || assessments.length < 2) return [];
+    
+    const previous = assessments[assessments.length - 2];
+    const insights: { type: string; message: string; color: string }[] = [];
+    
+    const spiritualChange = latestAssessment.spiritual - previous.spiritual;
+    const emotionalChange = latestAssessment.emotional - previous.emotional;
+    const mentalChange = latestAssessment.mental - previous.mental;
+    
+    if (spiritualChange >= 10) {
+      insights.push({
+        type: "Crescimento Espiritual",
+        message: `Seu bem-estar espiritual aumentou ${spiritualChange}%! Continue cultivando as práticas que trouxeram essa evolução.`,
+        color: "from-primary/10 to-primary/5 border-primary/30"
+      });
+    } else if (spiritualChange <= -10) {
+      insights.push({
+        type: "Atenção Espiritual",
+        message: `Sua dimensão espiritual caiu ${Math.abs(spiritualChange)}%. Considere retomar práticas de conexão e sentido.`,
+        color: "from-yellow-500/10 to-orange-500/5 border-yellow-500/30"
+      });
+    }
+    
+    if (latestAssessment.sentidoVida < 40) {
+      insights.push({
+        type: "Reconexão com Propósito",
+        message: "Seu senso de propósito está baixo. Explore o questionário de Logoterapia para redescobrir o que traz significado à sua vida.",
+        color: "from-accent/10 to-accent/5 border-accent/30"
+      });
+    }
+    
+    if (latestAssessment.gratidao >= 70 && latestAssessment.pazInterior >= 70) {
+      insights.push({
+        type: "Equilíbrio Interior",
+        message: "Gratidão e paz interior elevadas indicam um estado de harmonia espiritual. Continue nutrind o essas dimensões!",
+        color: "from-green-500/10 to-emerald-500/5 border-green-500/30"
+      });
+    }
+    
+    if (assessments.length >= 4) {
+      const trend = assessments.slice(-4).reduce((acc, a, i) => {
+        if (i > 0) {
+          const prev = assessments[assessments.length - 4 + i - 1];
+          return acc + (a.spiritual - prev.spiritual);
+        }
+        return acc;
+      }, 0);
+      
+      if (trend >= 20) {
+        insights.push({
+          type: "Tendência Positiva",
+          message: "Você está em uma trajetória ascendente consistente! Seu comprometimento com o crescimento espiritual está gerando frutos.",
+          color: "from-blue-500/10 to-indigo-500/5 border-blue-500/30"
+        });
+      }
+    }
+    
+    return insights;
+  };
+
+  const personalizedInsights = getPersonalizedInsights();
 
   if (isLoading) {
     return (
@@ -386,6 +445,25 @@ export default function Jornada() {
                 </Card>
               </TabsContent>
             </Tabs>
+
+            {/* Personalized Insights - NOVA FUNCIONALIDADE */}
+            {personalizedInsights.length > 0 && (
+              <div className="mt-12">
+                <h2 className="font-serif text-3xl font-medium mb-6 text-foreground">
+                  Insights Personalizados
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {personalizedInsights.map((insight, idx) => (
+                    <Card key={idx} className={`border-2 bg-gradient-to-br ${insight.color}`}>
+                      <CardContent className="pt-6">
+                        <h3 className="font-medium text-lg mb-2 text-foreground">{insight.type}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{insight.message}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
           </>
         )}
 
