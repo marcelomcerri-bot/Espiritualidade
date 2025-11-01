@@ -18,7 +18,7 @@ export default function ReferenceItem({ citation, type, url }: ReferenceItemProp
 
   const typeColors = {
     Artigo: "bg-primary/10 text-primary",
-    Livro: "bg-accent/10 text-accent-foreground",
+    Livro: "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
     Vídeo: "bg-chart-2/10 text-chart-2",
     PDF: "bg-muted text-muted-foreground",
   };

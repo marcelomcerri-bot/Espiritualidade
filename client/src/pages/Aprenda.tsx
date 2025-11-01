@@ -415,47 +415,6 @@ export default function Aprenda() {
           </Card>
         </div>
 
-        {/* References Section */}
-        <div className="mb-16">
-          <h2 className="font-serif text-3xl font-medium mb-8 text-foreground">
-            Referências Científicas
-          </h2>
-          
-          <Card>
-            <CardContent className="pt-6 space-y-4">
-              <div className="p-4 rounded-lg bg-background border border-card-border" data-testid="ref-lucchetti">
-                <p className="text-sm font-medium text-foreground mb-2">Lucchetti, G., Koenig, H. G., & Lucchetti, A. L. G. (2021)</p>
-                <p className="text-sm text-muted-foreground italic mb-2">
-                  Spirituality, religiousness, and mental health: A review of the current scientific evidence.
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  World Journal of Clinical Cases, v. 9, n. 26, p. 7620–7631.
-                </p>
-              </div>
-              
-              <div className="p-4 rounded-lg bg-background border border-card-border" data-testid="ref-moreira-almeida">
-                <p className="text-sm font-medium text-foreground mb-2">Moreira-Almeida, A., Koenig, H. G., & Lucchetti, G. (2014)</p>
-                <p className="text-sm text-muted-foreground italic mb-2">
-                  Clinical implications of spirituality to mental health: review of evidence and practical guidelines.
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Revista Brasileira de Psiquiatria, v. 36, n. 2, p. 176–182.
-                </p>
-              </div>
-              
-              <div className="p-4 rounded-lg bg-background border border-card-border" data-testid="ref-moreira">
-                <p className="text-sm font-medium text-foreground mb-2">Moreira, R. S., Santana Junior, R. N. A., & Posso, M. B. S. (2021)</p>
-                <p className="text-sm text-muted-foreground italic mb-2">
-                  Spirituality, nursing and pain: an indissociable triad.
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Brazilian Journal of Pain, 2021.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* Research Base */}
         <Card>
           <CardHeader>

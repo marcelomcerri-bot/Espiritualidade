@@ -3,6 +3,10 @@ import VideoPlayer from "@/components/VideoPlayer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Praticas() {
+  const handleTabChange = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-card py-12">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -20,7 +24,7 @@ export default function Praticas() {
           </div>
         </div>
 
-        <Tabs defaultValue="meditacao" className="w-full">
+        <Tabs defaultValue="meditacao" className="w-full" onValueChange={handleTabChange}>
           <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
             <TabsTrigger value="meditacao" className="gap-2" data-testid="tab-meditacao">
               <Play className="w-4 h-4" />

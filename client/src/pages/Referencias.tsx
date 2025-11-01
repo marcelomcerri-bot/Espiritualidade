@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import pdfFile from "@assets/Espiritualidade e Saúde mental_1762015049821.pdf";
 
 export default function Referencias() {
+  const handleTabChange = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-card py-12">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -17,7 +21,7 @@ export default function Referencias() {
           </p>
         </div>
 
-        <Tabs defaultValue="artigos" className="w-full">
+        <Tabs defaultValue="artigos" className="w-full" onValueChange={handleTabChange}>
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="artigos" className="gap-2" data-testid="tab-artigos">
               <BookOpen className="w-4 h-4" />
