@@ -1,5 +1,6 @@
-import { GraduationCap, Users, BookOpen, Heart } from "lucide-react";
+import { GraduationCap, Users, BookOpen, Heart, Smartphone, Download } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Sobre() {
   const authors = [
@@ -45,6 +46,140 @@ export default function Sobre() {
             <p className="text-muted-foreground leading-relaxed">
               Fundamentado em estudos sobre a dimensão espiritual como fator de proteção e promoção da saúde, este trabalho busca contribuir para um cuidado integral e humanizado.
             </p>
+          </CardContent>
+        </Card>
+
+        {/* APK Section */}
+        <Card className="mb-8 border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-background overflow-hidden">
+          <CardHeader>
+            <h2 className="font-serif text-2xl font-medium text-foreground flex items-center gap-2">
+              <Smartphone className="w-6 h-6 text-primary" />
+              Disponível para Android
+            </h2>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              {/* Phone Mockup */}
+              <div className="flex-shrink-0">
+                <div className="relative w-[280px] h-[560px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-[40px] p-3 shadow-2xl">
+                  {/* Phone notch */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-3xl z-10"></div>
+                  
+                  {/* Phone screen */}
+                  <div className="w-full h-full bg-white dark:bg-gray-950 rounded-[32px] overflow-hidden relative">
+                    {/* App content preview */}
+                    <div className="w-full h-full flex flex-col bg-gradient-to-b from-orange-50 to-white dark:from-orange-950/20 dark:to-gray-950">
+                      {/* Header */}
+                      <div className="p-6 text-center">
+                        <h1 className="font-serif text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">
+                          Cuidado Espiritual
+                        </h1>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                          na Saúde Mental
+                        </p>
+                      </div>
+                      
+                      {/* Content preview */}
+                      <div className="flex-1 px-4 space-y-3">
+                        <div className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                              <Heart className="w-3 h-3 text-orange-600 dark:text-orange-400" />
+                            </div>
+                            <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded w-24"></div>
+                          </div>
+                          <div className="space-y-1">
+                            <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded w-full"></div>
+                            <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded w-4/5"></div>
+                          </div>
+                        </div>
+                        
+                        <div className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                              <BookOpen className="w-3 h-3 text-blue-600 dark:text-blue-400" />
+                            </div>
+                            <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded w-20"></div>
+                          </div>
+                          <div className="space-y-1">
+                            <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded w-full"></div>
+                            <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded w-3/5"></div>
+                          </div>
+                        </div>
+
+                        <div className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+                          <div className="flex items-center gap-2 mb-1">
+                            <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                              <Users className="w-3 h-3 text-green-600 dark:text-green-400" />
+                            </div>
+                            <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded w-28"></div>
+                          </div>
+                          <div className="space-y-1">
+                            <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded w-full"></div>
+                            <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded w-2/3"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Bottom navigation */}
+                      <div className="p-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+                        <div className="flex justify-around">
+                          <div className="w-8 h-1 bg-orange-500 rounded-full"></div>
+                          <div className="w-8 h-1 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                          <div className="w-8 h-1 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                          <div className="w-8 h-1 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Download info */}
+              <div className="flex-1 space-y-4">
+                <div>
+                  <h3 className="text-xl font-serif font-medium text-foreground mb-3">
+                    Acesse onde estiver
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Baixe nosso aplicativo Android e tenha acesso a todas as práticas de cuidado espiritual, ferramentas de autoconhecimento e recursos para saúde mental diretamente no seu celular.
+                  </p>
+                  
+                  <div className="space-y-2 text-sm text-muted-foreground mb-6">
+                    <div className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Acesso offline a conteúdos selecionados</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Interface otimizada para dispositivos móveis</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Mesma experiência do site em formato de app</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-900/30">
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <strong className="text-foreground">Link de download:</strong> O link para baixar o APK será disponibilizado em breve.
+                  </p>
+                  <Button 
+                    disabled 
+                    className="w-full sm:w-auto gap-2"
+                    data-testid="button-download-apk"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download APK (em breve)
+                  </Button>
+                </div>
+
+                <p className="text-xs text-muted-foreground italic">
+                  <strong className="text-foreground">Nota:</strong> O aplicativo está em versão beta e disponível apenas para Android. Certifique-se de permitir instalação de apps de fontes desconhecidas nas configurações do seu dispositivo.
+                </p>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
