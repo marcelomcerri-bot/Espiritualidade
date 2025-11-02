@@ -63,9 +63,9 @@ export default function Praticas() {
               />
               <VideoPlayer
                 videoId="z6X5oEIg6Ak"
-                title="Meditação de Gratidão"
-                description="A gratidão é um recurso espiritual fundamental no cuidado da saúde mental. Esta prática fortalece a resiliência emocional, reduz sintomas de ansiedade e depressão, e cultiva uma perspectiva positiva sobre a vida. Ao reconhecer e valorizar as bênçãos cotidianas, desenvolvemos um senso mais profundo de propósito e bem-estar, elementos centrais na integração da espiritualidade ao cuidado em saúde mental."
-                reference="Poetoterapia por Lázaro Ramon. Meditação Guiada para Gratidão. YouTube, 2021. Disponível em: https://www.youtube.com/watch?v=z6X5oEIg6Ak"
+                title="Meditação para Alívio do Estresse (10 min)"
+                description="O estresse crônico afeta profundamente a saúde mental e espiritual, desconectando a pessoa do momento presente e esgotando recursos internos. Esta meditação guiada utiliza técnicas de respiração consciente e presença plena para reduzir tensões acumuladas, restaurar equilíbrio emocional e reconectar com a paz interior. Ao acalmar o sistema nervoso, fortalecemos nossa capacidade de enfrentar desafios com resiliência e serenidade."
+                reference="GOODFUL. 10-Minute Meditation For Stress. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=z6X5oEIg6Ak"
               />
               <VideoPlayer
                 videoId="2saauDlIqM0"

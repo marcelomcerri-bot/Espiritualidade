@@ -205,7 +205,7 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="Vídeo"
-                citation="POETOTERAPIA POR LÁZARO RAMON. Meditação Guiada para Gratidão. YouTube, 2021. Disponível em: https://www.youtube.com/watch?v=z6X5oEIg6Ak. Acesso em: 2 nov. 2025."
+                citation="GOODFUL. 10-Minute Meditation For Stress. YouTube, 2020. Disponível em: https://www.youtube.com/watch?v=z6X5oEIg6Ak. Acesso em: 2 nov. 2025."
                 url="https://www.youtube.com/watch?v=z6X5oEIg6Ak"
               />
 
