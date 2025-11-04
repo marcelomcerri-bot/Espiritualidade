@@ -111,6 +111,11 @@ The application supports both PostgreSQL and in-memory storage:
 - All API routes use hardcoded "demo-user" ID (authentication not yet implemented)
 
 ## Recent Changes
+- **2025-11-04**: Mobile layout fixes
+  - Fixed tab navigation layout on Práticas page for mobile devices
+  - Changed from horizontal grid to vertical stack layout for better mobile UX
+  - Tabs now display one below another on small screens (< 1024px)
+  - Desktop layout preserved with 4-column grid
 - **2025-11-01**: Initial project setup in Replit environment
   - Configured to use in-memory storage as fallback when database not available
   - Set up workflow for development server on port 5000
