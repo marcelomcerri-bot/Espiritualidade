@@ -22,16 +22,16 @@ export default function Header() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 opacity-50" />
       <nav className="relative max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3 hover-lift rounded-xl px-3 py-2 transition-all flex-shrink-0 group">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 hover-lift rounded-xl px-2 sm:px-3 py-2 transition-all flex-shrink-0 group">
             <div className="relative">
-              <Heart className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
+              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary transition-transform group-hover:scale-110" />
               <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full group-hover:bg-primary/30 transition-all" />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-serif text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="font-serif text-sm sm:text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Cuidado Espiritual
               </span>
-              <span className="font-serif text-xs text-muted-foreground">na Saúde Mental</span>
+              <span className="font-serif text-[10px] sm:text-xs text-muted-foreground">na Saúde Mental</span>
             </div>
           </Link>
 
@@ -94,13 +94,13 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 hover-elevate rounded-md"
+            className="lg:hidden p-3 hover-elevate rounded-md min-w-[44px] min-h-[44px] flex items-center justify-center"
             data-testid="button-mobile-menu"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-7 h-7" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-7 h-7" />
             )}
           </button>
         </div>
@@ -113,7 +113,7 @@ export default function Header() {
                 key={item.name} 
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-4 py-2 rounded-md text-sm font-medium hover-elevate ${
+                className={`block px-4 py-3 rounded-md text-base font-medium hover-elevate min-h-[48px] flex items-center ${
                   location === item.href
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground"
@@ -123,11 +123,11 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 space-y-2">
+            <div className="pt-4 space-y-3">
               <Link href="/momento-dificil">
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full text-base min-h-[48px] py-3"
                   onClick={() => setMobileMenuOpen(false)}
                   data-testid="button-mobile-momento-dificil"
                 >
@@ -137,7 +137,7 @@ export default function Header() {
               <Link href="/sobre">
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full text-base min-h-[48px] py-3"
                   onClick={() => setMobileMenuOpen(false)}
                   data-testid="button-mobile-sobre"
                 >
@@ -147,7 +147,7 @@ export default function Header() {
               <Link href="/referencias">
                 <Button
                   variant="default"
-                  className="w-full"
+                  className="w-full text-base min-h-[48px] py-3"
                   onClick={() => setMobileMenuOpen(false)}
                   data-testid="button-mobile-referencias"
                 >
