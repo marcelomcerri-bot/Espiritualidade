@@ -229,22 +229,22 @@ export default function Home() {
               </Link>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
-              <div className="group p-8 rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <p className="text-5xl font-black text-primary mb-3 group-hover:scale-110 transition-transform">OMS</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">Reconhece a espiritualidade na saúde desde 2005</p>
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
+              <div className="group p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-3xl sm:text-5xl font-black text-primary mb-2 sm:mb-3 group-hover:scale-110 transition-transform">OMS</p>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Reconhece a espiritualidade na saúde desde 2005</p>
               </div>
-              <div className="group p-8 rounded-3xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <p className="text-5xl font-black text-accent mb-3 group-hover:scale-110 transition-transform">EEAAC</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">Escola de Enfermagem Aurora de Afonso Costa</p>
+              <div className="group p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-3xl sm:text-5xl font-black text-accent mb-2 sm:mb-3 group-hover:scale-110 transition-transform">EEAAC</p>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Escola de Enfermagem Aurora de Afonso Costa</p>
               </div>
-              <div className="group p-8 rounded-3xl bg-gradient-to-br from-chart-2/15 to-chart-2/5 border border-chart-2/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <p className="text-5xl font-black text-chart-2 mb-3 group-hover:scale-110 transition-transform">UFF</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">Universidade Federal Fluminense</p>
+              <div className="group p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-chart-2/15 to-chart-2/5 border border-chart-2/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-3xl sm:text-5xl font-black text-chart-2 mb-2 sm:mb-3 group-hover:scale-110 transition-transform">UFF</p>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Universidade Federal Fluminense</p>
               </div>
-              <div className="group p-8 rounded-3xl bg-gradient-to-br from-chart-3/15 to-chart-3/5 border border-chart-3/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <p className="text-5xl font-black text-chart-3 mb-3 group-hover:scale-110 transition-transform">Frankl</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">Logoterapia como base teórica</p>
+              <div className="group p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-chart-3/15 to-chart-3/5 border border-chart-3/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-3xl sm:text-5xl font-black text-chart-3 mb-2 sm:mb-3 group-hover:scale-110 transition-transform">Frankl</p>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Logoterapia como base teórica</p>
               </div>
             </div>
           </div>

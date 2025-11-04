@@ -21,9 +21,9 @@ import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-full">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/proposito" component={Proposito} />
