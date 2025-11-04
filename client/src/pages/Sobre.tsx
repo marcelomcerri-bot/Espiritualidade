@@ -163,15 +163,21 @@ export default function Sobre() {
 
                 <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-900/30">
                   <p className="text-sm text-muted-foreground mb-3">
-                    <strong className="text-foreground">Link de download:</strong> O link para baixar o APK será disponibilizado em breve.
+                    <strong className="text-foreground">Link de download:</strong> Acesse a pasta do Google Drive para baixar o APK do aplicativo.
                   </p>
                   <Button 
-                    disabled 
+                    asChild
                     className="w-full sm:w-auto gap-2"
                     data-testid="button-download-apk"
                   >
-                    <Download className="w-4 h-4" />
-                    Download APK (em breve)
+                    <a 
+                      href="https://drive.google.com/drive/u/1/folders/13swnhpe7Dr1r4Qlkb35GmaeO6lptYDqu" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download APK
+                    </a>
                   </Button>
                 </div>
 
