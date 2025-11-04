@@ -89,22 +89,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border/30 pt-6 sm:pt-10">
-          <div className="glass-effect rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-4 sm:mb-6 max-w-4xl mx-auto">
-            <p className="text-sm text-foreground font-medium mb-2 sm:mb-3 text-center">
-              Desenvolvido por acadêmicos de enfermagem da UFF
-            </p>
-            <p className="text-xs text-muted-foreground text-center mb-3 sm:mb-4">
-              Disciplina: Espiritualidade no Campo da Saúde
-            </p>
-            <div className="text-xs text-muted-foreground text-center leading-relaxed space-y-1">
-              <p>© 2025 • Projeto acadêmico sem fins lucrativos</p>
-              <p>Conteúdo baseado em evidências científicas</p>
-              <p className="pt-2">UFF - Escola de Enfermagem Aurora de Afonso Costa</p>
-              <p>Orientação: Profª Drª Eliane Ramos Pereira</p>
+        <div className="border-t border-border/30 pt-6 sm:pt-8">
+          <div className="bg-card/50 rounded-lg p-4 sm:p-6 mb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 text-center sm:text-left">
+              <div className="flex-1">
+                <p className="text-sm font-medium text-foreground mb-1">
+                  Desenvolvido por acadêmicos de enfermagem da UFF
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Disciplina: Espiritualidade no Campo da Saúde
+                </p>
+              </div>
+              <div className="flex-1 sm:text-right">
+                <p className="text-xs text-muted-foreground mb-1">
+                  © 2025 • Projeto acadêmico sem fins lucrativos
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Conteúdo baseado em evidências científicas
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-border/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-center sm:text-left">
+              <p className="text-xs text-muted-foreground">
+                UFF - Escola de Enfermagem Aurora de Afonso Costa
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Orientação: Profª Drª Eliane Ramos Pereira
+              </p>
             </div>
           </div>
-          <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-900 max-w-4xl mx-auto">
+          <div className="p-3 sm:p-4 rounded-lg bg-orange-50 dark:bg-orange-950/20 border border-orange-200 dark:border-orange-900">
             <p className="text-xs text-muted-foreground text-center leading-relaxed">
               <strong className="text-foreground">Importante:</strong> Todas as práticas e recursos apresentados têm caráter educativo e informativo. Este conteúdo não substitui orientação médica, psicológica ou espiritual formal. Em caso de sofrimento emocional ou crise, procure um profissional de saúde qualificado.
             </p>
