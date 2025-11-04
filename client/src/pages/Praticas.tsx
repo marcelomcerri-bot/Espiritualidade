@@ -25,20 +25,20 @@ export default function Praticas() {
         </div>
 
         <Tabs defaultValue="meditacao" className="w-full" onValueChange={handleTabChange}>
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
-            <TabsTrigger value="meditacao" className="gap-2" data-testid="tab-meditacao">
+          <TabsList className="!flex flex-col lg:!grid w-full lg:grid-cols-4 gap-2 lg:gap-0 mb-8 h-auto p-2">
+            <TabsTrigger value="meditacao" className="gap-2 w-full !justify-start lg:!justify-center" data-testid="tab-meditacao">
               <Play className="w-4 h-4" />
               Meditação
             </TabsTrigger>
-            <TabsTrigger value="musica" className="gap-2" data-testid="tab-musica">
+            <TabsTrigger value="musica" className="gap-2 w-full !justify-start lg:!justify-center" data-testid="tab-musica">
               <Music className="w-4 h-4" />
               Música
             </TabsTrigger>
-            <TabsTrigger value="natureza" className="gap-2" data-testid="tab-natureza">
+            <TabsTrigger value="natureza" className="gap-2 w-full !justify-start lg:!justify-center" data-testid="tab-natureza">
               <Leaf className="w-4 h-4" />
               Natureza
             </TabsTrigger>
-            <TabsTrigger value="arte" className="gap-2" data-testid="tab-arte">
+            <TabsTrigger value="arte" className="gap-2 w-full !justify-start lg:!justify-center" data-testid="tab-arte">
               <Palette className="w-4 h-4" />
               Arte
             </TabsTrigger>
