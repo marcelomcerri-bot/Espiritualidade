@@ -111,6 +111,9 @@ The application supports both PostgreSQL and in-memory storage:
 - All API routes use hardcoded "demo-user" ID (authentication not yet implemented)
 
 ## Recent Changes
+- **2025-11-05**: Navigation updates
+  - Removed "Reflexões que Curam" from navigation menu (Gemini integration not compatible with APK)
+  - Route still exists at /mensagem-alma for direct URL access if needed
 - **2025-11-04**: Mobile layout fixes
   - Fixed tab navigation layout on Práticas page for mobile devices
   - Changed from horizontal grid to vertical stack layout for better mobile UX
