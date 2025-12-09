@@ -107,7 +107,7 @@ export default function Footer() {
                 UFF - Escola de Enfermagem Aurora de Afonso Costa
               </p>
               <p className="text-xs text-muted-foreground">
-                Orientação: Profª Drª Eliane Ramos Pereira, Profª Drª Rose Mary C. R. A. Silva e Profª Drª Diva Morett Leão
+                Orientação: Profª Drª Eliane Ramos Pereira, Profª Drª Rose Mary C. R. A. Silva e Profª Drª Diva C. M. R. Leão
               </p>
             </div>
           </div>

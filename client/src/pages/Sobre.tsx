@@ -222,22 +222,23 @@ export default function Sobre() {
               </p>
               
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong className="text-foreground">Formação:</strong> Doutora em Enfermagem | Mestre em Enfermagem</p>
-                <p><strong className="text-foreground">Áreas de Expertise:</strong> Fenomenologia, Cuidado Espiritual, Enfermagem em Saúde Mental, Abordagem Humanística em Enfermagem</p>
+                <p><strong className="text-foreground">Formação:</strong> Pós-Doutora em Filosofia (UERJ) | Doutora em Psicologia Social, Filosofia e Enfermagem | Mestre em Filosofia e Enfermagem</p>
+                <p><strong className="text-foreground">Áreas de Expertise:</strong> Fenomenologia (Merleau-Ponty), Cuidado Espiritual, Filosofia e Saúde, Tanatologia, Cuidados Paliativos</p>
+                <p><strong className="text-foreground">Liderança:</strong> Grupo de Pesquisa "Filosofia e Saúde" (UERJ-UFF)</p>
               </div>
             </div>
 
             <div className="p-6 rounded-xl bg-background border border-card-border">
               <h3 className="text-xl font-serif font-medium text-foreground mb-2">
-                Profª Drª Diva Morett Leão
+                Profª Drª Diva Cristina Morett Romano Leão
               </h3>
               <p className="text-muted-foreground mb-3">
                 Universidade Federal Fluminense (UFF)
               </p>
               
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong className="text-foreground">Formação:</strong> Doutora em Enfermagem | Mestre em Enfermagem</p>
-                <p><strong className="text-foreground">Áreas de Expertise:</strong> Espiritualidade e Saúde, Cuidado Integral, Dimensão Espiritual no Processo Saúde-Doença</p>
+                <p><strong className="text-foreground">Formação:</strong> Doutora em Ciências do Cuidado em Saúde (UFF/Universidad de Granada) | Mestre em Enfermagem (UNIRIO) | Especialista em Enfermagem Obstétrica</p>
+                <p><strong className="text-foreground">Áreas de Expertise:</strong> Espiritualidade e Saúde da Mulher, Câncer de Mama, Cuidados Paliativos, Logoterapia (Viktor Frankl)</p>
               </div>
             </div>
 

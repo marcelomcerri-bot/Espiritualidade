@@ -68,33 +68,44 @@ export default function Referencias() {
             <div className="space-y-4">
               <ReferenceItem
                 type="Artigo"
-                citation="SILVA, R. M. C. R. A.; PEREIRA, E. R.; SANTOS, L. T. O cuidado espiritual na perspectiva fenomenológica: uma abordagem humanística em enfermagem. Ciência, Cuidado e Saúde, v. 18, n. 2, 2019."
+                citation="SILVA, R. M. C. R. A.; PEREIRA, E. R. A dimensão espiritual e sentido da vida na prática do cuidado de enfermagem: enfoque fenomenológico. REME - Revista Mineira de Enfermagem, v. 22, 2018. DOI: https://doi.org/10.5935/1415-2762.20180049."
+                url="https://periodicos.ufmg.br/index.php/reme/article/view/49686"
               />
 
               <ReferenceItem
                 type="Artigo"
-                citation="SILVA, R. M. C. R. A.; PEREIRA, E. R. A dimensão espiritual no cuidado de enfermagem: revisão integrativa da literatura. Cogitare Enfermagem, v. 22, n. 2, 2017."
+                citation="SILVA, R. M. C. R. A.; PEREIRA, E. R.; PAULO, V. B.; SILVA, R. C. F. A Espiritualidade na Maternidade Atípica: Uma Reflexão com Base no Referencial Teórico de Victor Frankl. Revista Pró-UniverSUS, Edição Especial: Espiritualidade e Religiosidade, 2023."
+                url="https://editora.univassouras.edu.br/index.php/RPU/article/view/3859"
               />
 
               <ReferenceItem
                 type="Artigo"
-                citation="MEDEIROS, A. Y. B. B. V.; PEREIRA, E. R.; SILVA, R. M. C. R. A. Spirituality and mental health: integrative review. Research, Society and Development, v. 10, n. 5, 2021."
+                citation="ROCHA, R. C. N. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V.; MARINS, A. M. F. O sentido da vida dos enfermeiros no trabalho em cuidados paliativos: revisão integrativa de literatura. Revista Eletrônica de Enfermagem, v. 22, 2020. DOI: https://doi.org/10.5216/ree.v22.56169."
+                url="https://revistas.ufg.br/fen/article/view/56169"
               />
             </div>
 
             <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
-              Artigos da Profª Drª Diva Morett Leão
+              Artigos da Profª Drª Diva Cristina Morett Romano Leão
             </h3>
             
             <div className="space-y-4">
               <ReferenceItem
                 type="Artigo"
-                citation="LEÃO, D. M.; PEREIRA, E. R.; SILVA, R. M. C. R. A. Espiritualidade e saúde mental: interfaces do cuidado integral. Revista de Enfermagem UFPE on line, v. 14, 2020."
+                citation="ROCHA, R. C. N. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V.; LEÃO, D. C. M. R.; MARINS, A. M. F. Meaning of life as perceived by nurses at work in oncology palliative care: a phenomenological study. Revista da Escola de Enfermagem da USP, v. 55, e03753, 2021. DOI: https://doi.org/10.1590/S1980-220X2020018603753."
+                url="https://www.scielo.br/j/reeusp/a/rQMndXMdDxc7yFFBNPd7Nbg/?lang=en"
               />
 
               <ReferenceItem
                 type="Artigo"
-                citation="LEÃO, D. M.; SILVA, R. M. C. R. A. A dimensão espiritual no processo saúde-doença: contribuições para a prática do enfermeiro. Escola Anna Nery Revista de Enfermagem, v. 23, n. 4, 2019."
+                citation="LEÃO, D. C. M. R. et al. Spirituality and meaning of life in nursing education: report of experience in teaching. Revista Brasileira de Enfermagem, v. 73, n. 6, e20190796, 2020. DOI: https://doi.org/10.1590/0034-7167-2019-0796."
+                url="https://www.scielo.br/j/reben/a/DsSpFJNQzKZYJgdTRdVbTTM/?lang=en"
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="LEÃO, D. C. M. R.; PEREIRA, E. R.; SILVA, R. M. C. R. A. Influência da religiosidade e espiritualidade na saúde: reflexões para o cuidado de enfermagem. Online Brazilian Journal of Nursing (OBJN), 2017."
+                url="https://www.objnursing.uff.br/index.php/nursing/article/view/4086/html"
               />
             </div>
 
