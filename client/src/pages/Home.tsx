@@ -378,7 +378,7 @@ function DesktopHome() {
             </h3>
             <p className="text-muted-foreground leading-relaxed text-center">
               Este projeto é orientado pelas <strong className="text-foreground">Profª Drª Eliane Ramos Pereira</strong>, <strong className="text-foreground">Profª Drª Rose Mary Costa Rosa Andrade Silva</strong> e <strong className="text-foreground">Profª Drª Diva Cristina Morett Romano Leão</strong>, 
-              especialistas em espiritualidade no cuidado em saúde, vinculado à <strong className="text-foreground">Escola de Enfermagem Aurora de Afonso Costa (EEAAC)</strong> 
+              docentes e pesquisadoras em espiritualidade no cuidado em saúde, vinculadas à <strong className="text-foreground">Escola de Enfermagem Aurora de Afonso Costa (EEAAC)</strong> 
               da <strong className="text-foreground">Universidade Federal Fluminense</strong>.
             </p>
           </div>
