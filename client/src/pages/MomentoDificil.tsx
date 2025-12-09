@@ -1,12 +1,14 @@
-import { Heart, Sparkles, Sun, Wind, Book, Users, Brain, Lightbulb, Activity } from "lucide-react";
+import { Heart, Sparkles, Sun, Wind, Book, Users, Brain, Lightbulb, Activity, ChevronRight, Shield, Flower2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import BreathingExercise from "@/components/BreathingExercise";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function MomentoDificil() {
   const [selectedMood, setSelectedMood] = useState<string | null>(null);
+  const isMobile = useIsMobile();
 
   const spiritualPractices = [
     {
@@ -14,33 +16,45 @@ export default function MomentoDificil() {
       title: "Respiração Consciente",
       description: "A respiração profunda acalma o sistema nervoso e traz presença ao momento atual.",
       link: "#respiracao",
+      gradient: "from-primary/10 to-primary/5",
+      iconBg: "bg-primary/15",
+      iconColor: "text-primary",
     },
     {
       icon: Heart,
       title: "Práticas de Gratidão",
       description: "Reconhecer pequenas bênçãos, mesmo em momentos difíceis, cultiva esperança.",
       link: "/diario",
+      gradient: "from-accent/10 to-accent/5",
+      iconBg: "bg-accent/15",
+      iconColor: "text-accent",
     },
     {
       icon: Sun,
       title: "Conexão com a Natureza",
       description: "Observar o céu, sentir o sol ou caminhar ao ar livre restaura o equilíbrio interior.",
       link: "/praticas#natureza",
+      gradient: "from-chart-2/10 to-chart-2/5",
+      iconBg: "bg-chart-2/15",
+      iconColor: "text-chart-2",
     },
     {
       icon: Sparkles,
       title: "Meditação Guiada",
       description: "Práticas de mindfulness ajudam a encontrar paz interior e clareza mental.",
       link: "/praticas#meditacao",
+      gradient: "from-chart-3/10 to-chart-3/5",
+      iconBg: "bg-chart-3/15",
+      iconColor: "text-chart-3",
     },
   ];
 
   const moodOptions = [
-    { label: "Ansioso", value: "ansioso", color: "from-yellow-500/20 to-orange-500/20", borderColor: "border-yellow-500/40" },
-    { label: "Triste", value: "triste", color: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/40" },
-    { label: "Sobrecarregado", value: "sobrecarregado", color: "from-red-500/20 to-pink-500/20", borderColor: "border-red-500/40" },
-    { label: "Sem esperança", value: "sem-esperanca", color: "from-gray-500/20 to-slate-500/20", borderColor: "border-gray-500/40" },
-    { label: "Estressado", value: "estressado", color: "from-purple-500/20 to-violet-500/20", borderColor: "border-purple-500/40" },
+    { label: "Ansioso", value: "ansioso", color: "from-yellow-500/20 to-orange-500/20", borderColor: "border-yellow-500/40", icon: Activity },
+    { label: "Triste", value: "triste", color: "from-blue-500/20 to-indigo-500/20", borderColor: "border-blue-500/40", icon: Heart },
+    { label: "Sobrecarregado", value: "sobrecarregado", color: "from-red-500/20 to-pink-500/20", borderColor: "border-red-500/40", icon: Brain },
+    { label: "Sem esperança", value: "sem-esperanca", color: "from-gray-500/20 to-slate-500/20", borderColor: "border-gray-500/40", icon: Sun },
+    { label: "Estressado", value: "estressado", color: "from-purple-500/20 to-violet-500/20", borderColor: "border-purple-500/40", icon: Wind },
   ];
 
   const moodRecommendations: Record<string, { title: string; practices: string[]; description: string }> = {
@@ -101,27 +115,46 @@ export default function MomentoDificil() {
           </CardContent>
         </Card>
 
-        {/* Spiritual Practices Grid */}
-        <div className="mb-8">
-          <h2 className="font-serif text-2xl font-medium mb-6 text-foreground">
-            Práticas de Apoio Espiritual
-          </h2>
+        {/* Spiritual Practices Grid - Reorganized */}
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Shield className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h2 className="font-serif text-xl font-semibold text-foreground">
+                Práticas de Apoio
+              </h2>
+              <p className="text-sm text-muted-foreground">Escolha uma prática para começar</p>
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {spiritualPractices.map((practice) => (
+            {spiritualPractices.map((practice, index) => (
               <Link key={practice.title} href={practice.link}>
-                <div className="flex items-start gap-3 p-5 rounded-xl bg-gradient-to-br from-background to-card hover-elevate transition-all border border-card-border cursor-pointer group">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <practice.icon className="w-5 h-5" />
+                <Card className={`relative overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer`}>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${practice.gradient} opacity-50`} />
+                  <div className="relative p-5">
+                    <div className="flex items-center gap-4">
+                      <div className={`relative flex-shrink-0 w-14 h-14 rounded-2xl ${practice.iconBg} flex items-center justify-center`}>
+                        <practice.icon className={`w-7 h-7 ${practice.iconColor}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {practice.title}
+                          </h3>
+                          <div className={`w-8 h-8 rounded-full ${practice.iconBg} flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity`}>
+                            <ChevronRight className={`w-4 h-4 ${practice.iconColor}`} />
+                          </div>
+                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                          {practice.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-medium mb-1 text-foreground group-hover:text-primary transition-colors">
-                      {practice.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {practice.description}
-                    </p>
-                  </div>
-                </div>
+                </Card>
               </Link>
             ))}
           </div>
