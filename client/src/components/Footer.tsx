@@ -62,16 +62,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://pesquisadores.uff.br/researcher/eliane-ramos-pereira"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
-                  data-testid="link-footer-prof"
-                >
-                  Prof. Eliane Ramos Pereira
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+                <Link href="/sobre" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-footer-prof">
+                  Corpo Docente
+                </Link>
               </li>
             </ul>
           </div>
@@ -114,7 +107,7 @@ export default function Footer() {
                 UFF - Escola de Enfermagem Aurora de Afonso Costa
               </p>
               <p className="text-xs text-muted-foreground">
-                Orientação: Profª Drª Eliane Ramos Pereira
+                Orientação: Profª Drª Eliane Ramos Pereira, Profª Drª Rose Mary C. R. A. Silva e Profª Drª Diva Morett Leão
               </p>
             </div>
           </div>

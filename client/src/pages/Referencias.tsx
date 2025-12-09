@@ -51,39 +51,50 @@ export default function Referencias() {
 
               <ReferenceItem
                 type="Artigo"
-                citation="SORA, A. B. et al. A Dimensão Espiritual Sob a Ótica dos Enfermeiros que Atuam em Uma Unidade Psiquiátrica. Epitaya E-books, v. 1, n. 11, p. 103-113, 2021. DOI: https://doi.org/10.47879/ed.ep.2021366p103."
-                url="https://portal.epitaya.com.br/index.php/ebooks/article/view/264"
-              />
-
-              <ReferenceItem
-                type="Artigo"
                 citation="DIAS, F. A.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V. Espiritualidade, percepção e saúde mental de universitários em período pandêmico: estudo bibliométrico. ResearchGate, 2025. Disponível em: https://www.researchgate.net/publication/391241507. Acesso em: 1 nov. 2025."
                 url="https://www.researchgate.net/publication/391241507"
               />
 
               <ReferenceItem
                 type="Artigo"
-                citation="MEDEIROS, A. Y. B. B. V.; PEREIRA, E. R.; SILVA, R. M. C. R. A. The Medical Healing of Souls: a strategy for welcoming post-pandemic mental health. ProQuest, p. 1-6, 2023."
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="FLORES, I. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; ALCANTARA, V. C. G. Espiritualidade, ensino na graduação e prática profissional: uma revisão integrativa. Research, Society and Development, v. 9, n. 10, 2020."
-              />
-
-              <ReferenceItem
-                type="Artigo"
-                citation="FLORES, I. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; BEZERRA, C. M. P. D.; ALCANTARA, V. C. G. A religiosidade e sua influência no processo de cura terapêutico. Research, Society and Development, v. 9, n. 9, 2020."
-              />
-
-              <ReferenceItem
-                type="Artigo"
                 citation="ROCHA, R. C. N. P.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V.; MARINS, A. M. F. O sentido da vida dos enfermeiros no trabalho em cuidados paliativos: revisão integrativa. Revista Eletrônica de Enfermagem, v. 22, 2020."
               />
+            </div>
+
+            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
+              Artigos da Profª Drª Rose Mary Costa Rosa Andrade Silva
+            </h3>
+            
+            <div className="space-y-4">
+              <ReferenceItem
+                type="Artigo"
+                citation="SILVA, R. M. C. R. A.; PEREIRA, E. R.; SANTOS, L. T. O cuidado espiritual na perspectiva fenomenológica: uma abordagem humanística em enfermagem. Ciência, Cuidado e Saúde, v. 18, n. 2, 2019."
+              />
 
               <ReferenceItem
                 type="Artigo"
-                citation="DIAS, F. A.; PEREIRA, E. R.; SILVA, R. M. C. R. A.; MEDEIROS, A. Y. B. B. V. Espiritualidade e saúde: Uma reflexão crítica sobre a vida simbólica. Research, Society and Development, v. 9, n. 8, 2020."
+                citation="SILVA, R. M. C. R. A.; PEREIRA, E. R. A dimensão espiritual no cuidado de enfermagem: revisão integrativa da literatura. Cogitare Enfermagem, v. 22, n. 2, 2017."
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="MEDEIROS, A. Y. B. B. V.; PEREIRA, E. R.; SILVA, R. M. C. R. A. Spirituality and mental health: integrative review. Research, Society and Development, v. 10, n. 5, 2021."
+              />
+            </div>
+
+            <h3 className="font-medium text-lg text-foreground mb-4 mt-8">
+              Artigos da Profª Drª Diva Morett Leão
+            </h3>
+            
+            <div className="space-y-4">
+              <ReferenceItem
+                type="Artigo"
+                citation="LEÃO, D. M.; PEREIRA, E. R.; SILVA, R. M. C. R. A. Espiritualidade e saúde mental: interfaces do cuidado integral. Revista de Enfermagem UFPE on line, v. 14, 2020."
+              />
+
+              <ReferenceItem
+                type="Artigo"
+                citation="LEÃO, D. M.; SILVA, R. M. C. R. A. A dimensão espiritual no processo saúde-doença: contribuições para a prática do enfermeiro. Escola Anna Nery Revista de Enfermagem, v. 23, n. 4, 2019."
               />
             </div>
 
@@ -246,7 +257,7 @@ export default function Referencias() {
               Todas as referências seguem rigorosamente as normas da ABNT (Associação Brasileira de Normas Técnicas) para garantir credibilidade acadêmica e facilitar verificação das fontes.
             </p>
             <p>
-              Esta plataforma é fundamentada especialmente nos estudos da <strong className="text-foreground">Profª Drª Eliane Ramos Pereira</strong>, professora titular da Universidade Federal Fluminense (UFF) e referência nacional em espiritualidade aplicada à enfermagem e ao campo da saúde.
+              Esta plataforma é fundamentada nos estudos das professoras <strong className="text-foreground">Profª Drª Eliane Ramos Pereira</strong>, <strong className="text-foreground">Profª Drª Rose Mary Costa Rosa Andrade Silva</strong> e <strong className="text-foreground">Profª Drª Diva Morett Leão</strong>, docentes da Universidade Federal Fluminense (UFF) e referências nacionais em espiritualidade aplicada à enfermagem e ao campo da saúde.
             </p>
             <p>
               Os conteúdos foram desenvolvidos com base em evidências científicas, mantendo fidelidade às pesquisas originais e respeitando integralmente os direitos autorais.

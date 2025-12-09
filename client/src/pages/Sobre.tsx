@@ -197,7 +197,7 @@ export default function Sobre() {
               Orientação Acadêmica
             </h2>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6">
             <div className="p-6 rounded-xl bg-background border border-card-border">
               <h3 className="text-xl font-serif font-medium text-foreground mb-2">
                 Profª Drª Eliane Ramos Pereira
@@ -211,12 +211,40 @@ export default function Sobre() {
                 <p><strong className="text-foreground">Áreas de Expertise:</strong> Enfermagem em Saúde Mental, Espiritualidade e Cuidado Espiritual, Fenomenologia (Merleau-Ponty), Logoterapia (Viktor Frankl), Psicossomática</p>
                 <p><strong className="text-foreground">Liderança:</strong> Núcleo de Estudos Qualitativos Translacionais em Emoções e Espiritualidade na Saúde (QUALITEES/CNPq)</p>
               </div>
+            </div>
+
+            <div className="p-6 rounded-xl bg-background border border-card-border">
+              <h3 className="text-xl font-serif font-medium text-foreground mb-2">
+                Profª Drª Rose Mary Costa Rosa Andrade Silva
+              </h3>
+              <p className="text-muted-foreground mb-3">
+                Universidade Federal Fluminense (UFF)
+              </p>
               
-              <div className="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/20">
-                <p className="text-sm text-muted-foreground italic leading-relaxed">
-                  A Profª Eliane Ramos Pereira é referência nacional em pesquisas sobre espiritualidade aplicada à enfermagem e saúde mental, com foco em fenomenologia, logoterapia e cuidado humanizado. Sua extensa produção acadêmica demonstra forte compromisso com a integração da dimensão espiritual nos cuidados de saúde.
-                </p>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Formação:</strong> Doutora em Enfermagem | Mestre em Enfermagem</p>
+                <p><strong className="text-foreground">Áreas de Expertise:</strong> Fenomenologia, Cuidado Espiritual, Enfermagem em Saúde Mental, Abordagem Humanística em Enfermagem</p>
               </div>
+            </div>
+
+            <div className="p-6 rounded-xl bg-background border border-card-border">
+              <h3 className="text-xl font-serif font-medium text-foreground mb-2">
+                Profª Drª Diva Morett Leão
+              </h3>
+              <p className="text-muted-foreground mb-3">
+                Universidade Federal Fluminense (UFF)
+              </p>
+              
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Formação:</strong> Doutora em Enfermagem | Mestre em Enfermagem</p>
+                <p><strong className="text-foreground">Áreas de Expertise:</strong> Espiritualidade e Saúde, Cuidado Integral, Dimensão Espiritual no Processo Saúde-Doença</p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
+              <p className="text-sm text-muted-foreground italic leading-relaxed">
+                As professoras são referências nacionais em pesquisas sobre espiritualidade aplicada à enfermagem e saúde mental, com foco em fenomenologia, logoterapia e cuidado humanizado. Sua extensa produção acadêmica demonstra forte compromisso com a integração da dimensão espiritual nos cuidados de saúde.
+              </p>
             </div>
           </CardContent>
         </Card>
