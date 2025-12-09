@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileNavigation from "@/components/MobileNavigation";
+import MobileHeader from "@/components/MobileHeader";
 import Home from "@/pages/Home";
 import Proposito from "@/pages/Proposito";
 import Diario from "@/pages/Diario";
@@ -22,8 +24,13 @@ import NotFound from "@/pages/not-found";
 function Router() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-full">
-      <Header />
-      <main className="flex-1 w-full max-w-full overflow-x-hidden">
+      <div className="hidden md:block">
+        <Header />
+      </div>
+      <div className="md:hidden">
+        <MobileHeader />
+      </div>
+      <main className="flex-1 w-full max-w-full overflow-x-hidden pb-20 md:pb-0">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/proposito" component={Proposito} />
@@ -40,7 +47,10 @@ function Router() {
           <Route component={NotFound} />
         </Switch>
       </main>
-      <Footer />
+      <div className="hidden md:block">
+        <Footer />
+      </div>
+      <MobileNavigation />
     </div>
   );
 }
