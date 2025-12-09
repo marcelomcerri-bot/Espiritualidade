@@ -28,7 +28,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-serif text-sm sm:text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Cuidado Espiritual
+                Cuidado Integral
               </span>
               <span className="font-serif text-[10px] sm:text-xs text-muted-foreground">na Saúde Mental</span>
             </div>

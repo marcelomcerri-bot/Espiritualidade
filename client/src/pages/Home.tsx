@@ -114,7 +114,7 @@ function MobileHome() {
 
       <section className="px-5 py-8 bg-gradient-to-b from-background to-card">
         <h2 className="font-serif text-xl font-semibold mb-3 text-foreground text-center">
-          Cuidado Espiritual na Saúde Mental
+          Cuidado Integral na Saúde Mental
         </h2>
         <p className="text-sm text-primary font-medium mb-6 text-center">
           Uma Abordagem Científica e Humanizada
@@ -134,7 +134,7 @@ function MobileHome() {
         
         <Card className="p-5">
           <h3 className="font-serif text-lg font-bold mb-3 text-foreground">
-            Por Que <span className="text-primary">Cuidado Espiritual</span>?
+            Por Que <span className="text-primary">Cuidado Integral</span>?
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             A OMS reconhece desde 2005 a espiritualidade como componente integral da saúde. Cultivar a dimensão espiritual:
@@ -322,7 +322,7 @@ function DesktopHome() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl lg:text-5xl font-medium mb-6 text-foreground">
-              Cuidado Espiritual na Saúde Mental
+              Cuidado Integral na Saúde Mental
             </h2>
             <p className="text-xl text-primary font-medium mb-4">
               Uma Abordagem Científica e Humanizada
@@ -346,7 +346,7 @@ function DesktopHome() {
             <div className="relative bg-gradient-to-br from-card to-background rounded-3xl p-10 border border-border/50 shadow-xl hover-lift overflow-hidden group">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-all duration-500" />
               <h3 className="relative font-serif text-2xl font-bold mb-6 text-foreground">
-                Por Que <span className="text-primary">Cuidado Espiritual</span>?
+                Por Que <span className="text-primary">Cuidado Integral</span>?
               </h3>
               <p className="relative text-muted-foreground leading-relaxed mb-6">
                 A Organização Mundial da Saúde reconhece desde 2005 a espiritualidade como componente integral da saúde. Pesquisas demonstram que cultivar a dimensão espiritual:

@@ -72,7 +72,7 @@ export default function Sobre() {
                       {/* Header */}
                       <div className="p-6 text-center">
                         <h1 className="font-serif text-2xl font-medium text-gray-900 dark:text-gray-100 mb-2">
-                          Cuidado Espiritual
+                          Cuidado Integral
                         </h1>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
                           na Saúde Mental
@@ -208,7 +208,7 @@ export default function Sobre() {
               
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><strong className="text-foreground">Formação:</strong> Doutora em Enfermagem | Mestre em Enfermagem (UNIRIO) | Especialista em Psicanálise e Saúde Mental (UERJ)</p>
-                <p><strong className="text-foreground">Áreas de Expertise:</strong> Enfermagem em Saúde Mental, Espiritualidade e Cuidado Espiritual, Fenomenologia (Merleau-Ponty), Logoterapia (Viktor Frankl), Psicossomática</p>
+                <p><strong className="text-foreground">Áreas de Expertise:</strong> Enfermagem em Saúde Mental, Espiritualidade e Cuidado Integral, Fenomenologia (Merleau-Ponty), Logoterapia (Viktor Frankl), Psicossomática</p>
                 <p><strong className="text-foreground">Liderança:</strong> Núcleo de Estudos Qualitativos Translacionais em Emoções e Espiritualidade na Saúde (QUALITEES/CNPq)</p>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Sobre() {
               
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><strong className="text-foreground">Formação:</strong> Pós-Doutora em Filosofia (UERJ) | Doutora em Psicologia Social, Filosofia e Enfermagem | Mestre em Filosofia e Enfermagem</p>
-                <p><strong className="text-foreground">Áreas de Expertise:</strong> Fenomenologia (Merleau-Ponty), Cuidado Espiritual, Filosofia e Saúde, Tanatologia, Cuidados Paliativos</p>
+                <p><strong className="text-foreground">Áreas de Expertise:</strong> Fenomenologia (Merleau-Ponty), Cuidado Integral, Filosofia e Saúde, Tanatologia, Cuidados Paliativos</p>
                 <p><strong className="text-foreground">Liderança:</strong> Grupo de Pesquisa "Filosofia e Saúde" (UERJ-UFF)</p>
               </div>
             </div>

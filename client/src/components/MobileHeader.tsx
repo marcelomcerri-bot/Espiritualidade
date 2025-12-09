@@ -14,7 +14,7 @@ export default function MobileHeader({ title }: MobileHeaderProps) {
             <Heart className="w-6 h-6 text-primary" />
           </div>
           <span className="font-serif text-base font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {title || "Cuidado Espiritual"}
+            {title || "Cuidado Integral"}
           </span>
         </Link>
       </div>

@@ -72,7 +72,7 @@ export default function MensagemAlma() {
             Reflexões que Curam
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mensagens de Cuidado Espiritual para sua Jornada
+            Mensagens de Cuidado Integral para sua Jornada
           </p>
         </div>
 
