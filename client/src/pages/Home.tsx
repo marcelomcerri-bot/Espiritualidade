@@ -11,9 +11,7 @@ const features = [
   {
     icon: Compass,
     title: "Descobrir Meu Propósito",
-    shortTitle: "Propósito",
     description: "Questionário baseado em Logoterapia para identificar valores essenciais e propósito de vida através de reflexões profundas.",
-    shortDesc: "Encontre seu sentido de vida",
     href: "/proposito",
     gradient: "from-primary/10 to-primary/5",
     color: "text-primary",
@@ -22,9 +20,7 @@ const features = [
   {
     icon: BookOpen,
     title: "Meu Diário",
-    shortTitle: "Diário",
     description: "Espaço personalizado para registro de experiências significativas, gratidão e reflexões sobre fontes de sentido na vida.",
-    shortDesc: "Registre suas reflexões",
     href: "/diario",
     gradient: "from-accent/10 to-accent/5",
     color: "text-accent",
@@ -33,9 +29,7 @@ const features = [
   {
     icon: Heart,
     title: "Práticas",
-    shortTitle: "Práticas",
     description: "Catálogo de práticas espirituais como meditação, conexão com a natureza, música contemplativa e exercícios guiados.",
-    shortDesc: "Meditação e exercícios",
     href: "/praticas",
     gradient: "from-chart-2/10 to-chart-2/5",
     color: "text-chart-2",
@@ -44,9 +38,7 @@ const features = [
   {
     icon: TrendingUp,
     title: "Minha Jornada",
-    shortTitle: "Jornada",
     description: "Visualização da evolução do seu bem-estar espiritual, emocional e mental através de autoavaliações semanais.",
-    shortDesc: "Acompanhe seu progresso",
     href: "/jornada",
     gradient: "from-chart-3/10 to-chart-3/5",
     color: "text-chart-3",
@@ -55,9 +47,7 @@ const features = [
   {
     icon: Shield,
     title: "Momento Difícil",
-    shortTitle: "Apoio",
     description: "Ferramentas de apoio em crises com estratégias espirituais, frases de esperança e exercícios de ancoragem existencial.",
-    shortDesc: "Ajuda em momentos difíceis",
     href: "/momento-dificil",
     gradient: "from-chart-4/10 to-chart-4/5",
     color: "text-destructive",
@@ -66,9 +56,7 @@ const features = [
   {
     icon: Sparkles,
     title: "Meu Mapa de Sentido",
-    shortTitle: "Mapa",
     description: "Visualização interativa dos pilares que trazem propósito à sua vida, mapeando relações, atividades e valores.",
-    shortDesc: "Visualize seus valores",
     href: "/mapa-sentido",
     gradient: "from-chart-5/10 to-chart-5/5",
     color: "text-chart-5",
@@ -78,95 +66,206 @@ const features = [
 
 function MobileHome() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="px-4 py-6 space-y-6">
-        <div className="text-center space-y-2">
-          <Flower2 className="w-12 h-12 text-primary mx-auto" />
-          <h1 className="font-serif text-2xl font-bold text-foreground">
-            Olá, bem-vindo
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            Cultive seu bem-estar espiritual
-          </p>
-        </div>
-
-        <Link href="/proposito">
-          <Card className="p-4 bg-gradient-to-r from-primary/20 to-primary/10 border-primary/30">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <Compass className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Comece Agora</p>
-                  <p className="text-xs text-muted-foreground">Descubra seu propósito</p>
-                </div>
-              </div>
-              <ChevronRight className="w-5 h-5 text-primary" />
+    <div className="min-h-screen">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            filter: "brightness(0.4)",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        
+        <div className="relative z-10 w-full px-5 py-12">
+          <div className="flex justify-center mb-6">
+            <div className="relative w-16 h-16 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 blur-xl rounded-full" />
+              <Flower2 className="relative w-12 h-12 text-primary" />
             </div>
-          </Card>
-        </Link>
-
-        <div className="space-y-3">
-          <h2 className="font-semibold text-foreground px-1">Recursos</h2>
-          <div className="grid grid-cols-2 gap-3">
-            {features.slice(0, 4).map((feature) => {
-              const Icon = feature.icon;
-              return (
-                <Link key={feature.href} href={feature.href}>
-                  <Card className="p-4 h-full hover-elevate">
-                    <div className={`w-10 h-10 rounded-lg ${feature.bg} flex items-center justify-center mb-3`}>
-                      <Icon className={`w-5 h-5 ${feature.color}`} />
-                    </div>
-                    <p className="font-medium text-sm text-foreground">{feature.shortTitle}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{feature.shortDesc}</p>
-                  </Card>
-                </Link>
-              );
-            })}
           </div>
-        </div>
-
-        <div className="space-y-3">
-          <h2 className="font-semibold text-foreground px-1">Mais Ferramentas</h2>
-          <div className="space-y-2">
-            {features.slice(4).map((feature) => {
-              const Icon = feature.icon;
-              return (
-                <Link key={feature.href} href={feature.href}>
-                  <Card className="p-3 hover-elevate">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-lg ${feature.bg} flex items-center justify-center`}>
-                        <Icon className={`w-5 h-5 ${feature.color}`} />
-                      </div>
-                      <div className="flex-1">
-                        <p className="font-medium text-sm text-foreground">{feature.shortTitle}</p>
-                        <p className="text-xs text-muted-foreground">{feature.shortDesc}</p>
-                      </div>
-                      <ChevronRight className="w-4 h-4 text-muted-foreground" />
-                    </div>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        <Card className="p-4 bg-gradient-to-br from-accent/10 to-primary/10 border-accent/20">
-          <p className="text-sm italic text-muted-foreground text-center">
-            "Quem tem um porquê para viver pode suportar quase qualquer como."
+          
+          <h1 className="font-serif text-3xl font-bold mb-4 leading-tight text-center">
+            <span className="text-foreground">Descubra o </span>
+            <span className="gradient-text">Sentido</span>
+            <span className="text-foreground"> e o </span>
+            <span className="gradient-text">Propósito</span>
+            <span className="text-foreground"> da Vida</span>
+          </h1>
+          
+          <p className="text-base text-muted-foreground leading-relaxed mb-8 text-center">
+            Plataforma baseada em <strong className="text-foreground">evidências científicas</strong> e <strong className="text-foreground">Logoterapia</strong> para fortalecer seu bem-estar.
           </p>
-          <p className="text-xs text-primary text-center mt-2 font-medium">
-            Viktor Frankl
+          
+          <div className="flex flex-col gap-3">
+            <Link href="/proposito">
+              <Button size="lg" className="w-full bg-gradient-to-r from-primary to-primary/80 shadow-lg" data-testid="button-hero-comecar">
+                Começar Minha Jornada
+              </Button>
+            </Link>
+            <Link href="/aprenda">
+              <Button size="lg" variant="outline" className="w-full" data-testid="button-hero-aprenda">
+                Conheça a Ciência
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-8 bg-gradient-to-b from-background to-card">
+        <h2 className="font-serif text-xl font-semibold mb-3 text-foreground text-center">
+          Cuidado Espiritual na Saúde Mental
+        </h2>
+        <p className="text-sm text-primary font-medium mb-6 text-center">
+          Uma Abordagem Científica e Humanizada
+        </p>
+        
+        <Card className="p-5 mb-4">
+          <h3 className="font-serif text-lg font-bold mb-3 text-foreground">
+            Desenvolvido por Estudantes de <span className="text-primary">Enfermagem</span>
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            Esta plataforma foi criada por discentes do curso de Enfermagem da UFF como parte de seus estudos sobre espiritualidade no campo da saúde.
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            A plataforma oferece recursos interativos fundamentados em Logoterapia e estudos fenomenológicos sobre espiritualidade.
           </p>
         </Card>
-
-        <div className="text-center py-4">
-          <p className="text-xs text-muted-foreground">
-            Desenvolvido por estudantes de Enfermagem UFF
+        
+        <Card className="p-5">
+          <h3 className="font-serif text-lg font-bold mb-3 text-foreground">
+            Por Que <span className="text-primary">Cuidado Espiritual</span>?
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+            A OMS reconhece desde 2005 a espiritualidade como componente integral da saúde. Cultivar a dimensão espiritual:
+          </p>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li className="flex items-start gap-2">
+              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mt-0.5">✓</span>
+              <span>Fortalece a resiliência psicológica</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mt-0.5">✓</span>
+              <span>Reduz sintomas de ansiedade e depressão</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mt-0.5">✓</span>
+              <span>Promove esperança e equilíbrio emocional</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs mt-0.5">✓</span>
+              <span>Auxilia na busca por sentido existencial</span>
+            </li>
+          </ul>
+        </Card>
+        
+        <div className="mt-4 p-4 bg-gradient-to-br from-primary/10 to-accent/5 rounded-xl border border-primary/20">
+          <h3 className="font-serif text-base font-medium mb-2 text-foreground text-center">
+            Base Acadêmica
+          </h3>
+          <p className="text-xs text-muted-foreground leading-relaxed text-center">
+            Orientado pela <strong className="text-foreground">Profª Eliane Ramos Pereira (UFF)</strong>, 
+            especialista em espiritualidade no cuidado em saúde, vinculado à <strong className="text-foreground">EEAAC/UFF</strong>.
           </p>
         </div>
-      </div>
+      </section>
+
+      <section className="px-5 py-8 bg-background">
+        <div className="text-center mb-6">
+          <span className="text-xs font-semibold tracking-wider uppercase text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+            Ferramentas Interativas
+          </span>
+          <h2 className="font-serif text-2xl font-bold mt-4 mb-2 text-foreground">
+            Recursos para sua <span className="gradient-text">Jornada</span>
+          </h2>
+          <p className="text-sm text-muted-foreground">
+            Ferramentas baseadas em Logoterapia e estudos científicos
+          </p>
+        </div>
+        
+        <div className="space-y-3">
+          {features.map((feature) => {
+            const Icon = feature.icon;
+            return (
+              <Link key={feature.href} href={feature.href}>
+                <Card className="p-4 hover-elevate">
+                  <div className="flex items-start gap-4">
+                    <div className={`w-12 h-12 rounded-xl ${feature.bg} flex items-center justify-center flex-shrink-0`}>
+                      <Icon className={`w-6 h-6 ${feature.color}`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <p className="font-semibold text-foreground">{feature.title}</p>
+                        <ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{feature.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="px-5 py-8 bg-card">
+        <QuoteCard
+          text="Quem tem um porquê para viver pode suportar quase qualquer como."
+          author="Viktor Frankl, fundador da Logoterapia"
+        />
+      </section>
+
+      <section className="px-5 py-8 bg-background">
+        <h2 className="font-serif text-xl font-semibold mb-4 text-foreground">
+          Base Científica Sólida
+        </h2>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+          Desde 2005, a OMS reconhece a espiritualidade como componente integral da saúde. Este projeto é fundamentado em evidências científicas e Logoterapia.
+        </p>
+        
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          <div className="p-4 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/30 text-center">
+            <p className="text-2xl font-black text-primary mb-1">OMS</p>
+            <p className="text-xs text-muted-foreground">Reconhecimento desde 2005</p>
+          </div>
+          <div className="p-4 rounded-xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 text-center">
+            <p className="text-2xl font-black text-accent mb-1">EEAAC</p>
+            <p className="text-xs text-muted-foreground">Escola de Enfermagem</p>
+          </div>
+          <div className="p-4 rounded-xl bg-gradient-to-br from-chart-2/15 to-chart-2/5 border border-chart-2/30 text-center">
+            <p className="text-2xl font-black text-chart-2 mb-1">UFF</p>
+            <p className="text-xs text-muted-foreground">Universidade Federal</p>
+          </div>
+          <div className="p-4 rounded-xl bg-gradient-to-br from-chart-3/15 to-chart-3/5 border border-chart-3/30 text-center">
+            <p className="text-2xl font-black text-chart-3 mb-1">Frankl</p>
+            <p className="text-xs text-muted-foreground">Base teórica</p>
+          </div>
+        </div>
+        
+        <Link href="/referencias">
+          <Button variant="outline" className="w-full" data-testid="button-ver-referencias">
+            Ver Todas as Referências
+          </Button>
+        </Link>
+      </section>
+
+      <section className="px-5 py-10 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/15">
+        <div className="text-center">
+          <h2 className="font-serif text-2xl font-bold mb-4 text-foreground">
+            Inicie sua Jornada de <span className="gradient-text">Autoconhecimento</span>
+          </h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            Explore ferramentas baseadas em ciência para cultivar esperança e fortalecer seu bem-estar espiritual.
+          </p>
+          <Link href="/proposito">
+            <Button size="lg" className="w-full bg-gradient-to-r from-primary via-primary/90 to-accent shadow-xl" data-testid="button-cta-comecar">
+              Começar Agora
+            </Button>
+          </Link>
+        </div>
+      </section>
+      
+      <div className="h-4 bg-background" />
     </div>
   );
 }
@@ -219,22 +318,91 @@ function DesktopHome() {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-b from-background via-card/30 to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50" />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-sm font-semibold tracking-wider uppercase text-primary px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              Ferramentas Interativas
-            </span>
-            <h2 className="font-serif text-4xl lg:text-5xl font-bold mt-6 mb-4 text-foreground">
-              Recursos para sua <span className="gradient-text">Jornada</span>
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-card">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl lg:text-5xl font-medium mb-6 text-foreground">
+              Cuidado Espiritual na Saúde Mental
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ferramentas baseadas em Logoterapia e estudos científicos
+            <p className="text-xl text-primary font-medium mb-4">
+              Uma Abordagem Científica e Humanizada
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div className="relative bg-gradient-to-br from-card to-background rounded-3xl p-10 border border-border/50 shadow-xl hover-lift overflow-hidden group">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <h3 className="relative font-serif text-2xl font-bold mb-6 text-foreground">
+                Desenvolvido por Estudantes de <span className="text-primary">Enfermagem</span>
+              </h3>
+              <p className="relative text-muted-foreground leading-relaxed mb-4">
+                Esta plataforma foi criada por discentes do curso de Enfermagem da UFF como parte de seus estudos sobre espiritualidade no campo da saúde. Com dedicação e compromisso acadêmico, buscamos integrar conhecimentos científicos e práticas espirituais para promover bem-estar integral.
+              </p>
+              <p className="relative text-muted-foreground leading-relaxed">
+                A plataforma oferece recursos interativos fundamentados em Logoterapia e estudos fenomenológicos sobre espiritualidade, tornando acessível o conhecimento sobre cuidado espiritual na saúde mental.
+              </p>
+            </div>
+            
+            <div className="relative bg-gradient-to-br from-card to-background rounded-3xl p-10 border border-border/50 shadow-xl hover-lift overflow-hidden group">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <h3 className="relative font-serif text-2xl font-bold mb-6 text-foreground">
+                Por Que <span className="text-primary">Cuidado Espiritual</span>?
+              </h3>
+              <p className="relative text-muted-foreground leading-relaxed mb-6">
+                A Organização Mundial da Saúde reconhece desde 2005 a espiritualidade como componente integral da saúde. Pesquisas demonstram que cultivar a dimensão espiritual:
+              </p>
+              <ul className="relative space-y-3 text-muted-foreground">
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Fortalece a resiliência psicológica</span>
+                </li>
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Reduz sintomas de ansiedade e depressão</span>
+                </li>
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Promove esperança e equilíbrio emocional</span>
+                </li>
+                <li className="flex items-start gap-3 group/item">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm mt-0.5 group-hover/item:scale-110 transition-transform">✓</span>
+                  <span className="group-hover/item:text-foreground transition-colors">Auxilia na busca por sentido existencial</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl p-8 border border-primary/20">
+            <h3 className="font-serif text-xl font-medium mb-3 text-foreground text-center">
+              Base Acadêmica
+            </h3>
+            <p className="text-muted-foreground leading-relaxed text-center">
+              Este projeto é orientado pela <strong className="text-foreground">Profª Eliane Ramos Pereira (UFF)</strong>, 
+              especialista em espiritualidade no cuidado em saúde, vinculado à <strong className="text-foreground">Escola de Enfermagem Aurora de Afonso Costa (EEAAC)</strong> 
+              da <strong className="text-foreground">Universidade Federal Fluminense</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gradient-to-b from-background via-card/30 to-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50" />
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="text-sm font-semibold tracking-wider uppercase text-primary px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                Ferramentas Interativas
+              </span>
+            </div>
+            <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-6 text-foreground">
+              Recursos para sua <span className="gradient-text">Jornada</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Ferramentas baseadas em <strong className="text-foreground">Logoterapia</strong> e estudos científicos sobre espiritualidade na saúde
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
             {features.map((feature) => (
               <div key={feature.title} className="hover-lift">
                 <FeatureCard {...feature} />
@@ -244,7 +412,7 @@ function DesktopHome() {
         </div>
       </section>
 
-      <section className="py-20 bg-background">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <QuoteCard
             text="Quem tem um porquê para viver pode suportar quase qualquer como."
@@ -253,19 +421,66 @@ function DesktopHome() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-            Comece sua Jornada Agora
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Explore ferramentas baseadas em ciência para cultivar esperança e fortalecer seu bem-estar.
-          </p>
-          <Link href="/proposito">
-            <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-primary to-accent shadow-xl" data-testid="button-cta-comecar">
-              Começar Agora
-            </Button>
-          </Link>
+      <section className="py-12 sm:py-20 bg-gradient-to-b from-card to-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div>
+              <h2 className="font-serif text-3xl lg:text-4xl font-medium mb-6 text-foreground">
+                Base Científica Sólida
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Desde 2005, a Organização Mundial da Saúde reconhece a espiritualidade como componente integral da saúde. Estudos mostram que práticas espirituais funcionam como fator de proteção contra ansiedade, depressão e estresse.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Este projeto é fundamentado em evidências científicas, estudos fenomenológicos e de Logoterapia, orientado pela Profª Eliane Ramos Pereira (UFF), especialista em espiritualidade no cuidado em saúde.
+              </p>
+              <Link href="/referencias">
+                <Button variant="outline" size="lg" data-testid="button-ver-referencias">
+                  Ver Todas as Referências
+                </Button>
+              </Link>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div className="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-4xl sm:text-5xl font-black text-primary mb-2 sm:mb-3 group-hover:scale-110 transition-transform">OMS</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Reconhece a espiritualidade na saúde desde 2005</p>
+              </div>
+              <div className="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-4xl sm:text-5xl font-black text-accent mb-2 sm:mb-3 group-hover:scale-110 transition-transform">EEAAC</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Escola de Enfermagem Aurora de Afonso Costa</p>
+              </div>
+              <div className="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-chart-2/15 to-chart-2/5 border border-chart-2/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-4xl sm:text-5xl font-black text-chart-2 mb-2 sm:mb-3 group-hover:scale-110 transition-transform">UFF</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Universidade Federal Fluminense</p>
+              </div>
+              <div className="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-chart-3/15 to-chart-3/5 border border-chart-3/30 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <p className="text-4xl sm:text-5xl font-black text-chart-3 mb-2 sm:mb-3 group-hover:scale-110 transition-transform">Frankl</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">Logoterapia como base teórica</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/15 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent" />
+        <div className="absolute top-10 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+        <div className="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <div className="glass-effect rounded-3xl p-12 lg:p-16 shadow-2xl border-2">
+            <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-8 text-foreground">
+              Inicie sua Jornada de <span className="gradient-text">Autoconhecimento</span>
+            </h2>
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
+              Explore ferramentas baseadas em ciência para cultivar esperança, encontrar sentido e fortalecer seu bem-estar espiritual.
+            </p>
+            <Link href="/proposito">
+              <Button size="lg" className="text-xl px-16 py-7 bg-gradient-to-r from-primary via-primary/90 to-accent hover:scale-105 shadow-xl hover:shadow-2xl transition-all" data-testid="button-cta-comecar">
+                Começar Agora
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
