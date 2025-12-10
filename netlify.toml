@@ -14,6 +14,21 @@
 
 # Redirecionar chamadas da API para as funções serverless
 [[redirects]]
+  from = "/api/lume/chat"
+  to = "/.netlify/functions/lume-chat"
+  status = 200
+
+[[redirects]]
+  from = "/api/soul-message"
+  to = "/.netlify/functions/soul-message"
+  status = 200
+
+[[redirects]]
+  from = "/api/daily-reflection"
+  to = "/.netlify/functions/daily-reflection"
+  status = 200
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
