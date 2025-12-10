@@ -238,7 +238,6 @@ export default function Sobre() {
               
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><strong className="text-foreground">Formação:</strong> Doutora em Ciências do Cuidado em Saúde (UFF/Universidad de Granada) | Mestre em Enfermagem (UNIRIO) | Especialista em Enfermagem Obstétrica</p>
-                <p><strong className="text-foreground">Áreas de Expertise:</strong> Espiritualidade e Saúde da Mulher, Câncer de Mama, Cuidados Paliativos, Logoterapia (Viktor Frankl)</p>
               </div>
             </div>
 
