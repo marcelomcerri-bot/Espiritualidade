@@ -134,7 +134,7 @@ Gere uma "Reflexão que Cura" única e profunda para esta pessoa. Seja autêntic
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash-001",
+        model: "gemini-1.5-flash",
         config: {
           systemInstruction: systemPrompt,
           temperature: 0.75,
@@ -333,7 +333,7 @@ Responda de forma acolhedora e baseada exclusivamente nas evidências científic
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash-001",
+      model: "gemini-1.5-flash",
       config: {
         systemInstruction: systemPrompt,
         temperature: 0.7,
@@ -393,7 +393,7 @@ Crie uma reflexão diária (40-60 palavras) que explore este tema usando Logoter
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash-001",
+        model: "gemini-1.5-flash",
         config: {
           systemInstruction: systemPrompt,
           temperature: 0.75,
