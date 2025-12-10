@@ -18,6 +18,7 @@ import MensagemAlma from "@/pages/MensagemAlma";
 import Aprenda from "@/pages/Aprenda";
 import Referencias from "@/pages/Referencias";
 import Sobre from "@/pages/Sobre";
+import Lume from "@/pages/Lume";
 import TestGemini from "@/pages/test-gemini";
 import NotFound from "@/pages/not-found";
 
@@ -43,6 +44,7 @@ function Router() {
           <Route path="/aprenda" component={Aprenda} />
           <Route path="/referencias" component={Referencias} />
           <Route path="/sobre" component={Sobre} />
+          <Route path="/lume" component={Lume} />
           <Route path="/test-gemini" component={TestGemini} />
           <Route component={NotFound} />
         </Switch>

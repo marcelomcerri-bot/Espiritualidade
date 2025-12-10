@@ -124,3 +124,17 @@ export const insertDailyReflectionSchema = createInsertSchema(dailyReflections).
 
 export type InsertDailyReflection = z.infer<typeof insertDailyReflectionSchema>;
 export type DailyReflection = typeof dailyReflections.$inferSelect;
+
+// LUME Chat schemas
+export const lumeChatMessageSchema = z.object({
+  role: z.enum(['user', 'assistant']),
+  content: z.string().min(1).max(10000),
+});
+
+export const lumeChatRequestSchema = z.object({
+  message: z.string().min(1).max(5000),
+  history: z.array(lumeChatMessageSchema).max(20).optional(),
+});
+
+export type LumeChatMessage = z.infer<typeof lumeChatMessageSchema>;
+export type LumeChatRequest = z.infer<typeof lumeChatRequestSchema>;

@@ -88,6 +88,16 @@ export default function Header() {
                 Referências
               </Button>
             </Link>
+            <Link href="/lume">
+              <Button 
+                variant="default"
+                size="sm"
+                className="hover-lift font-medium"
+                data-testid="button-lume"
+              >
+                LUME
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -151,6 +161,16 @@ export default function Header() {
                   data-testid="button-mobile-referencias"
                 >
                   Referências
+                </Button>
+              </Link>
+              <Link href="/lume">
+                <Button
+                  variant="default"
+                  className="w-full text-base min-h-[48px] py-3"
+                  onClick={() => setMobileMenuOpen(false)}
+                  data-testid="button-mobile-lume"
+                >
+                  LUME
                 </Button>
               </Link>
             </div>

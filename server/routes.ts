@@ -1,8 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertDiaryEntrySchema, insertPurposeAnswerSchema, insertMeaningPillarSchema, insertJourneyAssessmentSchema } from "@shared/schema";
-import { generateSoulMessage, generateDailyReflection } from "./gemini";
+import { insertDiaryEntrySchema, insertPurposeAnswerSchema, insertMeaningPillarSchema, insertJourneyAssessmentSchema, lumeChatRequestSchema } from "@shared/schema";
+import { generateSoulMessage, generateDailyReflection, generateLumeResponse } from "./gemini";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Diary entries
@@ -165,6 +165,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error generating daily reflection:", error);
       res.status(500).json({ error: "Failed to generate daily reflection" });
+    }
+  });
+
+  // LUME Chat endpoint
+  app.post("/api/lume/chat", async (req, res) => {
+    try {
+      const validatedRequest = lumeChatRequestSchema.parse(req.body);
+      const response = await generateLumeResponse(validatedRequest.message, validatedRequest.history || []);
+      res.json({ response });
+    } catch (error) {
+      if (error instanceof Error && error.name === 'ZodError') {
+        return res.status(400).json({ error: "Invalid request format" });
+      }
+      console.error("Error in LUME chat:", error);
+      res.status(500).json({ error: "Failed to generate response" });
     }
   });
 

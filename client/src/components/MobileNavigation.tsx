@@ -1,4 +1,4 @@
-import { Home, Compass, BookOpen, Heart, Sparkles, MoreHorizontal } from "lucide-react";
+import { Home, Compass, BookOpen, Heart, Sparkles, MoreHorizontal, MessageCircle } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -21,6 +21,7 @@ const moreNavItems: NavItem[] = [
   { name: "Minha Jornada", href: "/jornada", icon: Compass },
   { name: "Aprenda Mais", href: "/aprenda", icon: BookOpen },
   { name: "Momento Difícil", href: "/momento-dificil", icon: Heart },
+  { name: "LUME", href: "/lume", icon: MessageCircle },
   { name: "Sobre", href: "/sobre", icon: Home },
   { name: "Referências", href: "/referencias", icon: BookOpen },
 ];
