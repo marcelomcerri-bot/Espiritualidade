@@ -75,6 +75,7 @@ A spiritual wellness platform built with React and Express for the discipline "E
 - **Mapa de Sentido**: Meaning pillars mapping
 - **Momento Difícil**: Support for difficult moments
 - **Aprenda Mais**: Educational resources and references
+- **LUME**: AI chat assistant that answers questions about spirituality and mental health based exclusively on scientific references from the platform. Always cites academic sources.
 
 ## Development Setup
 
@@ -111,6 +112,13 @@ The application supports both PostgreSQL and in-memory storage:
 - All API routes use hardcoded "demo-user" ID (authentication not yet implemented)
 
 ## Recent Changes
+- **2025-12-10**: Added LUME AI Assistant
+  - New AI chat assistant that answers questions exclusively based on scientific references from the platform
+  - Uses Google Gemini API with comprehensive knowledge base from Referencias.tsx and Aprenda.tsx
+  - Enforces citation requirements - LUME always cites academic sources (AUTHOR, year) format
+  - Added input validation using Zod schemas to prevent malformed requests
+  - Accessible via /lume route and header navigation
+  - Refuses to answer questions outside the knowledge base scope
 - **2025-11-05**: Navigation updates
   - Removed "Reflexões que Curam" from navigation menu (Gemini integration not compatible with APK)
   - Route still exists at /mensagem-alma for direct URL access if needed
